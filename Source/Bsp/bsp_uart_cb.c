@@ -1,0 +1,42 @@
+/**
+  ******************************************************************************
+  * @file    bsp_uart_cb.c
+  * @author  lbm
+  * @version V1.0
+  * @date    2026-07-03
+  * @brief   uart回调源文件
+  ******************************************************************************
+	
+*/
+
+#include "bsp_uart_cb.h"
+
+/**
+  ******************************************************************************
+  * @brief  debug com中断回调
+  * @param  com:端口号
+  * @retval None.
+  ******************************************************************************/
+
+void bsp_debug_com_irq_cb(void)
+{
+	uint8_t data = 0;
+	if (USART_GetIntStatus(DEBUG_UART, USART_INT_RXDNE) != RESET)
+	{
+		//如果UART的中断状态为“接收寄存器满”，则把收到的数据发送出去
+		data = USART_ReceiveData(DEBUG_UART);
+		bsp_uart_send_data(DEBUG_COM,&data,1);
+	}
+	
+	if(USART_GetIntStatus(DEBUG_UART,USART_INT_TXDE) != RESET)
+	{
+		//USART_SendData(DEBUG_UART,data);
+	}
+	
+	if(USART_GetIntStatus(DEBUG_UART,USART_INT_OREF) != RESET)
+	{
+		//如果产生了错误，则清标志位
+		(void)DEBUG_UART->STS;
+		(void)DEBUG_UART->DAT;
+	}
+}

@@ -1,0 +1,25 @@
+--cpu=Cortex-M4.fp.sp
+".\obj\startup_n32g43x.o"
+".\obj\system_n32g43x.o"
+".\obj\misc.o"
+".\obj\n32g43x_adc.o"
+".\obj\n32g43x_can.o"
+".\obj\n32g43x_comp.o"
+".\obj\n32g43x_dac.o"
+".\obj\n32g43x_dma.o"
+".\obj\n32g43x_exti.o"
+".\obj\n32g43x_flash.o"
+".\obj\n32g43x_gpio.o"
+".\obj\n32g43x_opamp.o"
+".\obj\n32g43x_rcc.o"
+".\obj\n32g43x_tim.o"
+".\obj\n32g43x_usart.o"
+".\obj\n32g43x_spi.o"
+".\obj\bsp_uart.o"
+".\obj\bsp_systick.o"
+".\obj\n32g43x_it.o"
+".\obj\main.o"
+--library_type=microlib --strict --scatter ".\Obj\bldc_motor.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\List\bldc_motor.map" -o .\Obj\bldc_motor.axf
