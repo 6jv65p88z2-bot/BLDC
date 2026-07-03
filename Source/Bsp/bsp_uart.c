@@ -101,10 +101,10 @@ void bsp_uart_gpio_config(uart_com_e com,uint32_t baud)
 				//配置串口
 			USART_InitStructure.BaudRate = baud;
 			USART_InitStructure.WordLength = USART_WL_8B;
-      USART_InitStructure.StopBits = USART_STPB_1;
-      USART_InitStructure.Parity = USART_PE_NO;
-      USART_InitStructure.Mode = USART_MODE_RX | USART_MODE_TX;
-      USART_InitStructure.HardwareFlowControl = USART_HFCTRL_NONE;
+			USART_InitStructure.StopBits = USART_STPB_1;
+			USART_InitStructure.Parity = USART_PE_NO;
+			USART_InitStructure.Mode = USART_MODE_RX | USART_MODE_TX;
+			USART_InitStructure.HardwareFlowControl = USART_HFCTRL_NONE;
 				//配置串口和NVIC中断控制器的关系
 			NVIC_InitStructure.NVIC_IRQChannel = DEBUG_UART_IRQ;		//UART的中断编号
 			NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
@@ -125,11 +125,43 @@ void bsp_uart_gpio_config(uart_com_e com,uint32_t baud)
  
  /**
   ******************************************************************************
-  * @brief  UART阻塞方式发送不定长数据
+  * @brief  UART阻塞方式发送不定长数据,实际上可以类比江科大的Serial_SendAray函数
   * @param  com :端口号
   * @param  data:发送数据指针
   * @param  len :发送数据长度
   * @retval None.
   ******************************************************************************/
+ void bsp_uart_send_data(uart_com_e com,uint8_t *data,uint16_t len)
+ {
+	int i = 0;
+	USART_Module *uart = NULL;
+	switch(com)
+	{
+		case DEBUG_COM:
+			uart = DEBUG_UART;
+			break;
+	}
+
+	if(uart == NULL)
+	{
+		while(1);	//野指针
+	}
+
+	//开始发送数组里面的数据
+	//还可以对下面这个for循环进行封装
+	for(i = 0; i < len ;i++)
+	{
+		//发送数据
+		USART_SendData(uart,data[i]);
+		while(USART_GetFlagStatus(uart,USART_FLAG_TXDE) == RESET);	//等待发送完成
+	}
+
+	switch(com)
+	{
+		case DEBUG_COM;
+			break;
+	}
+ }
+
  
  

@@ -1,21 +1,20 @@
 /**
   ******************************************************************************
-  * @file    bsp_uart_cb.c
+  * @file    bsp_systick.h
   * @author  lbm
   * @version V1.0
   * @date    2026-07-03
-  * @brief   uartå›žè°ƒå¤´æ–‡ä»¶
+  * @brief   systickÇý¶¯Í·ÎÄ¼þ
   ******************************************************************************
 */
 
-
-#ifndef __BSP_UART_CB_H__
-#define __BSP_UART_CB_H__
+#ifndef __BSP_SYSTICK_H__
+#define __BSP_SYSTICK_H__
 
 
 #include "n32g43x.h"
-#include "bsp_uart.h"
+
+void bsp_systick_init(void);
 
 
 #endif
-
