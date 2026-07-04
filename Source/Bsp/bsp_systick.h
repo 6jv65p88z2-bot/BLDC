@@ -15,6 +15,7 @@
 #include "n32g43x.h"
 
 void bsp_systick_init(void);
+void bsp_delay_ms(uint32_t time);
 
 
 #endif

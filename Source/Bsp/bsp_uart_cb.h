@@ -16,6 +16,7 @@
 #include "n32g43x.h"
 #include "bsp_uart.h"
 
-
+//函数声明
+void bsp_debug_com_irq_cb(void);
 #endif
 

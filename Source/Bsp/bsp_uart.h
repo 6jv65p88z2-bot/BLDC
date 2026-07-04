@@ -54,4 +54,5 @@ extern com_irq_cb_t com_irq_cb;
 
 //函数声明
 void bsp_uart_init(uart_com_e com,uint32_t baud,void (*irq_cb)(void));
+void bsp_uart_send_data(uart_com_e com,uint8_t *data,uint16_t len);
 #endif

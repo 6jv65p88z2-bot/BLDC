@@ -33,4 +33,5 @@
 .\obj\main.o: ..\Libraries\Lib\inc\n32g43x_lpuart.h
 .\obj\main.o: ..\Libraries\Lib\inc\n32g43x_wwdg.h
 .\obj\main.o: ..\Libraries\Lib\inc\misc.h
+.\obj\main.o: ..\Source\Bsp\bsp_uart_cb.h
 .\obj\main.o: ..\Source\Bsp\bsp_systick.h

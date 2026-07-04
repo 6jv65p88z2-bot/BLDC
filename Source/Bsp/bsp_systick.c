@@ -59,6 +59,6 @@ void bsp_delay_ms(uint32_t time)
 {
 	uint32_t temp = 0;
 	temp = systick_count + time;
-	while(temp <= systick_count);
+	while(systick_count <= temp);
 
 }

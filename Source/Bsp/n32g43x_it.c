@@ -33,7 +33,7 @@
  * @copyright Copyright (c) 2022, Nations Technologies Inc. All rights reserved.
  */
 #include "n32g43x_it.h"
-
+#include "bsp_uart_cb.h"
 
 /** @addtogroup N32G43X_StdPeriph_Template
  * @{
@@ -155,7 +155,7 @@ void USART3_IRQHandler(void)
  */
 void UART4_IRQHandler(void)
 {
-	
+	com_irq_cb.debug_com_cb();
 }
 
 /**

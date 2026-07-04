@@ -113,7 +113,9 @@ void bsp_uart_gpio_config(uart_com_e com,uint32_t baud)
 			
 				//设置DEBUG_UART和NVIC关联起来
 			USART_ConfigInt(DEBUG_UART,USART_INT_RXDNE,ENABLE);	//接收寄存器满，产生中断
-			com_irq_cb.debug_com_cb = irq_cb;	//回调赋值
+			
+			com_irq_cb.debug_com_cb = irq_cb;	//回调赋值`
+			
 				//调用api接口初始化串口
 			USART_Init(DEBUG_UART,&USART_InitStructure);
 				//开启串口
@@ -158,10 +160,23 @@ void bsp_uart_gpio_config(uart_com_e com,uint32_t baud)
 
 	switch(com)
 	{
-		case DEBUG_COM;
+		case DEBUG_COM:
 			break;
 	}
  }
 
+/**
+  ******************************************************************************
+  * @brief  retarget the C library printf function to the LPUARTx
+  * @param  ch：send data
+  * @param  f：flow
+  * @retval ch
+  ******************************************************************************/
+ int fputc(int ch,FILE *f)
+ {
+	USART_SendData(DEBUG_UART,(uint8_t)ch);
+	while(USART_GetFlagStatus(DEBUG_UART,USART_FLAG_TXDE) == RESET);
+	return ch;
+ }
  
  

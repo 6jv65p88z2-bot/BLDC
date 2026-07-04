@@ -18,6 +18,7 @@
 ".\obj\bsp_uart.o"
 ".\obj\bsp_systick.o"
 ".\obj\n32g43x_it.o"
+".\obj\bsp_uart_cb.o"
 ".\obj\main.o"
 --library_type=microlib --strict --scatter ".\Obj\bldc_motor.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols

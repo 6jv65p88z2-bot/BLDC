@@ -28,12 +28,13 @@ Project File Date:  07/03/2026
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'MotorControl'
 compiling main.c...
-..\Source\App\main.c(27): error:  #29: expected an expression
-  	bsp_uart_init(DEBUG_COM,115200,);
-..\Source\App\main.c(30): warning:  #1-D: last line of file ends without a newline
-  }
-..\Source\App\main.c: 1 warning, 1 error
-".\Obj\bldc_motor.axf" - 1 Error(s), 1 Warning(s).
+..\Source\App\main.c(31): warning:  #177-D: variable "test_data"  was declared but never referenced
+    uint8_t test_data[3] = {0x41,0x42,0x43};	//测试成功1
+..\Source\App\main.c: 1 warning, 0 errors
+linking...
+Program Size: Code=6136 RO-data=496 RW-data=12 ZI-data=5380  
+FromELF: creating hex file...
+".\Obj\bldc_motor.axf" - 0 Error(s), 1 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -46,7 +47,6 @@ Package Vendor: Nationstech
   C:\Users\Administrator\AppData\Local\Arm\Packs\Nationstech\N32G43x_DFP\0.9.6\firmware\CMSIS\device
 
 <h2>Collection of Component Files used:</h2>
-Target not created.
 Build Time Elapsed:  00:00:00
 </pre>
 </body>
