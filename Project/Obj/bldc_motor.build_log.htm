@@ -3,38 +3,53 @@
 <pre>
 <h1>礦ision Build Log</h1>
 <h2>Tool Versions:</h2>
-IDE-Version: μVision V5.34.0.0
+IDE-Version: μVision V5.36.0.0
 Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: 1 Administrator, 1, LIC=03C6R-KS51G-BSNYX-HZGTY-63JTC-0EMJH
+License Information: 1 2, 3, LIC=65ISZ-J6KTR-BS3YX-HB1HJ-L92M9-I2GGY
  
 Tool Versions:
-Toolchain:       MDK-ARM Plus  Version: 5.34.0.0
-Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+Toolchain:       MDK-ARM Plus  Version: 5.36.0.0
+Toolchain Path:  D:\keil5\ARM\ARMCC\Bin
 C Compiler:      Armcc.exe V5.06 update 7 (build 960)
 Assembler:       Armasm.exe V5.06 update 7 (build 960)
 Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
 Library Manager: ArmAr.exe V5.06 update 7 (build 960)
 Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
-CPU DLL:         SARMCM3.DLL V5.34.0.0
+CPU DLL:         SARMCM3.DLL V5.36.0.0
 Dialog DLL:      DCM.DLL V1.17.3.0
-Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.8.0
-Dialog DLL:      TCM.DLL V1.48.0.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TCM.DLL V1.53.0.0
  
 <h2>Project:</h2>
-F:\3_BLDC\7_修改中\n32g435_mymotor_v1.3_1\Project\n32g43x_bldc_motor.uvprojx
+d:\3_JKD_Stm32\8_BLDC\修改中\BLDC\Project\n32g43x_bldc_motor.uvprojx
 Project File Date:  07/03/2026
 
 <h2>Output:</h2>
-*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\keil5\ARM\ARMCC\Bin'
 Build target 'MotorControl'
+compiling bsp_uart_cb.c...
+..\Source\Bsp\bsp_uart_cb.c(106): warning:  #1-D: last line of file ends without a newline
+   }
+..\Source\Bsp\bsp_uart_cb.c(16): warning:  #550-D: variable "rs485_recv_buf"  was set but never used
+  static uint8_t rs485_recv_buf[1024];
+..\Source\Bsp\bsp_uart_cb.c: 2 warnings, 0 errors
 compiling main.c...
 ..\Source\App\main.c(31): warning:  #177-D: variable "test_data"  was declared but never referenced
     uint8_t test_data[3] = {0x41,0x42,0x43};	//娴嬭瘯鎴愬姛1
 ..\Source\App\main.c: 1 warning, 0 errors
+compiling n32g43x_it.c...
+compiling bsp_uart.c...
+..\Source\Bsp\bsp_uart.c(126): warning:  #550-D: variable "NVIC_InitStructure"  was set but never used
+      NVIC_InitType NVIC_InitStructure = {0};
+..\Source\Bsp\bsp_uart.c(264): warning:  #223-D: function "bsp_delay_ms" declared implicitly
+  			bsp_delay_ms(1);	//RS485鍙戦�佸畬姣曞悗锛屽欢鏃?1ms鍐嶅垏鎹负鎺ユ敹妯″紡
+..\Source\Bsp\bsp_uart.c(284): warning:  #1-D: last line of file ends without a newline
+   
+..\Source\Bsp\bsp_uart.c: 3 warnings, 0 errors
 linking...
-Program Size: Code=6136 RO-data=496 RW-data=12 ZI-data=5380  
+Program Size: Code=6716 RO-data=496 RW-data=12 ZI-data=6412  
 FromELF: creating hex file...
-".\Obj\bldc_motor.axf" - 0 Error(s), 1 Warning(s).
+".\Obj\bldc_motor.axf" - 0 Error(s), 6 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -44,10 +59,10 @@ Package Vendor: Nationstech
                 Nationstech N32G43x Series Device Support, Drivers and Examples
 
 <h2>Collection of Component include folders:</h2>
-  C:\Users\Administrator\AppData\Local\Arm\Packs\Nationstech\N32G43x_DFP\0.9.6\firmware\CMSIS\device
+  D:\keil5\Nationstech\N32G43x_DFP\0.9.6\firmware\CMSIS\device
 
 <h2>Collection of Component Files used:</h2>
-Build Time Elapsed:  00:00:00
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

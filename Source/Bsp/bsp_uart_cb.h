@@ -18,5 +18,6 @@
 
 //函数声明
 void bsp_debug_com_irq_cb(void);
+ void bsp_host_computer_com_irq_cb(void);
 #endif
 

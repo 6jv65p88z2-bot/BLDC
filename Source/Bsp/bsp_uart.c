@@ -11,7 +11,7 @@
 #include "bsp_uart.h"
 #include <stdio.h>
 
-com_irq_cb_t com_irq_cb = {NULL};
+com_irq_cb_t com_irq_cb = {NULL,NULL,NULL};
 
 /**
   ******************************************************************************
@@ -24,12 +24,24 @@ void bsp_uart_rcc_config(uart_com_e com)
     switch(com)
     {
         case DEBUG_COM:
-					//开启UART TX RX的时钟
+					//开启UART4 TX RX的时钟
 					DEBUG_UART_TX_GPIO_CLK_CMD(DEBUG_UART_TX_GPIO_CLK,ENABLE);
 					DEBUG_UART_RX_GPIO_CLK_CMD(DEBUG_UART_RX_GPIO_CLK,ENABLE);
 					DEBUG_UART_CLK_CMD(DEBUG_UART_CLK,ENABLE);
 					break;
-				
+		
+		case HOST_COMPUTER_COM:
+					//开启USART5的 TX RX时钟
+					HOST_COMPUTER_UART_TX_GPIO_CLK_CMD(HOST_COMPUTER_UART_TX_GPIO_CLK,ENABLE);
+					HOST_COMPUTER_UART_TX_GPIO_CLK_CMD(HOST_COMPUTER_UART_RX_GPIO_CLK,ENABLE);
+					HOST_COMPUTER_UART_CLK_CMD(HOST_COMPUTER_UART_CLK,ENABLE);
+					break;
+		case RS485_COM:
+					//开启RS485的 TX RX时钟
+					RS485_UART_TX_GPIO_CLK_CMD(RS485_UART_TX_GPIO_CLK,ENABLE);
+					RS485_UART_RX_GPIO_CLK_CMD(RS485_UART_RX_GPIO_CLK,ENABLE);
+					RS485_UART_CLK_CMD(RS485_UART_CLK,ENABLE);
+					break;
     }
 }
 
@@ -43,25 +55,58 @@ void bsp_uart_rcc_config(uart_com_e com)
   * @param  irq_cb:中断回调指针
   * @retval None.
   ******************************************************************************/
-void bsp_uart_gpio_config(uart_com_e com,uint32_t baud)
+void bsp_uart_gpio_config(uart_com_e com)
 {
 	GPIO_InitType	GPIO_InitStructure = {0};
 	GPIO_InitStruct(&GPIO_InitStructure);
 	switch(com)
 	{
 		case DEBUG_COM:
-
-		//配置TX引脚
+		{
+			//配置TX引脚
 			GPIO_InitStructure.GPIO_Alternate = DEBUG_UART_TX_GPIO_AF;
 			GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;		//复用推挽输出	
 			GPIO_InitStructure.Pin = DEBUG_UART_TX_PIN;
 			GPIO_InitPeripheral(DEBUG_UART_TX_GPIO,&GPIO_InitStructure);
-
 		//配置RX引脚
 			GPIO_InitStructure.GPIO_Pull = GPIO_Pull_Up;		//上拉模式
 			GPIO_InitStructure.Pin = DEBUG_UART_RX_PIN;
 			GPIO_InitStructure.GPIO_Alternate = DEBUG_UART_RX_GPIO_AF;
+			GPIO_InitPeripheral(DEBUG_UART_RX_GPIO, &GPIO_InitStructure);
 			break;
+		}
+
+		
+		case HOST_COMPUTER_COM:
+		{
+			//配置TX引脚
+			GPIO_InitStructure.GPIO_Alternate = HOST_COMPUTER_UART_TX_GPIO_AF;
+			GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;		//复用推挽输出
+			GPIO_InitStructure.Pin = HOST_COMPUTER_UART_TX_PIN;
+			GPIO_InitPeripheral(HOST_COMPUTER_UART_TX_GPIO,&GPIO_InitStructure);
+			//配置RX引脚
+			GPIO_InitStructure.GPIO_Pull = GPIO_Pull_Up;		//上拉模式
+			GPIO_InitStructure.Pin = HOST_COMPUTER_UART_RX_PIN;
+			GPIO_InitStructure.GPIO_Alternate = HOST_COMPUTER_UART_RX_GPIO_AF;
+			GPIO_InitPeripheral(HOST_COMPUTER_UART_RX_GPIO, &GPIO_InitStructure);
+			break;
+		}
+		
+		case RS485_COM:
+		{
+			//配置TX引脚
+			GPIO_InitStructure.GPIO_Alternate = RS485_UART_TX_GPIO_AF;
+			GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;		//复用推挽输出
+			GPIO_InitStructure.Pin = RS485_UART_TX_PIN;
+			GPIO_InitPeripheral(RS485_UART_TX_GPIO,&GPIO_InitStructure);
+			//配置RX引脚
+			GPIO_InitStructure.GPIO_Alternate = RS485_UART_RX_GPIO_AF;
+			GPIO_InitStructure.GPIO_Pull = GPIO_Pull_Up;		//上拉模式
+			GPIO_InitStructure.Pin = RS485_UART_RX_PIN;
+			GPIO_InitPeripheral(RS485_UART_RX_GPIO,&GPIO_InitStructure);
+			break;
+
+		}
 	}
 	
 	
@@ -85,7 +130,7 @@ void bsp_uart_gpio_config(uart_com_e com,uint32_t baud)
     //配置串口时钟
     bsp_uart_rcc_config(com);
     //配置串口的GPIO引脚
-		bsp_uart_gpio_config(com,baud);
+	bsp_uart_gpio_config(com);
 		
 		if(irq_cb == NULL)
 		{
@@ -98,29 +143,80 @@ void bsp_uart_gpio_config(uart_com_e com,uint32_t baud)
 		switch(com)
 		{
 			case DEBUG_COM:
+			{
 				//配置串口
-			USART_InitStructure.BaudRate = baud;
-			USART_InitStructure.WordLength = USART_WL_8B;
-			USART_InitStructure.StopBits = USART_STPB_1;
-			USART_InitStructure.Parity = USART_PE_NO;
-			USART_InitStructure.Mode = USART_MODE_RX | USART_MODE_TX;
-			USART_InitStructure.HardwareFlowControl = USART_HFCTRL_NONE;
+				USART_InitStructure.BaudRate = baud;
+				USART_InitStructure.WordLength = USART_WL_8B;
+				USART_InitStructure.StopBits = USART_STPB_1;
+				USART_InitStructure.Parity = USART_PE_NO;
+				USART_InitStructure.Mode = USART_MODE_RX | USART_MODE_TX;
+				USART_InitStructure.HardwareFlowControl = USART_HFCTRL_NONE;
+					//配置串口和NVIC中断控制器的关系
+				NVIC_InitStructure.NVIC_IRQChannel = DEBUG_UART_IRQ;		//UART的中断编号
+				NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+				NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
+				NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
+				
+					//设置DEBUG_UART和NVIC关联起来
+				USART_ConfigInt(DEBUG_UART,USART_INT_RXDNE,ENABLE);	//接收寄存器满，产生中断
+				
+				com_irq_cb.debug_com_cb = irq_cb;	//回调赋值`
+				
+					//调用api接口初始化串口
+				USART_Init(DEBUG_UART,&USART_InitStructure);
+					//开启串口
+				USART_Enable(DEBUG_UART,ENABLE);		
+				break;
+
+			}
+			
+			case HOST_COMPUTER_COM:
+			{
+				//配置串口
+				USART_InitStructure.BaudRate = baud;
+				USART_InitStructure.WordLength = USART_WL_8B;
+				USART_InitStructure.StopBits = USART_STPB_1;
+				USART_InitStructure.Parity = USART_PE_NO;
+				USART_InitStructure.Mode = USART_MODE_RX | USART_MODE_TX;
+				USART_InitStructure.HardwareFlowControl = USART_HFCTRL_NONE;
+				
+					//配置串口和NVIC中断控制器的关系
+				NVIC_InitStructure.NVIC_IRQChannel = HOST_COMPUTER_UART_IRQ;		//UART的中断编号
+				NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+				NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;		//抢占优先级（主）
+				NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
+				
+					//设置HOST_COMPUTER_UART和NVIC关联起来
+				USART_ConfigInt(HOST_COMPUTER_UART,USART_INT_RXDNE,ENABLE);
+				com_irq_cb.host_compute_com_cb = irq_cb;
+				USART_Init(HOST_COMPUTER_UART,&USART_InitStructure);
+				USART_Enable(HOST_COMPUTER_UART,ENABLE);
+				break;
+			}
+
+			case RS485_COM:
+			{
+				//配置串口
+				USART_InitStructure.BaudRate = baud;
+				USART_InitStructure.WordLength = USART_WL_8B;
+				USART_InitStructure.StopBits = USART_STPB_1;
+				USART_InitStructure.Parity = USART_PE_NO;
+				USART_InitStructure.Mode = USART_MODE_RX | USART_MODE_TX;
+				USART_InitStructure.HardwareFlowControl = USART_HFCTRL_NONE;
+				
 				//配置串口和NVIC中断控制器的关系
-			NVIC_InitStructure.NVIC_IRQChannel = DEBUG_UART_IRQ;		//UART的中断编号
-			NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
-			NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
-			NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
-			
-				//设置DEBUG_UART和NVIC关联起来
-			USART_ConfigInt(DEBUG_UART,USART_INT_RXDNE,ENABLE);	//接收寄存器满，产生中断
-			
-			com_irq_cb.debug_com_cb = irq_cb;	//回调赋值`
-			
-				//调用api接口初始化串口
-			USART_Init(DEBUG_UART,&USART_InitStructure);
-				//开启串口
-			USART_Enable(DEBUG_UART,ENABLE);		
-			break;
+				NVIC_InitStructure.NVIC_IRQChannel = RS485_UART_IRQ;		//UART的中断编号
+				NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+				NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;		//抢占优先级（主）
+				NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
+				
+				//设置RS485_UART和NVIC关联起来
+				USART_ConfigInt(RS485_UART,USART_INT_RXDNE,ENABLE);
+				com_irq_cb.rs485_com_cb = irq_cb;
+				USART_Init(RS485_UART,&USART_InitStructure);
+				USART_Enable(RS485_UART,ENABLE);
+				break;
+			}
 		}	
  }
  
@@ -161,6 +257,12 @@ void bsp_uart_gpio_config(uart_com_e com,uint32_t baud)
 	switch(com)
 	{
 		case DEBUG_COM:
+			break;
+		case HOST_COMPUTER_COM:
+			break;
+		case RS485_COM:
+			bsp_delay_ms(1);	//RS485发送完毕后，延时1ms再切换为接收模式
+			RS485_COM_RECV_ENABLE();	//RS485切换为接收模式
 			break;
 	}
  }

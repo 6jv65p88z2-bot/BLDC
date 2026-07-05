@@ -147,7 +147,7 @@ void CAN_RX0_IRQHandler(void)
  */
 void USART3_IRQHandler(void)
 {
-    
+    com_irq_cb.rs485_com_cb ();
 }
 
 /**
@@ -163,7 +163,7 @@ void UART4_IRQHandler(void)
  */
 void UART5_IRQHandler(void)
 {
-	
+	com_irq_cb.host_compute_com_cb();
 }
 
 /**
