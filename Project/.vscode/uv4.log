@@ -1,26 +1,4 @@
-*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\keil5\ARM\ARMCC\Bin'
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'MotorControl'
-compiling bsp_uart_cb.c...
-..\Source\Bsp\bsp_uart_cb.c(106): warning:  #1-D: last line of file ends without a newline
-   }
-..\Source\Bsp\bsp_uart_cb.c(16): warning:  #550-D: variable "rs485_recv_buf"  was set but never used
-  static uint8_t rs485_recv_buf[1024];
-..\Source\Bsp\bsp_uart_cb.c: 2 warnings, 0 errors
-compiling main.c...
-..\Source\App\main.c(31): warning:  #177-D: variable "test_data"  was declared but never referenced
-    uint8_t test_data[3] = {0x41,0x42,0x43};	//测试成功1
-..\Source\App\main.c: 1 warning, 0 errors
-compiling n32g43x_it.c...
-compiling bsp_uart.c...
-..\Source\Bsp\bsp_uart.c(126): warning:  #550-D: variable "NVIC_InitStructure"  was set but never used
-      NVIC_InitType NVIC_InitStructure = {0};
-..\Source\Bsp\bsp_uart.c(264): warning:  #223-D: function "bsp_delay_ms" declared implicitly
-  			bsp_delay_ms(1);	//RS485发送完毕后，延�?1ms再切换为接收模式
-..\Source\Bsp\bsp_uart.c(284): warning:  #1-D: last line of file ends without a newline
-   
-..\Source\Bsp\bsp_uart.c: 3 warnings, 0 errors
-linking...
-Program Size: Code=6716 RO-data=496 RW-data=12 ZI-data=6412  
-FromELF: creating hex file...
-".\Obj\bldc_motor.axf" - 0 Error(s), 6 Warning(s).
-Build Time Elapsed:  00:00:02
+".\Obj\bldc_motor.axf" - 0 Error(s), 0 Warning(s).
+Build Time Elapsed:  00:00:00

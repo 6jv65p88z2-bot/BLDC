@@ -38,7 +38,7 @@
 
 /************************************************************************/
 #define HOST_COMPUTER_UART	UART5
-#define HOST_COMPUTER_UART_CLK	RCC_APB2_PERIPH_UART4
+#define HOST_COMPUTER_UART_CLK	RCC_APB2_PERIPH_UART5
 
 #define HOST_COMPUTER_UART_TX_GPIO				GPIOC
 #define HOST_COMPUTER_UART_TX_PIN					GPIO_PIN_12
@@ -60,8 +60,8 @@
 
 
 /************************************************************************/
-#define RS485_UART	UART5
-#define RS485_UART_CLK	RCC_APB2_PERIPH_UART5
+#define RS485_UART            					USART3
+#define RS485_UART_CLK        					RCC_APB1_PERIPH_USART3  
 
 #define RS485_UART_TX_GPIO				GPIOB
 #define RS485_UART_TX_PIN					GPIO_PIN_10
@@ -80,6 +80,7 @@
 #define RS485_UART_TX_GPIO_CLK_CMD	RCC_EnableAPB2PeriphClk
 #define RS485_UART_RX_GPIO_CLK_CMD	RCC_EnableAPB2PeriphClk
 #define	RS485_UART_CLK_CMD					RCC_EnableAPB1PeriphClk
+#define RS485_EN_GPIO_CLK_CMD   		RCC_EnableAPB2PeriphClk
 
 #define	RS485_UART_IRQ							USART3_IRQn  			//此编号在n32g43x.h的枚举体可以找到				
 
@@ -109,5 +110,5 @@ extern com_irq_cb_t com_irq_cb;
 
 //函数声明
 void bsp_uart_init(uart_com_e com,uint32_t baud,void (*irq_cb)(void));
-void bsp_uart_send_data(uart_com_e com,uint8_t *data,uint16_t len);
+void bsp_uart_send_data(uart_com_e com,uint8_t *data,uint32_t len);
 #endif

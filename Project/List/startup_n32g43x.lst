@@ -575,10 +575,11 @@ ARM Macro Assembler    Page 9
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp.sp --apcs=
 interwork --depend=.\obj\startup_n32g43x.d -o.\obj\startup_n32g43x.o -I..\Head 
--ID:\keil5\Nationstech\N32G43x_DFP\0.9.6\firmware\CMSIS\device --predefine="__M
-ICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 536" --predefine="N32G43X S
-ETA 1" --predefine="N32G435 SETA 1" --predefine="USE_STDPERIPH_DRIVER SETA 1" -
--list=.\list\startup_n32g43x.lst ..\Libraries\Startup\startup_n32g43x.s
+-IC:\Users\Administrator\AppData\Local\Arm\Packs\Nationstech\N32G43x_DFP\0.9.6\
+firmware\CMSIS\device --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VE
+RSION SETA 534" --predefine="N32G43X SETA 1" --predefine="N32G435 SETA 1" --pre
+define="USE_STDPERIPH_DRIVER SETA 1" --list=.\list\startup_n32g43x.lst ..\Libra
+ries\Startup\startup_n32g43x.s
 
 
 

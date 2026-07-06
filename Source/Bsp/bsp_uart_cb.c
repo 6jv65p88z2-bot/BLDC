@@ -54,11 +54,12 @@ void bsp_debug_com_irq_cb(void)
  void bsp_host_computer_com_irq_cb(void)
  {
 	uint8_t data = 0;
-	if(USART_GetIntStatus(HOST_COMPUTER_UART,USART_INT_RXDNE))
+	if(USART_GetIntStatus(HOST_COMPUTER_UART,USART_INT_RXDNE) != RESET)
 	{
 		//如果UART的中断状态为“接收寄存器满”，则把收到的数据发送出去
+		//所以就会看到如下：
 		data = USART_ReceiveData(HOST_COMPUTER_UART);
-		bsp_uart_send_data(HOST_COMPUTER_COM,&data,1);		//感觉这个1可能有问题 暂时未测试
+		bsp_uart_send_data(HOST_COMPUTER_COM,&data,1);		
 	}
 
 	if(USART_GetIntStatus(HOST_COMPUTER_UART,USART_INT_TXDE) != RESET)
@@ -82,10 +83,13 @@ void bsp_debug_com_irq_cb(void)
   ******************************************************************************/
  void bsp_rs485_com_irq_cb(void)
  {
-	
+	uint8_t data = 0;
 	if(USART_GetIntStatus(RS485_UART,USART_INT_RXDNE) != RESET)
 	{
-		rs485_recv_buf[findex++] = USART_ReceiveData(RS485_UART);
+		data =  USART_ReceiveData(RS485_UART);
+		rs485_recv_buf[findex++] = data;
+		bsp_uart_send_data(RS485_COM, &data, 1);
+		
 		if(findex >= sizeof(rs485_recv_buf))
 		{
 			findex = 0;
