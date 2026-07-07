@@ -35,3 +35,5 @@
 .\obj\main.o: ..\Libraries\Lib\inc\misc.h
 .\obj\main.o: ..\Source\Bsp\bsp_uart_cb.h
 .\obj\main.o: ..\Source\Bsp\bsp_systick.h
+.\obj\main.o: ..\Source\Bsp\bsp_led.h
+.\obj\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

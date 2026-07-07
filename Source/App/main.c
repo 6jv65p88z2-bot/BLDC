@@ -11,6 +11,7 @@
 #include "bsp_uart.h"
 #include "bsp_uart_cb.h"
 #include "bsp_systick.h"
+#include "bsp_led.h"
 #include "misc.h"
 
 
@@ -35,6 +36,8 @@ int main(void)
 	//bsp_uart_send_data(RS485_COM,test_data,3);
   //printf("test\r\n");
   
+	bsp_led_init();
+	bsp_led_ctrl(LED1,LED_ON);	//点亮LED1
 	while(1)
 	{
 		// bsp_uart_send_data(HOST_COMPUTER_COM,test_data,3);  //

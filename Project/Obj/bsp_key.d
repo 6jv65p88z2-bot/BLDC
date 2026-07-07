@@ -33,5 +33,3 @@
 .\obj\bsp_key.o: ..\Libraries\Lib\inc\n32g43x_lpuart.h
 .\obj\bsp_key.o: ..\Libraries\Lib\inc\n32g43x_wwdg.h
 .\obj\bsp_key.o: ..\Libraries\Lib\inc\misc.h
-.\obj\bsp_key.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-.\obj\bsp_key.o: ..\Source\Bsp\bsp_systick.h
