@@ -16,6 +16,7 @@
 
 void bsp_systick_init(void);
 void bsp_delay_ms(uint32_t time);
+uint32_t bsp_systick_time_get(void);
 
 
 #endif
