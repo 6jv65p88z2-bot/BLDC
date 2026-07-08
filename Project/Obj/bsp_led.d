@@ -35,3 +35,4 @@
 .\obj\bsp_led.o: ..\Libraries\Lib\inc\misc.h
 .\obj\bsp_led.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\obj\bsp_led.o: ..\Source\Bsp\bsp_systick.h
+.\obj\bsp_led.o: ..\Source\Bsp\bsp_uart.h

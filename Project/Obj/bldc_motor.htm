@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Obj\bldc_motor.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Obj\bldc_motor.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Tue Jul 07 19:31:17 2026
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Wed Jul 08 10:28:07 2026
 <BR><P>
 <H3>Maximum Stack Usage =        124 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -657,8 +657,7 @@ Global Symbols
 <LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_GetFlagStatus
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_SendData
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_rs485_com_irq_cb
+<BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_rs485_com_irq_cb
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_host_computer_com_irq_cb
 <LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_debug_com_irq_cb
 </UL>
@@ -679,8 +678,7 @@ Global Symbols
 <P><STRONG><a name="[db]"></a>bsp_systick_time_get</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, bsp_systick.o(.text), UNUSED)
 
 <P><STRONG><a name="[6e]"></a>bsp_delay_ms</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, bsp_systick.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_led_toggle
+<BR><BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_led_toggle
 <LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_uart_send_data
 </UL>
 
@@ -768,7 +766,7 @@ Global Symbols
 <LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_ReceiveData
 </UL>
 
-<P><STRONG><a name="[76]"></a>bsp_led_init</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, bsp_led.o(.text))
+<P><STRONG><a name="[76]"></a>bsp_led_init</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, bsp_led.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = bsp_led_init &rArr; GPIO_InitPeripheral
 </UL>
 <BR>[Calls]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_InitPeripheral
@@ -776,7 +774,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[78]"></a>bsp_led_ctrl</STRONG> (Thumb, 92 bytes, Stack size 16 bytes, bsp_led.o(.text))
+<P><STRONG><a name="[78]"></a>bsp_led_ctrl</STRONG> (Thumb, 112 bytes, Stack size 16 bytes, bsp_led.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = bsp_led_ctrl
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
@@ -786,15 +784,13 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[4b]"></a>main</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, main.o(.text))
+<P><STRONG><a name="[4b]"></a>main</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 124<LI>Call Chain = main &rArr; bsp_uart_init &rArr; USART_Init &rArr; RCC_GetClocksFreqValue
 </UL>
 <BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_PriorityGroupConfig
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_led_ctrl
 <LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_led_init
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_systick_init
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_delay_ms
-<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_uart_send_data
 <LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_uart_init
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)

@@ -13,7 +13,7 @@ typedef enum
 {
     LED1 = 0,       //错误灯
     LED2,           //状态灯1
-    LEN3,           //状态灯2
+    LED3,           //状态灯2
     LEDMAX
 }led_num_e;
 
@@ -22,7 +22,7 @@ typedef struct
     led_num_e led_num;
     GPIO_Module *GPIOx;
     GPIO_InitType GPIO_InitStructure;
-}gpio_struct_t;
+}gpio_config_t;
 
 
 //函数声明

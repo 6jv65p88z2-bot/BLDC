@@ -28,10 +28,13 @@ Project File Date:  07/07/2026
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'MotorControl'
 compiling main.c...
+..\Source\App\main.c(31): warning:  #177-D: variable "test_data"  was declared but never referenced
+  	uint8_t test_data[3] = {0x42,0x43,0x44};
+..\Source\App\main.c: 1 warning, 0 errors
 linking...
-Program Size: Code=7092 RO-data=496 RW-data=108 ZI-data=6412  
+Program Size: Code=7100 RO-data=496 RW-data=108 ZI-data=6412  
 FromELF: creating hex file...
-".\Obj\bldc_motor.axf" - 0 Error(s), 0 Warning(s).
+".\Obj\bldc_motor.axf" - 0 Error(s), 1 Warning(s).
 
 <h2>Software Packages used:</h2>
 

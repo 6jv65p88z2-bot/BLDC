@@ -44,10 +44,11 @@ int main(void)
 		//		 printf("test\r\n");	//测试成功1
 		//		 bsp_delay_ms(1000);
 		
-		 bsp_uart_send_data(HOST_COMPUTER_COM,test_data,3); 
+		//bsp_uart_send_data(HOST_COMPUTER_COM,test_data,3); 
 //		// printf("test\r\n");	//测试成功1
 //		bsp_uart_send_data(RS485_COM,test_data,3);
-		bsp_delay_ms(1000);
+		//bsp_delay_ms(1000);
+		bsp_led_ctrl(LED1,LED_TOGGLE);		//LED2翻转
 	}
 
 }
