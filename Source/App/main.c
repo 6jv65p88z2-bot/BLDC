@@ -13,6 +13,8 @@
 #include "bsp_key.h"
 #include "bsp_uart_cb.h"
 #include "bsp_systick.h"
+#include "bsp_opa.h"
+#include "bsp_dac.h"
 
 #include "misc.h"
 
@@ -41,6 +43,8 @@ int main(void)
   
 	bsp_led_init();
 	bsp_key_init();
+	bsp_opa1_init();
+	bsp_dac_init(300);
 	//bsp_led_ctrl(LED1,LED_ON);	//点亮LED1
 
 	while(1)

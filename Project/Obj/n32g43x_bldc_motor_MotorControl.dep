@@ -496,7 +496,7 @@ I (..\Libraries\Lib\inc\n32g43x_usart.h)(0x642E610F)
 I (..\Libraries\Lib\inc\n32g43x_lpuart.h)(0x642E610F)
 I (..\Libraries\Lib\inc\n32g43x_wwdg.h)(0x642E610F)
 I (..\Libraries\Lib\inc\misc.h)(0x642E610F)
-F (..\Source\Bsp\bsp_uart.c)(0x6A4B4E36)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork -I ..\Libraries\Lib\inc -I ..\Libraries\Lib\src -I ..\Libraries\Startup -I ..\Libraries\SysConfig -I ..\Libraries\SysCore -I ..\Source\App -I ..\Source\Bsp -I ..\Source\Motor -I ..\Source\AD56xx-IC:\Users\Administrator\AppData\Local\Arm\Packs\Nationstech\N32G43x_DFP\0.9.6\firmware\CMSIS\device-D__UVISION_VERSION="534" -DN32G43X -DN32G435 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER-o .\obj\bsp_uart.o --omf_browse .\obj\bsp_uart.crf --depend .\obj\bsp_uart.d)
+F (..\Source\Bsp\bsp_uart.c)(0x6A50AE46)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork -I ..\Libraries\Lib\inc -I ..\Libraries\Lib\src -I ..\Libraries\Startup -I ..\Libraries\SysConfig -I ..\Libraries\SysCore -I ..\Source\App -I ..\Source\Bsp -I ..\Source\Motor -I ..\Source\AD56xx-IC:\Users\Administrator\AppData\Local\Arm\Packs\Nationstech\N32G43x_DFP\0.9.6\firmware\CMSIS\device-D__UVISION_VERSION="534" -DN32G43X -DN32G435 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER-o .\obj\bsp_uart.o --omf_browse .\obj\bsp_uart.crf --depend .\obj\bsp_uart.d)
 I (..\Source\Bsp\bsp_uart.h)(0x6A4B14D1)
 I (..\Libraries\SysConfig\n32g43x.h)(0x642E610F)
 I (..\Libraries\SysCore\core_cm4.h)(0x642E610F)
@@ -532,7 +532,7 @@ I (..\Libraries\Lib\inc\n32g43x_wwdg.h)(0x642E610F)
 I (..\Libraries\Lib\inc\misc.h)(0x642E610F)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
 I (..\Source\Bsp\bsp_systick.h)(0x6A4DE9EF)
-F (..\Source\Bsp\bsp_systick.c)(0x6A48B9D7)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork -I ..\Libraries\Lib\inc -I ..\Libraries\Lib\src -I ..\Libraries\Startup -I ..\Libraries\SysConfig -I ..\Libraries\SysCore -I ..\Source\App -I ..\Source\Bsp -I ..\Source\Motor -I ..\Source\AD56xx-IC:\Users\Administrator\AppData\Local\Arm\Packs\Nationstech\N32G43x_DFP\0.9.6\firmware\CMSIS\device-D__UVISION_VERSION="534" -DN32G43X -DN32G435 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER-o .\obj\bsp_systick.o --omf_browse .\obj\bsp_systick.crf --depend .\obj\bsp_systick.d)
+F (..\Source\Bsp\bsp_systick.c)(0x6A50AE46)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork -I ..\Libraries\Lib\inc -I ..\Libraries\Lib\src -I ..\Libraries\Startup -I ..\Libraries\SysConfig -I ..\Libraries\SysCore -I ..\Source\App -I ..\Source\Bsp -I ..\Source\Motor -I ..\Source\AD56xx-IC:\Users\Administrator\AppData\Local\Arm\Packs\Nationstech\N32G43x_DFP\0.9.6\firmware\CMSIS\device-D__UVISION_VERSION="534" -DN32G43X -DN32G435 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER-o .\obj\bsp_systick.o --omf_browse .\obj\bsp_systick.crf --depend .\obj\bsp_systick.d)
 I (..\Source\Bsp\bsp_systick.h)(0x6A4DE9EF)
 I (..\Libraries\SysConfig\n32g43x.h)(0x642E610F)
 I (..\Libraries\SysCore\core_cm4.h)(0x642E610F)
@@ -602,7 +602,7 @@ I (..\Libraries\Lib\inc\n32g43x_wwdg.h)(0x642E610F)
 I (..\Libraries\Lib\inc\misc.h)(0x642E610F)
 I (..\Source\Bsp\bsp_uart_cb.h)(0x6A4B26F8)
 I (..\Source\Bsp\bsp_uart.h)(0x6A4B14D1)
-F (..\Source\Bsp\bsp_uart_cb.c)(0x6A4B5BB2)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork -I ..\Libraries\Lib\inc -I ..\Libraries\Lib\src -I ..\Libraries\Startup -I ..\Libraries\SysConfig -I ..\Libraries\SysCore -I ..\Source\App -I ..\Source\Bsp -I ..\Source\Motor -I ..\Source\AD56xx-IC:\Users\Administrator\AppData\Local\Arm\Packs\Nationstech\N32G43x_DFP\0.9.6\firmware\CMSIS\device-D__UVISION_VERSION="534" -DN32G43X -DN32G435 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER-o .\obj\bsp_uart_cb.o --omf_browse .\obj\bsp_uart_cb.crf --depend .\obj\bsp_uart_cb.d)
+F (..\Source\Bsp\bsp_uart_cb.c)(0x6A50AE46)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork -I ..\Libraries\Lib\inc -I ..\Libraries\Lib\src -I ..\Libraries\Startup -I ..\Libraries\SysConfig -I ..\Libraries\SysCore -I ..\Source\App -I ..\Source\Bsp -I ..\Source\Motor -I ..\Source\AD56xx-IC:\Users\Administrator\AppData\Local\Arm\Packs\Nationstech\N32G43x_DFP\0.9.6\firmware\CMSIS\device-D__UVISION_VERSION="534" -DN32G43X -DN32G435 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER-o .\obj\bsp_uart_cb.o --omf_browse .\obj\bsp_uart_cb.crf --depend .\obj\bsp_uart_cb.d)
 I (..\Source\Bsp\bsp_uart_cb.h)(0x6A4B26F8)
 I (..\Libraries\SysConfig\n32g43x.h)(0x642E610F)
 I (..\Libraries\SysCore\core_cm4.h)(0x642E610F)
@@ -675,7 +675,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
 I (..\Source\Bsp\bsp_systick.h)(0x6A4DE9EF)
 I (..\Source\Bsp\bsp_uart.h)(0x6A4B14D1)
 F (..\Source\Bsp\bsp_key.c)(0x6A4E0607)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork -I ..\Libraries\Lib\inc -I ..\Libraries\Lib\src -I ..\Libraries\Startup -I ..\Libraries\SysConfig -I ..\Libraries\SysCore -I ..\Source\App -I ..\Source\Bsp -I ..\Source\Motor -I ..\Source\AD56xx-IC:\Users\Administrator\AppData\Local\Arm\Packs\Nationstech\N32G43x_DFP\0.9.6\firmware\CMSIS\device-D__UVISION_VERSION="534" -DN32G43X -DN32G435 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER-o .\obj\bsp_key.o --omf_browse .\obj\bsp_key.crf --depend .\obj\bsp_key.d)
-I (..\Source\Bsp\bsp_key.h)(0x6A4E05D5)
+I (..\Source\Bsp\bsp_key.h)(0x6A506AC1)
 I (..\Libraries\SysConfig\n32g43x.h)(0x642E610F)
 I (..\Libraries\SysCore\core_cm4.h)(0x642E610F)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
@@ -710,7 +710,77 @@ I (..\Libraries\Lib\inc\n32g43x_wwdg.h)(0x642E610F)
 I (..\Libraries\Lib\inc\misc.h)(0x642E610F)
 I (..\Source\Bsp\bsp_systick.h)(0x6A4DE9EF)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
-F (..\Source\App\main.c)(0x6A4DFD70)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork -I ..\Libraries\Lib\inc -I ..\Libraries\Lib\src -I ..\Libraries\Startup -I ..\Libraries\SysConfig -I ..\Libraries\SysCore -I ..\Source\App -I ..\Source\Bsp -I ..\Source\Motor -I ..\Source\AD56xx-IC:\Users\Administrator\AppData\Local\Arm\Packs\Nationstech\N32G43x_DFP\0.9.6\firmware\CMSIS\device-D__UVISION_VERSION="534" -DN32G43X -DN32G435 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER-o .\obj\main.o --omf_browse .\obj\main.crf --depend .\obj\main.d)
+F (..\Source\Bsp\bsp_opa.c)(0x6A50AE46)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork -I ..\Libraries\Lib\inc -I ..\Libraries\Lib\src -I ..\Libraries\Startup -I ..\Libraries\SysConfig -I ..\Libraries\SysCore -I ..\Source\App -I ..\Source\Bsp -I ..\Source\Motor -I ..\Source\AD56xx-IC:\Users\Administrator\AppData\Local\Arm\Packs\Nationstech\N32G43x_DFP\0.9.6\firmware\CMSIS\device-D__UVISION_VERSION="534" -DN32G43X -DN32G435 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER-o .\obj\bsp_opa.o --omf_browse .\obj\bsp_opa.crf --depend .\obj\bsp_opa.d)
+I (..\Source\Bsp\bsp_opa.h)(0x6A506AB5)
+I (..\Libraries\SysConfig\n32g43x.h)(0x642E610F)
+I (..\Libraries\SysCore\core_cm4.h)(0x642E610F)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (..\Libraries\SysCore\cmsis_version.h)(0x642E610F)
+I (..\Libraries\SysCore\cmsis_compiler.h)(0x642E610F)
+I (..\Libraries\SysCore\cmsis_armcc.h)(0x642E610F)
+I (..\Libraries\SysCore\mpu_armv7.h)(0x642E610F)
+I (..\Libraries\SysConfig\system_n32g43x.h)(0x642E610F)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E3CC2)
+I (..\Libraries\SysConfig\n32g43x_conf.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_adc.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_can.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_comp.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_crc.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_dac.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_dbg.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_dma.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_exti.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_flash.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_gpio.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_i2c.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_iwdg.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_opamp.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_pwr.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_rcc.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_rtc.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_spi.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_tim.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_usart.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_lpuart.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_wwdg.h)(0x642E610F)
+I (..\Libraries\Lib\inc\misc.h)(0x642E610F)
+I (..\Source\Bsp\bsp_systick.h)(0x6A4DE9EF)
+F (..\Source\Bsp\bsp_dac.c)(0x6A50AF69)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork -I ..\Libraries\Lib\inc -I ..\Libraries\Lib\src -I ..\Libraries\Startup -I ..\Libraries\SysConfig -I ..\Libraries\SysCore -I ..\Source\App -I ..\Source\Bsp -I ..\Source\Motor -I ..\Source\AD56xx-IC:\Users\Administrator\AppData\Local\Arm\Packs\Nationstech\N32G43x_DFP\0.9.6\firmware\CMSIS\device-D__UVISION_VERSION="534" -DN32G43X -DN32G435 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER-o .\obj\bsp_dac.o --omf_browse .\obj\bsp_dac.crf --depend .\obj\bsp_dac.d)
+I (..\Source\Bsp\bsp_dac.h)(0x6A50AACD)
+I (..\Libraries\SysConfig\n32g43x.h)(0x642E610F)
+I (..\Libraries\SysCore\core_cm4.h)(0x642E610F)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E3CC2)
+I (..\Libraries\SysCore\cmsis_version.h)(0x642E610F)
+I (..\Libraries\SysCore\cmsis_compiler.h)(0x642E610F)
+I (..\Libraries\SysCore\cmsis_armcc.h)(0x642E610F)
+I (..\Libraries\SysCore\mpu_armv7.h)(0x642E610F)
+I (..\Libraries\SysConfig\system_n32g43x.h)(0x642E610F)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5E8E3CC2)
+I (..\Libraries\SysConfig\n32g43x_conf.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_adc.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_can.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_comp.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_crc.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_dac.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_dbg.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_dma.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_exti.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_flash.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_gpio.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_i2c.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_iwdg.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_opamp.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_pwr.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_rcc.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_rtc.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_spi.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_tim.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_usart.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_lpuart.h)(0x642E610F)
+I (..\Libraries\Lib\inc\n32g43x_wwdg.h)(0x642E610F)
+I (..\Libraries\Lib\inc\misc.h)(0x642E610F)
+I (..\Source\Bsp\bsp_systick.h)(0x6A4DE9EF)
+F (..\Source\App\main.c)(0x6A50AFC1)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork -I ..\Libraries\Lib\inc -I ..\Libraries\Lib\src -I ..\Libraries\Startup -I ..\Libraries\SysConfig -I ..\Libraries\SysCore -I ..\Source\App -I ..\Source\Bsp -I ..\Source\Motor -I ..\Source\AD56xx-IC:\Users\Administrator\AppData\Local\Arm\Packs\Nationstech\N32G43x_DFP\0.9.6\firmware\CMSIS\device-D__UVISION_VERSION="534" -DN32G43X -DN32G435 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER-o .\obj\main.o --omf_browse .\obj\main.crf --depend .\obj\main.d)
 I (..\Source\Bsp\bsp_led.h)(0x6A4DB4AF)
 I (..\Libraries\SysConfig\n32g43x.h)(0x642E610F)
 I (..\Libraries\SysCore\core_cm4.h)(0x642E610F)
@@ -747,6 +817,8 @@ I (..\Libraries\Lib\inc\misc.h)(0x642E610F)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E3CC2)
 I (..\Source\Bsp\bsp_systick.h)(0x6A4DE9EF)
 I (..\Source\Bsp\bsp_uart.h)(0x6A4B14D1)
-I (..\Source\Bsp\bsp_key.h)(0x6A4E05D5)
+I (..\Source\Bsp\bsp_key.h)(0x6A506AC1)
 I (..\Source\Bsp\bsp_uart_cb.h)(0x6A4B26F8)
-F (..\ReadMe\ReadMe.txt)(0x6A4DB7CD)()
+I (..\Source\Bsp\bsp_opa.h)(0x6A506AB5)
+I (..\Source\Bsp\bsp_dac.h)(0x6A50AACD)
+F (..\ReadMe\ReadMe.txt)(0x6A506AE8)()

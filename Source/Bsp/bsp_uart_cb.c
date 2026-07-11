@@ -108,3 +108,4 @@ void bsp_debug_com_irq_cb(void)
 		(void)RS485_UART->DAT;
 	}
  }
+ 

@@ -38,3 +38,5 @@
 .\obj\main.o: ..\Source\Bsp\bsp_uart.h
 .\obj\main.o: ..\Source\Bsp\bsp_key.h
 .\obj\main.o: ..\Source\Bsp\bsp_uart_cb.h
+.\obj\main.o: ..\Source\Bsp\bsp_opa.h
+.\obj\main.o: ..\Source\Bsp\bsp_dac.h

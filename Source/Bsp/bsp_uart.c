@@ -297,4 +297,4 @@ static void bsp_uart_gpio_config(uart_com_e com)
 	while(USART_GetFlagStatus(DEBUG_UART,USART_FLAG_TXDE) == RESET);
 	return ch;
  }
-  
+ 

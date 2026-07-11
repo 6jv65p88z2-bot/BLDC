@@ -508,6 +508,16 @@
               <FileType>1</FileType>
               <FilePath>..\Source\Bsp\bsp_key.c</FilePath>
             </File>
+            <File>
+              <FileName>bsp_opa.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Source\Bsp\bsp_opa.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_dac.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Source\Bsp\bsp_dac.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
