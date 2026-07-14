@@ -35,3 +35,5 @@
 .\obj\n32g43x_it.o: ..\Libraries\Lib\inc\misc.h
 .\obj\n32g43x_it.o: ..\Source\Bsp\bsp_uart_cb.h
 .\obj\n32g43x_it.o: ..\Source\Bsp\bsp_uart.h
+.\obj\n32g43x_it.o: ..\Source\Bsp\bsp_pwm_cb.h
+.\obj\n32g43x_it.o: ..\Source\Bsp\bsp_pwm.h

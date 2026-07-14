@@ -13,7 +13,7 @@
 #define __BSP_TIMER_H__
 
 
-#include "n32g34x.h"
+#include "n32g43x.h"
 
 
 

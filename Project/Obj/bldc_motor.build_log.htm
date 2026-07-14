@@ -21,23 +21,20 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
 Dialog DLL:      TCM.DLL V1.53.0.0
  
 <h2>Project:</h2>
-D:\3_JKD_Stm32\8_BLDC\修改中\BLDC\Project\n32g43x_bldc_motor.uvprojx
-Project File Date:  07/13/2026
+d:\3_JKD_Stm32\8_BLDC\修改中\BLDC\Project\n32g43x_bldc_motor.uvprojx
+Project File Date:  07/14/2026
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\keil5\ARM\ARMCC\Bin'
 Build target 'MotorControl'
-compiling bsp_timer.c...
-..\Source\Bsp\bsp_timer.h(16): error:  #5: cannot open source input file "n32g34x.h": No such file or directory
-  #include "n32g34x.h"
-..\Source\Bsp\bsp_timer.c: 0 warnings, 1 error
-compiling bsp_uart_cb.c...
-..\Source\Bsp\bsp_uart_cb.c(112): warning:  #1-D: last line of file ends without a newline
-   
-..\Source\Bsp\bsp_uart_cb.c(16): warning:  #550-D: variable "rs485_recv_buf"  was set but never used
-  static uint8_t rs485_recv_buf[1024];
-..\Source\Bsp\bsp_uart_cb.c: 2 warnings, 0 errors
-".\Obj\bldc_motor.axf" - 1 Error(s), 2 Warning(s).
+compiling bsp_pwm.c...
+..\Source\Bsp\bsp_pwm.c(84): warning:  #513-D: a value of type "void *(*)(void)" cannot be assigned to an entity of type "void (*)(void)"
+  	pwm_irq_cb.pwm_cb = irq_cb;
+..\Source\Bsp\bsp_pwm.c: 1 warning, 0 errors
+linking...
+Program Size: Code=12772 RO-data=496 RW-data=192 ZI-data=6440  
+FromELF: creating hex file...
+".\Obj\bldc_motor.axf" - 0 Error(s), 1 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -50,8 +47,7 @@ Package Vendor: Nationstech
   D:\keil5\Nationstech\N32G43x_DFP\0.9.6\firmware\CMSIS\device
 
 <h2>Collection of Component Files used:</h2>
-Target not created.
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

@@ -566,7 +566,7 @@ I (..\Libraries\Lib\inc\n32g43x_usart.h)(0x6A47BEB3)
 I (..\Libraries\Lib\inc\n32g43x_lpuart.h)(0x6A47BEB3)
 I (..\Libraries\Lib\inc\n32g43x_wwdg.h)(0x6A47BEB3)
 I (..\Libraries\Lib\inc\misc.h)(0x6A47BEB3)
-F (..\Source\Bsp\n32g43x_it.c)(0x6A4A19C4)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork -I ..\Libraries\Lib\inc -I ..\Libraries\Lib\src -I ..\Libraries\Startup -I ..\Libraries\SysConfig -I ..\Libraries\SysCore -I ..\Source\App -I ..\Source\Bsp -I ..\Source\Motor -I ..\Source\AD56xx-ID:\keil5\Nationstech\N32G43x_DFP\0.9.6\firmware\CMSIS\device-D__UVISION_VERSION="536" -DN32G43X -DN32G435 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER-o .\obj\n32g43x_it.o --omf_browse .\obj\n32g43x_it.crf --depend .\obj\n32g43x_it.d)
+F (..\Source\Bsp\n32g43x_it.c)(0x6A56524B)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork -I ..\Libraries\Lib\inc -I ..\Libraries\Lib\src -I ..\Libraries\Startup -I ..\Libraries\SysConfig -I ..\Libraries\SysCore -I ..\Source\App -I ..\Source\Bsp -I ..\Source\Motor -I ..\Source\AD56xx-ID:\keil5\Nationstech\N32G43x_DFP\0.9.6\firmware\CMSIS\device-D__UVISION_VERSION="536" -DN32G43X -DN32G435 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER-o .\obj\n32g43x_it.o --omf_browse .\obj\n32g43x_it.crf --depend .\obj\n32g43x_it.d)
 I (..\Source\Bsp\n32g43x_it.h)(0x6A47BEB3)
 I (..\Libraries\SysConfig\n32g43x.h)(0x6A47BEB3)
 I (..\Libraries\SysCore\core_cm4.h)(0x6A47BEB3)
@@ -602,6 +602,8 @@ I (..\Libraries\Lib\inc\n32g43x_wwdg.h)(0x6A47BEB3)
 I (..\Libraries\Lib\inc\misc.h)(0x6A47BEB3)
 I (..\Source\Bsp\bsp_uart_cb.h)(0x6A4BC784)
 I (..\Source\Bsp\bsp_uart.h)(0x6A4BC784)
+I (..\Source\Bsp\bsp_pwm_cb.h)(0x6A565238)
+I (..\Source\Bsp\bsp_pwm.h)(0x6A5652E4)
 F (..\Source\Bsp\bsp_uart_cb.c)(0x6A5501CD)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork -I ..\Libraries\Lib\inc -I ..\Libraries\Lib\src -I ..\Libraries\Startup -I ..\Libraries\SysConfig -I ..\Libraries\SysCore -I ..\Source\App -I ..\Source\Bsp -I ..\Source\Motor -I ..\Source\AD56xx-ID:\keil5\Nationstech\N32G43x_DFP\0.9.6\firmware\CMSIS\device-D__UVISION_VERSION="536" -DN32G43X -DN32G435 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER-o .\obj\bsp_uart_cb.o --omf_browse .\obj\bsp_uart_cb.crf --depend .\obj\bsp_uart_cb.d)
 I (..\Source\Bsp\bsp_uart_cb.h)(0x6A4BC784)
 I (..\Libraries\SysConfig\n32g43x.h)(0x6A47BEB3)
@@ -780,11 +782,111 @@ I (..\Libraries\Lib\inc\n32g43x_lpuart.h)(0x6A47BEB3)
 I (..\Libraries\Lib\inc\n32g43x_wwdg.h)(0x6A47BEB3)
 I (..\Libraries\Lib\inc\misc.h)(0x6A47BEB3)
 I (..\Source\Bsp\bsp_systick.h)(0x6A54FD88)
-F (..\Source\Bsp\bsp_timer.c)(0x6A550167)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork -I ..\Libraries\Lib\inc -I ..\Libraries\Lib\src -I ..\Libraries\Startup -I ..\Libraries\SysConfig -I ..\Libraries\SysCore -I ..\Source\App -I ..\Source\Bsp -I ..\Source\Motor -I ..\Source\AD56xx-ID:\keil5\Nationstech\N32G43x_DFP\0.9.6\firmware\CMSIS\device-D__UVISION_VERSION="536" -DN32G43X -DN32G435 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER-o .\obj\bsp_timer.o --omf_browse .\obj\bsp_timer.crf --depend .\obj\bsp_timer.d)
-I (..\Source\Bsp\bsp_timer.h)(0x6A54FE77)
-F (..\Source\Bsp\bsp_pwm.c)(0x6A5501BD)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork -I ..\Libraries\Lib\inc -I ..\Libraries\Lib\src -I ..\Libraries\Startup -I ..\Libraries\SysConfig -I ..\Libraries\SysCore -I ..\Source\App -I ..\Source\Bsp -I ..\Source\Motor -I ..\Source\AD56xx-ID:\keil5\Nationstech\N32G43x_DFP\0.9.6\firmware\CMSIS\device-D__UVISION_VERSION="536" -DN32G43X -DN32G435 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER-o .\obj\bsp_pwm.o --omf_browse .\obj\bsp_pwm.crf --depend .\obj\bsp_pwm.d)
-I (..\Source\Bsp\bsp_pwm.h)(0x6A5501AE)
-F (..\Source\App\main.c)(0x6A54FD88)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork -I ..\Libraries\Lib\inc -I ..\Libraries\Lib\src -I ..\Libraries\Startup -I ..\Libraries\SysConfig -I ..\Libraries\SysCore -I ..\Source\App -I ..\Source\Bsp -I ..\Source\Motor -I ..\Source\AD56xx-ID:\keil5\Nationstech\N32G43x_DFP\0.9.6\firmware\CMSIS\device-D__UVISION_VERSION="536" -DN32G43X -DN32G435 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER-o .\obj\main.o --omf_browse .\obj\main.crf --depend .\obj\main.d)
+F (..\Source\Bsp\bsp_timer.c)(0x6A5652A1)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork -I ..\Libraries\Lib\inc -I ..\Libraries\Lib\src -I ..\Libraries\Startup -I ..\Libraries\SysConfig -I ..\Libraries\SysCore -I ..\Source\App -I ..\Source\Bsp -I ..\Source\Motor -I ..\Source\AD56xx-ID:\keil5\Nationstech\N32G43x_DFP\0.9.6\firmware\CMSIS\device-D__UVISION_VERSION="536" -DN32G43X -DN32G435 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER-o .\obj\bsp_timer.o --omf_browse .\obj\bsp_timer.crf --depend .\obj\bsp_timer.d)
+I (..\Source\Bsp\bsp_timer.h)(0x6A565293)
+I (..\Libraries\SysConfig\n32g43x.h)(0x6A47BEB3)
+I (..\Libraries\SysCore\core_cm4.h)(0x6A47BEB3)
+I (D:\keil5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (..\Libraries\SysCore\cmsis_version.h)(0x6A47BEB3)
+I (..\Libraries\SysCore\cmsis_compiler.h)(0x6A47BEB3)
+I (..\Libraries\SysCore\cmsis_armcc.h)(0x6A47BEB3)
+I (..\Libraries\SysCore\mpu_armv7.h)(0x6A47BEB3)
+I (..\Libraries\SysConfig\system_n32g43x.h)(0x6A47BEB3)
+I (D:\keil5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (..\Libraries\SysConfig\n32g43x_conf.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_adc.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_can.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_comp.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_crc.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_dac.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_dbg.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_dma.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_exti.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_flash.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_gpio.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_i2c.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_iwdg.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_opamp.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_pwr.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_rcc.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_rtc.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_spi.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_tim.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_usart.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_lpuart.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_wwdg.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\misc.h)(0x6A47BEB3)
+F (..\Source\Bsp\bsp_pwm.c)(0x6A565335)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork -I ..\Libraries\Lib\inc -I ..\Libraries\Lib\src -I ..\Libraries\Startup -I ..\Libraries\SysConfig -I ..\Libraries\SysCore -I ..\Source\App -I ..\Source\Bsp -I ..\Source\Motor -I ..\Source\AD56xx-ID:\keil5\Nationstech\N32G43x_DFP\0.9.6\firmware\CMSIS\device-D__UVISION_VERSION="536" -DN32G43X -DN32G435 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER-o .\obj\bsp_pwm.o --omf_browse .\obj\bsp_pwm.crf --depend .\obj\bsp_pwm.d)
+I (..\Source\Bsp\bsp_pwm.h)(0x6A5652E4)
+I (..\Libraries\SysConfig\n32g43x.h)(0x6A47BEB3)
+I (..\Libraries\SysCore\core_cm4.h)(0x6A47BEB3)
+I (D:\keil5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (..\Libraries\SysCore\cmsis_version.h)(0x6A47BEB3)
+I (..\Libraries\SysCore\cmsis_compiler.h)(0x6A47BEB3)
+I (..\Libraries\SysCore\cmsis_armcc.h)(0x6A47BEB3)
+I (..\Libraries\SysCore\mpu_armv7.h)(0x6A47BEB3)
+I (..\Libraries\SysConfig\system_n32g43x.h)(0x6A47BEB3)
+I (D:\keil5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (..\Libraries\SysConfig\n32g43x_conf.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_adc.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_can.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_comp.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_crc.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_dac.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_dbg.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_dma.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_exti.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_flash.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_gpio.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_i2c.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_iwdg.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_opamp.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_pwr.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_rcc.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_rtc.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_spi.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_tim.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_usart.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_lpuart.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_wwdg.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\misc.h)(0x6A47BEB3)
+I (D:\keil5\ARM\ARMCC\include\stdio.h)(0x60252374)
+F (..\Source\Bsp\bsp_pwm_cb.c)(0x6A5652E4)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork -I ..\Libraries\Lib\inc -I ..\Libraries\Lib\src -I ..\Libraries\Startup -I ..\Libraries\SysConfig -I ..\Libraries\SysCore -I ..\Source\App -I ..\Source\Bsp -I ..\Source\Motor -I ..\Source\AD56xx-ID:\keil5\Nationstech\N32G43x_DFP\0.9.6\firmware\CMSIS\device-D__UVISION_VERSION="536" -DN32G43X -DN32G435 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER-o .\obj\bsp_pwm_cb.o --omf_browse .\obj\bsp_pwm_cb.crf --depend .\obj\bsp_pwm_cb.d)
+I (..\Source\Bsp\bsp_pwm_cb.h)(0x6A565238)
+I (..\Libraries\SysConfig\n32g43x.h)(0x6A47BEB3)
+I (..\Libraries\SysCore\core_cm4.h)(0x6A47BEB3)
+I (D:\keil5\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (..\Libraries\SysCore\cmsis_version.h)(0x6A47BEB3)
+I (..\Libraries\SysCore\cmsis_compiler.h)(0x6A47BEB3)
+I (..\Libraries\SysCore\cmsis_armcc.h)(0x6A47BEB3)
+I (..\Libraries\SysCore\mpu_armv7.h)(0x6A47BEB3)
+I (..\Libraries\SysConfig\system_n32g43x.h)(0x6A47BEB3)
+I (D:\keil5\ARM\ARMCC\include\stdbool.h)(0x6025237C)
+I (..\Libraries\SysConfig\n32g43x_conf.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_adc.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_can.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_comp.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_crc.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_dac.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_dbg.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_dma.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_exti.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_flash.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_gpio.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_i2c.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_iwdg.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_opamp.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_pwr.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_rcc.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_rtc.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_spi.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_tim.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_usart.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_lpuart.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\n32g43x_wwdg.h)(0x6A47BEB3)
+I (..\Libraries\Lib\inc\misc.h)(0x6A47BEB3)
+I (..\Source\Bsp\bsp_pwm.h)(0x6A5652E4)
+F (..\Source\App\main.c)(0x6A565046)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O0 --apcs=interwork -I ..\Libraries\Lib\inc -I ..\Libraries\Lib\src -I ..\Libraries\Startup -I ..\Libraries\SysConfig -I ..\Libraries\SysCore -I ..\Source\App -I ..\Source\Bsp -I ..\Source\Motor -I ..\Source\AD56xx-ID:\keil5\Nationstech\N32G43x_DFP\0.9.6\firmware\CMSIS\device-D__UVISION_VERSION="536" -DN32G43X -DN32G435 -DUSE_STDPERIPH_DRIVER -DUSE_STDPERIPH_DRIVER-o .\obj\main.o --omf_browse .\obj\main.crf --depend .\obj\main.d)
 I (..\Source\Bsp\bsp_led.h)(0x6A54FD88)
 I (..\Libraries\SysConfig\n32g43x.h)(0x6A47BEB3)
 I (..\Libraries\SysCore\core_cm4.h)(0x6A47BEB3)
@@ -823,6 +925,8 @@ I (..\Source\Bsp\bsp_systick.h)(0x6A54FD88)
 I (..\Source\Bsp\bsp_uart.h)(0x6A4BC784)
 I (..\Source\Bsp\bsp_key.h)(0x6A54FD88)
 I (..\Source\Bsp\bsp_uart_cb.h)(0x6A4BC784)
+I (..\Source\Bsp\bsp_pwm_cb.h)(0x6A565238)
+I (..\Source\Bsp\bsp_pwm.h)(0x6A5652E4)
 I (..\Source\Bsp\bsp_opa.h)(0x6A54FD88)
 I (..\Source\Bsp\bsp_dac.h)(0x6A54FD88)
-F (..\ReadMe\ReadMe.txt)(0x6A54FDCF)()
+F (..\ReadMe\ReadMe.txt)(0x6A5653B3)()

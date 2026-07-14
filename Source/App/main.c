@@ -12,9 +12,11 @@
 #include "bsp_uart.h"
 #include "bsp_key.h"
 #include "bsp_uart_cb.h"
+#include "bsp_pwm_cb.h"
 #include "bsp_systick.h"
 #include "bsp_opa.h"
 #include "bsp_dac.h"
+#include "bsp_pwm.h"
 
 #include "misc.h"
 
@@ -46,6 +48,7 @@ int main(void)
 	bsp_opa1_init();
 	bsp_dac_init(300);
 	//bsp_led_ctrl(LED1,LED_ON);	//点亮LED1
+	bsp_pwm_init(bsp_pwm_irq_cb);	//初始化PWM
 
 	while(1)
 	{

@@ -1,13 +1,11 @@
-*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\keil5\ARM\ARMCC\Bin'
 Build target 'MotorControl'
-compiling main.c...
-compiling bsp_opa.c...
-..\Source\Bsp\bsp_opa.c(101): warning:  #1-D: last line of file ends without a newline
-  }
-..\Source\Bsp\bsp_opa.c: 1 warning, 0 errors
-compiling bsp_key.c...
+compiling bsp_pwm.c...
+..\Source\Bsp\bsp_pwm.c(84): warning:  #513-D: a value of type "void *(*)(void)" cannot be assigned to an entity of type "void (*)(void)"
+  	pwm_irq_cb.pwm_cb = irq_cb;
+..\Source\Bsp\bsp_pwm.c: 1 warning, 0 errors
 linking...
-Program Size: Code=7536 RO-data=496 RW-data=184 ZI-data=6440  
+Program Size: Code=12772 RO-data=496 RW-data=192 ZI-data=6440  
 FromELF: creating hex file...
 ".\Obj\bldc_motor.axf" - 0 Error(s), 1 Warning(s).
-Build Time Elapsed:  00:00:00
+Build Time Elapsed:  00:00:02

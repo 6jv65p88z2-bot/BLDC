@@ -34,6 +34,7 @@
  */
 #include "n32g43x_it.h"
 #include "bsp_uart_cb.h"
+#include "bsp_pwm_cb.h"
 
 /** @addtogroup N32G43X_StdPeriph_Template
  * @{
@@ -187,7 +188,7 @@ void TIM1_BRK_IRQHandler(void)
  */
 void TIM1_UP_IRQHandler(void)
 {
-	
+	pwm_irq_cb.pwm_cb();
 }
 
 /**
