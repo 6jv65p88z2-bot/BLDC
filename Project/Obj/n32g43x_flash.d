@@ -2,13 +2,13 @@
 .\obj\n32g43x_flash.o: ..\Libraries\Lib\inc\n32g43x_flash.h
 .\obj\n32g43x_flash.o: ..\Libraries\SysConfig\n32g43x.h
 .\obj\n32g43x_flash.o: ..\Libraries\SysCore\core_cm4.h
-.\obj\n32g43x_flash.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\n32g43x_flash.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\obj\n32g43x_flash.o: ..\Libraries\SysCore\cmsis_version.h
 .\obj\n32g43x_flash.o: ..\Libraries\SysCore\cmsis_compiler.h
 .\obj\n32g43x_flash.o: ..\Libraries\SysCore\cmsis_armcc.h
 .\obj\n32g43x_flash.o: ..\Libraries\SysCore\mpu_armv7.h
 .\obj\n32g43x_flash.o: ..\Libraries\SysConfig\system_n32g43x.h
-.\obj\n32g43x_flash.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\obj\n32g43x_flash.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\obj\n32g43x_flash.o: ..\Libraries\SysConfig\n32g43x_conf.h
 .\obj\n32g43x_flash.o: ..\Libraries\Lib\inc\n32g43x_adc.h
 .\obj\n32g43x_flash.o: ..\Libraries\SysConfig\n32g43x.h

@@ -2,13 +2,13 @@
 .\obj\main.o: ..\Source\Bsp\bsp_led.h
 .\obj\main.o: ..\Libraries\SysConfig\n32g43x.h
 .\obj\main.o: ..\Libraries\SysCore\core_cm4.h
-.\obj\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\main.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\obj\main.o: ..\Libraries\SysCore\cmsis_version.h
 .\obj\main.o: ..\Libraries\SysCore\cmsis_compiler.h
 .\obj\main.o: ..\Libraries\SysCore\cmsis_armcc.h
 .\obj\main.o: ..\Libraries\SysCore\mpu_armv7.h
 .\obj\main.o: ..\Libraries\SysConfig\system_n32g43x.h
-.\obj\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\obj\main.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\obj\main.o: ..\Libraries\SysConfig\n32g43x_conf.h
 .\obj\main.o: ..\Libraries\Lib\inc\n32g43x_adc.h
 .\obj\main.o: ..\Libraries\SysConfig\n32g43x.h
@@ -33,7 +33,7 @@
 .\obj\main.o: ..\Libraries\Lib\inc\n32g43x_lpuart.h
 .\obj\main.o: ..\Libraries\Lib\inc\n32g43x_wwdg.h
 .\obj\main.o: ..\Libraries\Lib\inc\misc.h
-.\obj\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\obj\main.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
 .\obj\main.o: ..\Source\Bsp\bsp_systick.h
 .\obj\main.o: ..\Source\Bsp\bsp_uart.h
 .\obj\main.o: ..\Source\Bsp\bsp_key.h

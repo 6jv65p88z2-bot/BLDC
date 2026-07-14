@@ -2,13 +2,13 @@
 .\obj\misc.o: ..\Libraries\Lib\inc\misc.h
 .\obj\misc.o: ..\Libraries\SysConfig\n32g43x.h
 .\obj\misc.o: ..\Libraries\SysCore\core_cm4.h
-.\obj\misc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\misc.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\obj\misc.o: ..\Libraries\SysCore\cmsis_version.h
 .\obj\misc.o: ..\Libraries\SysCore\cmsis_compiler.h
 .\obj\misc.o: ..\Libraries\SysCore\cmsis_armcc.h
 .\obj\misc.o: ..\Libraries\SysCore\mpu_armv7.h
 .\obj\misc.o: ..\Libraries\SysConfig\system_n32g43x.h
-.\obj\misc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\obj\misc.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\obj\misc.o: ..\Libraries\SysConfig\n32g43x_conf.h
 .\obj\misc.o: ..\Libraries\Lib\inc\n32g43x_adc.h
 .\obj\misc.o: ..\Libraries\SysConfig\n32g43x.h

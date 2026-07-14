@@ -2,13 +2,13 @@
 .\obj\bsp_key.o: ..\Source\Bsp\bsp_key.h
 .\obj\bsp_key.o: ..\Libraries\SysConfig\n32g43x.h
 .\obj\bsp_key.o: ..\Libraries\SysCore\core_cm4.h
-.\obj\bsp_key.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\bsp_key.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\obj\bsp_key.o: ..\Libraries\SysCore\cmsis_version.h
 .\obj\bsp_key.o: ..\Libraries\SysCore\cmsis_compiler.h
 .\obj\bsp_key.o: ..\Libraries\SysCore\cmsis_armcc.h
 .\obj\bsp_key.o: ..\Libraries\SysCore\mpu_armv7.h
 .\obj\bsp_key.o: ..\Libraries\SysConfig\system_n32g43x.h
-.\obj\bsp_key.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\obj\bsp_key.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\obj\bsp_key.o: ..\Libraries\SysConfig\n32g43x_conf.h
 .\obj\bsp_key.o: ..\Libraries\Lib\inc\n32g43x_adc.h
 .\obj\bsp_key.o: ..\Libraries\SysConfig\n32g43x.h
@@ -34,4 +34,4 @@
 .\obj\bsp_key.o: ..\Libraries\Lib\inc\n32g43x_wwdg.h
 .\obj\bsp_key.o: ..\Libraries\Lib\inc\misc.h
 .\obj\bsp_key.o: ..\Source\Bsp\bsp_systick.h
-.\obj\bsp_key.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\obj\bsp_key.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h

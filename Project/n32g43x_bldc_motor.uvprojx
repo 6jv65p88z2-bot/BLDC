@@ -518,6 +518,16 @@
               <FileType>1</FileType>
               <FilePath>..\Source\Bsp\bsp_dac.c</FilePath>
             </File>
+            <File>
+              <FileName>bsp_timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Source\Bsp\bsp_timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_pwm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Source\Bsp\bsp_pwm.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

@@ -2,13 +2,13 @@
 .\obj\bsp_opa.o: ..\Source\Bsp\bsp_opa.h
 .\obj\bsp_opa.o: ..\Libraries\SysConfig\n32g43x.h
 .\obj\bsp_opa.o: ..\Libraries\SysCore\core_cm4.h
-.\obj\bsp_opa.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\bsp_opa.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\obj\bsp_opa.o: ..\Libraries\SysCore\cmsis_version.h
 .\obj\bsp_opa.o: ..\Libraries\SysCore\cmsis_compiler.h
 .\obj\bsp_opa.o: ..\Libraries\SysCore\cmsis_armcc.h
 .\obj\bsp_opa.o: ..\Libraries\SysCore\mpu_armv7.h
 .\obj\bsp_opa.o: ..\Libraries\SysConfig\system_n32g43x.h
-.\obj\bsp_opa.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\obj\bsp_opa.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\obj\bsp_opa.o: ..\Libraries\SysConfig\n32g43x_conf.h
 .\obj\bsp_opa.o: ..\Libraries\Lib\inc\n32g43x_adc.h
 .\obj\bsp_opa.o: ..\Libraries\SysConfig\n32g43x.h
