@@ -26,6 +26,7 @@
 ".\obj\bsp_timer.o"
 ".\obj\bsp_pwm.o"
 ".\obj\bsp_pwm_cb.o"
+".\obj\bsp_io.o"
 ".\obj\main.o"
 --library_type=microlib --strict --scatter ".\Obj\bldc_motor.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols

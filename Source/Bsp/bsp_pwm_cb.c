@@ -20,20 +20,20 @@ static uint16_t test_num = 0;
   ******************************************************************************/
 void bsp_pwm_irq_cb(void)
 {
-	if(TIM_GetIntStatus(TIM1,TIM_FLAG_UPDATE) != RESET)
+	if(TIM_GetIntStatus(TIM1,TIM_INT_UPDATE) != RESET)
 	{
-		TIM_ClrIntPendingBit(TIM1,TIM_FLAG_UPDATE);
+		TIM_ClrIntPendingBit(TIM1,TIM_INT_UPDATE);
 		test_num ++;
 		if(test_num % 2 == 0)
 		{
 			//输出高电平
-			ADC_TEST_TO_HIGH();
+			ADC_TEST_IO_HIGH();
 		}
 		else
 		{
 			//输出低电平
 			
-			ADC_TEST_TO_LOW();
+			ADC_TEST_IO_LOW();
 		}
 	}
 }

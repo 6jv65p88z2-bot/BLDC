@@ -15,10 +15,7 @@
 
 #include "n32g43x.h"
 #include "bsp_pwm.h"
-
-#define ADC_TEST_TO_HIGH()	GPIO_SetBits(GPIOC,GPIO_PIN_5)
-#define ADC_TEST_TO_LOW()	GPIO_ResetBits(GPIOC,GPIO_PIN_5)
-
+#include "bsp_io.h"
 
 
 void bsp_pwm_irq_cb(void);

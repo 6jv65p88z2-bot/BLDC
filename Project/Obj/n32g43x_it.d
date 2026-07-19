@@ -37,3 +37,4 @@
 .\obj\n32g43x_it.o: ..\Source\Bsp\bsp_uart.h
 .\obj\n32g43x_it.o: ..\Source\Bsp\bsp_pwm_cb.h
 .\obj\n32g43x_it.o: ..\Source\Bsp\bsp_pwm.h
+.\obj\n32g43x_it.o: ..\Source\Bsp\bsp_io.h

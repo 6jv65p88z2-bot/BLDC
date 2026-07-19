@@ -533,6 +533,11 @@
               <FileType>1</FileType>
               <FilePath>..\Source\Bsp\bsp_pwm_cb.c</FilePath>
             </File>
+            <File>
+              <FileName>bsp_io.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Source\Bsp\bsp_io.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

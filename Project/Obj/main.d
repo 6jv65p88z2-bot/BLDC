@@ -40,5 +40,6 @@
 .\obj\main.o: ..\Source\Bsp\bsp_uart_cb.h
 .\obj\main.o: ..\Source\Bsp\bsp_pwm_cb.h
 .\obj\main.o: ..\Source\Bsp\bsp_pwm.h
+.\obj\main.o: ..\Source\Bsp\bsp_io.h
 .\obj\main.o: ..\Source\Bsp\bsp_opa.h
 .\obj\main.o: ..\Source\Bsp\bsp_dac.h

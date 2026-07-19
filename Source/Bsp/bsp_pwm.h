@@ -17,13 +17,15 @@
 
 typedef struct
 {
-	void (*pwm_cb)(void);
+	void (*pwm_cb)(void);			//TIM1的PWM
+	void (*pwm_bk_cb)(void);		//TIM7的配置 用来配置OUTPUT CTRL
 }pwm_irq_cb_t;
 
 extern pwm_irq_cb_t pwm_irq_cb;
 
 
-void bsp_pwm_init(void (*irq_cb(void)));
+void bsp_pwm_init(void (*irq_cb)(void));
+//void bsp_pwm_init(void (*irq_bk_cb)(void),void (*irq_cb)(void));
 
 
 #endif

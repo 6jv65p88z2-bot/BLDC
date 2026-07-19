@@ -34,3 +34,4 @@
 .\obj\bsp_pwm_cb.o: ..\Libraries\Lib\inc\n32g43x_wwdg.h
 .\obj\bsp_pwm_cb.o: ..\Libraries\Lib\inc\misc.h
 .\obj\bsp_pwm_cb.o: ..\Source\Bsp\bsp_pwm.h
+.\obj\bsp_pwm_cb.o: ..\Source\Bsp\bsp_io.h
