@@ -45,8 +45,8 @@ int main(void)
 	bsp_io_init();
 	bsp_led_init();
 	bsp_key_init();
-	bsp_opa1_init();
 	bsp_dac_init(300);
+	bsp_opa1_init();
 	
 	bsp_pwm_init(bsp_pwm_irq_cb);	//初始化PWM
 	

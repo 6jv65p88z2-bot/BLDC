@@ -103,7 +103,7 @@ static void bsp_pwm_config(void)
 		TIM_TimBaseInitStructure.Period = 1000;										//计数周期（自动重装载值）		计数1000次就是1ms 
 		//预分频写入值越大，counter计数器越慢；反之，预分频值越小，计数频率越高。
 		TIM_TimBaseInitStructure.Prescaler = 108 - 1;  									//预分频值为108  1MHZ = 1000 000hz  T = 1/f = 1/1000000 = 0.000001s = 1us 也就是1us计数1次
-		TIM_TimBaseInitStructure.RepetCnt = 0;										//重复计数
+		TIM_TimBaseInitStructure.RepetCnt = 0;										//重复� �数
 		
 		TIM_InitTimeBase(TIM1,&TIM_TimBaseInitStructure);
 		TIM_ConfigInt(TIM1,TIM_INT_UPDATE,ENABLE);									//设置定时器的中断，使能
@@ -191,4 +191,70 @@ void bsp_pwm_init(void (*irq_cb)(void))
 	bsp_pwm_rcc_config();
 	bsp_pwm_io_config();
 	bsp_pwm_config();	
+}
+
+/**
+  ******************************************************************************
+  * @brief  设置Pwm的占空比
+  * @param  duty，占空比的比例
+  * @retval None.
+  ******************************************************************************/
+void bsp_pwm_set_duty(uint16_t duty)
+{
+	//1.限幅比较
+	if(duty > PWM_PERIOD_MAX) duty = PWM_PERIOD_MAX;
+	
+	TIM1->CCDAT1 = duty;	// U相占空比
+	TIM1->CCDAT2 = duty;	// V相占空比
+	TIM1->CCDAT3 = duty;	// W相占空比
+	
+	
+	//2.占空比为0时，CC4依然要触发ADC转换
+	if(duty == 0)
+	{
+		/*
+		占空比为0条件下：需要ch4上升沿触发adc转换，此时ch4占空比不能为0,
+		默认占空比设置为：满占空比/8 = 12.5%
+		*/
+		duty = PWM_PERIOD_MAX;
+	}
+	//3.设置TIM1的CH4 占空比
+	/*设定timer1 ch4通道占空比，此通道pwm上升沿触发ADC采集*/
+	TIM1->CCDAT4 = duty >> 3 ;	//timer1 ch4上升沿触发adc转换pwm占空比
+}
+
+
+/**
+  ******************************************************************************
+  * @brief  关闭所有的占空比
+  * @retval None.
+  ******************************************************************************/
+void bsp_all_pwm_close(void)
+{
+	uint16_t tmp;
+	tmp = TIM1->CCEN;
+	
+	tmp &= (uint16_t)(~((uint16_t)TIM_CCEN_CC1EN));
+	tmp &= (uint16_t)(~((uint16_t)TIM_CCEN_CC2EN));
+	tmp &= (uint16_t)(~((uint16_t)TIM_CCEN_CC3EN));
+	
+	TIM1->CCEN = tmp;
+
+}
+
+/**
+  ******************************************************************************
+  * @brief  打开所有的占空比
+  * @retval None.
+  ******************************************************************************/
+void bsp_all_pwm_open(void)
+{
+	uint16_t tmp;
+	tmp = TIM1->CCEN;
+	
+	tmp |= (uint16_t)(~((uint16_t)TIM_CCEN_CC1EN));
+	tmp |= (uint16_t)(~((uint16_t)TIM_CCEN_CC2EN));
+	tmp |= (uint16_t)(~((uint16_t)TIM_CCEN_CC3EN));
+	
+	TIM1->CCEN = tmp;
 }
