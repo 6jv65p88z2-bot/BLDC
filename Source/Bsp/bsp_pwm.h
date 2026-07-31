@@ -31,8 +31,8 @@ typedef struct
 extern pwm_irq_cb_t pwm_irq_cb;
 
 
-void bsp_pwm_init(void (*irq_cb)(void));
-//void bsp_pwm_init(void (*irq_bk_cb)(void),void (*irq_cb)(void));
+//void bsp_pwm_init(void (*irq_cb)(void));
+void bsp_pwm_init(void (*irq_bk_cb)(void),void (*irq_cb)(void));
 void bsp_all_pwm_open(void);
 void bsp_all_pwm_close(void);
 void bsp_pwm_set_duty(uint16_t duty);

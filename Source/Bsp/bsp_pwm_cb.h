@@ -18,6 +18,7 @@
 #include "bsp_io.h"
 
 
-void bsp_pwm_irq_cb(void);
+void bsp_pwm_irq_cb(void);			//TIM1的更新中断 回调函数
+void bsp_pwm_irq_bk_cb(void);		//TIM1的刹车中断 回调函数
 
 #endif

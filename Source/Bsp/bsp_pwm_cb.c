@@ -37,3 +37,20 @@ void bsp_pwm_irq_cb(void)
 		}
 	}
 }
+
+
+/**
+  ******************************************************************************
+  * @brief  timer1的刹车中断回调函数实现
+  * @param  com:端口号
+  * @retval None.
+  ******************************************************************************/
+void bsp_pwm_irq_bk_cb(void)
+{
+	if(TIM_GetIntStatus(TIM1,TIM_INT_BREAK) != RESET)
+	{
+		TIM_ClrIntPendingBit(TIM1,TIM_INT_BREAK);		//清除刹车触发的中断标志位
+	}	
+}
+
+

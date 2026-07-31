@@ -42,13 +42,13 @@ int main(void)
   	 
 	//bsp_uart_send_data(RS485_COM,test_data,3);
   //printf("test\r\n");
-	bsp_io_init();
-	bsp_led_init();
-	bsp_key_init();
-	bsp_dac_init(300);
-	bsp_opa1_init();
+	bsp_io_init();			//PC5引脚初始化,目的是做DAC的输出值测试
+	bsp_led_init();			//LED初始化
+	bsp_key_init();			//按键初始化
+	bsp_dac_init(300);		//DAC初始化
+	bsp_opa1_init();		//运放OPA1初始化
 	
-	bsp_pwm_init(bsp_pwm_irq_cb);	//初始化PWM
+	bsp_pwm_init(bsp_pwm_irq_bk_cb,bsp_pwm_irq_cb);	//初始化PWM
 	
 		
 	bsp_led_ctrl(LED1, LED_ON);

@@ -62,15 +62,28 @@ static void bsp_pwm_io_config(void)
 	
 #if 1
 	// Configure TIM1, CH1N(PB13),CH2N(PB14),CH3N(PB15) as alternate function push-pull
+	//为了抓取到PB13 PB14 PB15的3个引脚
     GPIO_InitStructure.Pin        = GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15;
 	GPIO_InitPeripheral(GPIOB,&GPIO_InitStructure);
 #else
+	//上管PWM控制,下关常开或常闭方式控制	(暂时还没有用到这里)
 	GPIO_InitStruct(&GPIO_InitStructure);
     GPIO_InitStructure.GPIO_Current = GPIO_DC_4mA;
     GPIO_InitStructure.GPIO_Mode  = GPIO_Mode_Out_PP;
     GPIO_InitStructure.Pin        = GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15;
     GPIO_InitPeripheral(GPIOB, &GPIO_InitStructure);
 #endif	
+	
+#if 1
+	//PB12 刹车引脚设置
+	GPIO_InitStruct(&GPIO_InitStructure);
+	GPIO_InitStructure.GPIO_Current = GPIO_DC_4mA;
+	GPIO_InitStructure.GPIO_Alternate = GPIO_AF5_TIM1;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;		//复用推挽输出
+	GPIO_InitStructure.GPIO_Pull = GPIO_Pull_Down;
+	GPIO_InitStructure.Pin = GPIO_PIN_12;
+	GPIO_InitPeripheral(GPIOB,&GPIO_InitStructure);
+#endif
 }
 
 
@@ -88,8 +101,8 @@ static void bsp_pwm_config(void)
 	TIM_TimeBaseInitType TIM_TimBaseInitStructure;
 	OCInitType TIM1_OCInitStructure;	//配置TIM1的输出比较器
 	NVIC_InitType NVIC_InitStructure;
-
-	#if 0
+	TIM_BDTRInitType TIM_BDTRInitStructure;		//刹车功能结构体
+#if 0
 		/*
 			1.目标：产生的定时器中断1ms1次
 			2.系统主频：108MHZ
@@ -117,7 +130,7 @@ static void bsp_pwm_config(void)
 		//定时器1开启
 		TIM_Enable(TIM1,ENABLE);													//使能TIM1
 	
-	#else
+#else
 		TimerPeriod = MAIN_FREQUENCY / PWM_FREQUENCY  - 1;		//5399
 		TIM_DeInit(TIM1);		//禁用TIM1
 		TIM_InitTimBaseStruct(&TIM_TimBaseInitStructure);							//对TIM1进行默认初始化
@@ -164,9 +177,52 @@ static void bsp_pwm_config(void)
 		//TIM1 counter enable
 		TIM_Enable(TIM1, ENABLE);
 		TIM_EnableCtrlPwmOutputs(TIM1,ENABLE);
-	#endif
+#endif
 
 
+#if 1
+	//刹车功能的配置
+	//这个OSSI和OSSR，是否有效，取决于三相MOS管的下桥是否配置为PWM控制，若配置了，那么这OSSI和OSSR就会有效。现在的情况是无效的
+	TIM_BDTRInitStructure.OssrState = TIM_OSSI_STATE_ENABLE;		//默认设置为enable
+	TIM_BDTRInitStructure.OssrState = TIM_OSSR_STATE_ENABLE;		//默认设置为enable
+	
+	TIM_BDTRInitStructure.Break = TIM_BREAK_IN_ENABLE;		//打开刹车信号
+	TIM_BDTRInitStructure.DeadTime = 0;		//死区时间，因为这不是互补PWM，所以死区时间不用设置。
+	TIM_BDTRInitStructure.AutomaticOutput = TIM_AUTO_OUTPUT_DISABLE;
+	
+	/*
+	TIM_AUTO_OUTPUT_ENABLE: 当刹车信号触发后(PB12 0->1)，6路PWM输出全部关闭输出。
+						    当刹车信号解除后(PB12 1->0)，6路PWM正常输出
+	TIM_AUTO_OUTPUT_DISABLE:当刹车信号触发后(PB12 0->1)，6路PWM输出全部关闭输出。
+							当刹车信号解除后(PB12 1->0)，6路PWM保持触发后状态，全部关闭输出
+								此时需要注意的是：PWM输出关闭后，TIM1_CH4通道也无法输出PWM，
+								所以ADC无法通过TIM1_CH4上升沿通道触发进行采集转换
+	*/
+	
+	TIM_BDTRInitStructure.BreakPolarity = TIM_BREAK_POLARITY_HIGH;		//高电平触发
+	
+	TIM_BDTRInitStructure.LockLevel = TIM_LOCK_LEVEL_OFF; 				//防止软件错误写保护，设置为关闭
+	
+	/*false:使用内部的比较器输出作为刹车信号 true:使用外部IO输入作为刹车信号*/
+	TIM_BDTRInitStructure.PvdBreakEn = false;			//PVD刹车关闭
+	TIM_BDTRInitStructure.IomBreakEn = false;			
+	TIM_BDTRInitStructure.LockUpBreakEn = false;		//LockUp刹车关闭
+	
+	TIM_ConfigBkdt(TIM1,&TIM_BDTRInitStructure);	
+	
+	//清除刹车中断标志位
+	TIM_ClrIntPendingBit(TIM1,TIM_INT_BREAK);
+	//设置中断 
+	TIM_ConfigInt(TIM1,TIM_INT_BREAK,ENABLE);	//开启刹车中断
+	
+	//配置刹车中断的NVIC管理
+	NVIC_InitStructure.NVIC_IRQChannel = TIM1_BRK_IRQn;		//TIM1对应的刹车中断编号
+	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 3;		//抢占
+	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;		//响应
+	NVIC_Init(&NVIC_InitStructure);
+	
+#endif	
 
 }
 
@@ -178,19 +234,19 @@ static void bsp_pwm_config(void)
 	@param  irq_bk_cb:timer brake中断回调指针
   * @retval None.
   ******************************************************************************/
-//void bsp_pwm_init(void (*irq_bk_cb)(void),void (*irq_cb)(void))
-void bsp_pwm_init(void (*irq_cb)(void))
+void bsp_pwm_init(void (*irq_bk_cb)(void),void (*irq_cb)(void))
+//void bsp_pwm_init(void (*irq_cb)(void))
 {
-	if(irq_cb == NULL)
+	if(irq_cb == NULL || irq_bk_cb == NULL)
 	{
 		while(1);//空指针，直接进入死循环
 	}
 	pwm_irq_cb.pwm_cb = irq_cb;		//若TIM1产生更新中断，则会把TIM1的回调函数在这里进行赋值
-	//pwm_irq_cb.pwm_bk_cb = irq_bk_cb; //若TIM7产生更新中断，则会把TIM1的回调函数在这里进行赋值
+	pwm_irq_cb.pwm_bk_cb = irq_bk_cb; //若TIM7产生更新中断，则会把TIM1的回调函数在这里进行赋值
 	
-	bsp_pwm_rcc_config();
-	bsp_pwm_io_config();
-	bsp_pwm_config();	
+	bsp_pwm_rcc_config();		//时钟设置
+	bsp_pwm_io_config();		//io设置
+	bsp_pwm_config();			//定时器pwm配置
 }
 
 /**
