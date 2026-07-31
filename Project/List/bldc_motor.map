@@ -67,6 +67,8 @@ Section Cross References
     bsp_adc.o(.text) refers to n32g43x_gpio.o(.text) for GPIO_InitStruct
     bsp_adc.o(.text) refers to n32g43x_adc.o(.text) for ADC_Init
     bsp_adc.o(.text) refers to misc.o(.text) for NVIC_Init
+    bsp_adc.o(.text) refers to n32g43x_dma.o(.text) for DMA_DeInit
+    bsp_adc.o(.text) refers to bsp_adc.o(.data) for ADC_RegularConvertedValueTab
     main.o(.text) refers to misc.o(.text) for NVIC_PriorityGroupConfig
     main.o(.text) refers to bsp_systick.o(.text) for bsp_systick_init
     main.o(.text) refers to bsp_uart.o(.text) for bsp_uart_init
@@ -441,7 +443,8 @@ Removing Unused input sections from the image.
     Removing bsp_adc.o(.rev16_text), (4 bytes).
     Removing bsp_adc.o(.revsh_text), (4 bytes).
     Removing bsp_adc.o(.rrx_text), (6 bytes).
-    Removing bsp_adc.o(.text), (408 bytes).
+    Removing bsp_adc.o(.text), (516 bytes).
+    Removing bsp_adc.o(.data), (14 bytes).
     Removing main.o(.rev16_text), (4 bytes).
     Removing main.o(.revsh_text), (4 bytes).
     Removing main.o(.rrx_text), (6 bytes).
@@ -452,7 +455,7 @@ Removing Unused input sections from the image.
     Removing cdrcmple.o(.text), (48 bytes).
     Removing depilogue.o(.text), (186 bytes).
 
-104 unused section(s) (total 10700 bytes) removed from the image.
+105 unused section(s) (total 10822 bytes) removed from the image.
 
 ==============================================================================
 
@@ -1051,16 +1054,16 @@ Memory Map of the image
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x08000000   0x08000000   0x00000148   Data   RO            3    RESET               startup_n32g43x.o
-    0x08000148   0x08000148   0x00000000   Code   RO          897  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x08000148   0x08000148   0x00000004   Code   RO         1160    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x0800014c   0x0800014c   0x00000004   Code   RO         1163    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x08000150   0x08000150   0x00000000   Code   RO         1165    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x08000150   0x08000150   0x00000000   Code   RO         1167    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x08000150   0x08000150   0x00000008   Code   RO         1168    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x08000158   0x08000158   0x00000004   Code   RO         1175    .ARM.Collect$$$$0000000E  mc_w.l(entry12b.o)
-    0x0800015c   0x0800015c   0x00000000   Code   RO         1170    .ARM.Collect$$$$0000000F  mc_w.l(entry10a.o)
-    0x0800015c   0x0800015c   0x00000000   Code   RO         1172    .ARM.Collect$$$$00000011  mc_w.l(entry11a.o)
-    0x0800015c   0x0800015c   0x00000004   Code   RO         1161    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08000148   0x08000148   0x00000000   Code   RO          900  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x08000148   0x08000148   0x00000004   Code   RO         1163    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x0800014c   0x0800014c   0x00000004   Code   RO         1166    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x08000150   0x08000150   0x00000000   Code   RO         1168    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x08000150   0x08000150   0x00000000   Code   RO         1170    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x08000150   0x08000150   0x00000008   Code   RO         1171    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x08000158   0x08000158   0x00000004   Code   RO         1178    .ARM.Collect$$$$0000000E  mc_w.l(entry12b.o)
+    0x0800015c   0x0800015c   0x00000000   Code   RO         1173    .ARM.Collect$$$$0000000F  mc_w.l(entry10a.o)
+    0x0800015c   0x0800015c   0x00000000   Code   RO         1175    .ARM.Collect$$$$00000011  mc_w.l(entry11a.o)
+    0x0800015c   0x0800015c   0x00000004   Code   RO         1164    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
     0x08000160   0x08000160   0x00000024   Code   RO            4    .text               startup_n32g43x.o
     0x08000184   0x08000184   0x000002d4   Code   RO           13    .text               system_n32g43x.o
     0x08000458   0x08000458   0x000000dc   Code   RO          139    .text               misc.o
@@ -1081,16 +1084,16 @@ Memory Map of the image
     0x08003190   0x08003190   0x0000024c   Code   RO          765    .text               bsp_pwm.o
     0x080033dc   0x080033dc   0x00000064   Code   RO          795    .text               bsp_pwm_cb.o
     0x08003440   0x08003440   0x00000030   Code   RO          821    .text               bsp_io.o
-    0x08003470   0x08003470   0x00000084   Code   RO          872    .text               main.o
-    0x080034f4   0x080034f4   0x00000024   Code   RO         1192    .text               mc_w.l(init.o)
-    0x08003518   0x08003518   0x00000010   Code   RO          901    i.__0printf$bare    mc_w.l(printfb.o)
-    0x08003528   0x08003528   0x0000000e   Code   RO         1204    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x08003536   0x08003536   0x00000002   Code   RO         1205    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08003538   0x08003538   0x0000000e   Code   RO         1206    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x08003546   0x08003546   0x00000022   Code   RO          908    i._printf_core      mc_w.l(printfb.o)
+    0x08003470   0x08003470   0x00000084   Code   RO          875    .text               main.o
+    0x080034f4   0x080034f4   0x00000024   Code   RO         1195    .text               mc_w.l(init.o)
+    0x08003518   0x08003518   0x00000010   Code   RO          904    i.__0printf$bare    mc_w.l(printfb.o)
+    0x08003528   0x08003528   0x0000000e   Code   RO         1207    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08003536   0x08003536   0x00000002   Code   RO         1208    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08003538   0x08003538   0x0000000e   Code   RO         1209    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08003546   0x08003546   0x00000022   Code   RO          911    i._printf_core      mc_w.l(printfb.o)
     0x08003568   0x08003568   0x0000002c   Data   RO           14    .constdata          system_n32g43x.o
     0x08003594   0x08003594   0x0000005c   Data   RO          384    .constdata          n32g43x_rcc.o
-    0x080035f0   0x080035f0   0x00000020   Data   RO         1202    Region$$Table       anon$$obj.o
+    0x080035f0   0x080035f0   0x00000020   Data   RO         1205    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08003610, Size: 0x000019e8, Max: 0x00008000, ABSOLUTE)
@@ -1104,7 +1107,7 @@ Memory Map of the image
     0x2000006c   0x0800367c   0x00000048   Data   RW          655    .data               bsp_key.o
     0x200000b4   0x080036c4   0x0000000a   Data   RW          766    .data               bsp_pwm.o
     0x200000be   0x080036ce   0x00000002   Data   RW          796    .data               bsp_pwm_cb.o
-    0x200000c0   0x080036d0   0x00000004   Data   RW         1176    .data               mc_w.l(stdout.o)
+    0x200000c0   0x080036d0   0x00000004   Data   RW         1179    .data               mc_w.l(stdout.o)
     0x200000c4        -       0x0000000c   Zero   RW          482    .bss                bsp_uart.o
     0x200000d0        -       0x00000400   Zero   RW          598    .bss                bsp_uart_cb.o
     0x200004d0        -       0x00000018   Zero   RW          654    .bss                bsp_key.o

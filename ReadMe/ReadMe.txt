@@ -60,3 +60,7 @@
 
 2026.7.29日软件更新日志
 (1)完成bsp_adc.c模块中的函数bsp_adc_config，同时在这个函数中开启了ADC和DMA的关联。但是还没有配置DMA。
+
+2026.7.31日软件更新日志
+（1）完成bsp_adc_dma_config(void)函数。
+（2）github->1.4.7

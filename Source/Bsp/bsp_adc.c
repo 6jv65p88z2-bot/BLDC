@@ -17,6 +17,8 @@ static void bsp_adc_rcc_config(void);
 static void bsp_adc_gpio_config(void);
 static void bsp_adc_config(void);
 
+volatile uint16_t ADC_RegularConvertedValueTab[3];		//规则组缓冲区
+volatile uint16_t ADC_InjectConvertedValueTab[4];		//注入组缓冲区
 
 
 /**
@@ -147,6 +149,43 @@ static void bsp_adc_config(void)
 	
 }
   
+
+/**
+  ******************************************************************************
+  * @brief  adc的dma配置
+  * @retval None.
+  ******************************************************************************/
+static void bsp_adc_dma_config(void)
+{
+	DMA_InitType DMA_InitStructure;
+	DMA_DeInit(DMA_CH1);
+	
+	//配置ADC的规则通道
+	
+	DMA_InitStructure.Mem2Mem = DMA_M2M_DISABLE;
+	DMA_InitStructure.MemAddr = (uint32_t)&ADC_RegularConvertedValueTab;		//DMA内存地址
+	DMA_InitStructure.MemDataSize = DMA_MemoryDataSize_HalfWord;				//内存数据长度为半字：2字节			
+	DMA_InitStructure.DMA_MemoryInc = ENABLE;									//内存地址递增模式开启
+	
+	DMA_InitStructure.PeriphAddr = (uint32_t)&ADC->DAT;							//DMA外设地址
+	DMA_InitStructure.PeriphDataSize = DMA_PERIPH_DATA_SIZE_HALFWORD;			//外设数据长度为半字：2字节
+	DMA_InitStructure.PeriphInc = DISABLE;										//外设地址递增模式禁止
+	DMA_InitStructure.BufSize = 3;												//目的缓冲区元素数，也就是内存缓冲区元素数
+	DMA_InitStructure.CircularMode = DMA_MODE_CIRCULAR;							//DMA模式为循环模式
+	DMA_InitStructure.Direction = DMA_DIR_PERIPH_SRC;							//DMA传输方向为外设到内存
+	
+	DMA_InitStructure.Priority = DMA_PRIORITY_HIGH;								//DMA优先级设置为高
+	
+	
+	DMA_Init(DMA_CH1,&DMA_InitStructure);
+	/*DMA重映射请求：将DMA CH1通道映射到ADC1*/
+	DMA_RequestRemap(DMA_REMAP_ADC1,DMA,DMA_CH1,ENABLE);
+	DMA_EnableChannel(DMA_CH1,ENABLE);
+	
+	
+	
+}
+
   
 /**
   ******************************************************************************
@@ -158,5 +197,6 @@ void bsp_adc_init(void)
 	bsp_adc_rcc_config();
 	bsp_adc_gpio_config();
 	bsp_adc_config();
+	bsp_adc_dma_config();
 }
 
