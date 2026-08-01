@@ -64,3 +64,29 @@
 2026.7.31日软件更新日志
 （1）完成bsp_adc_dma_config(void)函数。
 （2）github->1.4.7
+
+2026.8.1日软件更新日志
+(1) 完成bsp_adc_irq_cb(void) ADC回调函数。github->1.4.8
+(2)ADC的ISR程序ADC_Handler里面我还没有写任何函数，也就是目前ADC没有进行主函数初始化以及回调函数的调用。
+(3) ADC测试方法：
+*********************************************************************
+*********************************************************************
+// 在 while(1) 中添加（在 bsp_key_scan() 之前或之后）：
+// ADC 测试：每1秒打印一次 ADC 采集数据
+static uint32_t adc_test_tick = 0;
+if (bsp_systick_time_get() - adc_test_tick >= 1000)  // 每1000ms
+{
+    adc_test_tick = bsp_systick_time_get();
+    
+    printf("=== ADC Data ===\r\n");
+    printf("V_Bus:       %d\r\n", adc_digital_val.v_bus);
+    printf("Temperature: %d\r\n", adc_digital_val.temperature);
+    printf("Speed:       %d\r\n", adc_digital_val.speed);
+    printf("Current:     %d\r\n", adc_digital_val.current);
+    printf("BEMF_U:      %d\r\n", adc_digital_val.bemf_u);
+    printf("BEMF_V:      %d\r\n", adc_digital_val.bemf_v);
+    printf("BEMF_W:      %d\r\n", adc_digital_val.bemf_w);
+    printf("ttt_cnt:     %d\r\n\r\n", ttt_cnt);  // 中断计数，验证注入触发频率
+}
+*********************************************************************
+*********************************************************************

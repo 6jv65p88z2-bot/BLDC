@@ -3,18 +3,18 @@
         {
             "name": "MotorControl",
             "includePath": [
-                "d:\\3_JKD_Stm32\\8_BLDC\\修改中\\BLDC\\Libraries\\Lib\\inc",
-                "d:\\3_JKD_Stm32\\8_BLDC\\修改中\\BLDC\\Libraries\\Lib\\src",
-                "d:\\3_JKD_Stm32\\8_BLDC\\修改中\\BLDC\\Libraries\\Startup",
-                "d:\\3_JKD_Stm32\\8_BLDC\\修改中\\BLDC\\Libraries\\SysConfig",
-                "d:\\3_JKD_Stm32\\8_BLDC\\修改中\\BLDC\\Libraries\\SysCore",
-                "d:\\3_JKD_Stm32\\8_BLDC\\修改中\\BLDC\\Source\\App",
-                "d:\\3_JKD_Stm32\\8_BLDC\\修改中\\BLDC\\Source\\Bsp",
-                "d:\\3_JKD_Stm32\\8_BLDC\\修改中\\BLDC\\Source\\Motor",
-                "d:\\3_JKD_Stm32\\8_BLDC\\修改中\\BLDC\\Source\\AD56xx",
-                "D:\\keil5\\ARM\\ARMCC\\include",
-                "D:\\keil5\\ARM\\ARMCC\\include\\rw",
-                "d:\\3_JKD_Stm32\\8_BLDC\\修改中\\BLDC\\ReadMe"
+                "f:\\3_BLDC\\7_修改中\\n32g435_mymotor_v1.3_1\\Libraries\\Lib\\inc",
+                "f:\\3_BLDC\\7_修改中\\n32g435_mymotor_v1.3_1\\Libraries\\Lib\\src",
+                "f:\\3_BLDC\\7_修改中\\n32g435_mymotor_v1.3_1\\Libraries\\Startup",
+                "f:\\3_BLDC\\7_修改中\\n32g435_mymotor_v1.3_1\\Libraries\\SysConfig",
+                "f:\\3_BLDC\\7_修改中\\n32g435_mymotor_v1.3_1\\Libraries\\SysCore",
+                "f:\\3_BLDC\\7_修改中\\n32g435_mymotor_v1.3_1\\Source\\App",
+                "f:\\3_BLDC\\7_修改中\\n32g435_mymotor_v1.3_1\\Source\\Bsp",
+                "f:\\3_BLDC\\7_修改中\\n32g435_mymotor_v1.3_1\\Source\\Motor",
+                "f:\\3_BLDC\\7_修改中\\n32g435_mymotor_v1.3_1\\Source\\AD56xx",
+                "C:\\Keil_v5\\ARM\\ARMCC\\include",
+                "C:\\Keil_v5\\ARM\\ARMCC\\include\\rw",
+                "f:\\3_BLDC\\7_修改中\\n32g435_mymotor_v1.3_1\\ReadMe"
             ],
             "defines": [
                 "USE_STDPERIPH_DRIVER",
