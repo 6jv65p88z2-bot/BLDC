@@ -1,13 +1,13 @@
 .\obj\system_n32g43x.o: ..\Libraries\SysConfig\system_n32g43x.c
 .\obj\system_n32g43x.o: ..\Libraries\SysConfig\n32g43x.h
 .\obj\system_n32g43x.o: ..\Libraries\SysCore\core_cm4.h
-.\obj\system_n32g43x.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\system_n32g43x.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\obj\system_n32g43x.o: ..\Libraries\SysCore\cmsis_version.h
 .\obj\system_n32g43x.o: ..\Libraries\SysCore\cmsis_compiler.h
 .\obj\system_n32g43x.o: ..\Libraries\SysCore\cmsis_armcc.h
 .\obj\system_n32g43x.o: ..\Libraries\SysCore\mpu_armv7.h
 .\obj\system_n32g43x.o: ..\Libraries\SysConfig\system_n32g43x.h
-.\obj\system_n32g43x.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\obj\system_n32g43x.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\obj\system_n32g43x.o: ..\Libraries\SysConfig\n32g43x_conf.h
 .\obj\system_n32g43x.o: ..\Libraries\Lib\inc\n32g43x_adc.h
 .\obj\system_n32g43x.o: ..\Libraries\SysConfig\n32g43x.h

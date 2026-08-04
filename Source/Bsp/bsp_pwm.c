@@ -161,8 +161,8 @@ static void bsp_pwm_config(void)
 		TIM1_OCInitStructure.OcNPolarity = TIM_OCN_POLARITY_HIGH;		//镜像通道 输出低电平
 		
 		
-		TIM1_OCInitStructure.OcIdleState = TIM_OC_IDLE_STATE_SET;	//初始状态或占空比值为0时CH1-CH4通道输出低电平
-		TIM1_OCInitStructure.OcNIdleState= TIM_OCN_IDLE_STATE_SET;	//初始状态或占空比值为0时CH1N-CH3N通道输出低电平   
+		TIM1_OCInitStructure.OcIdleState = TIM_OC_IDLE_STATE_RESET;	//初始状态或占空比值为0时CH1-CH4通道输出低电平
+		TIM1_OCInitStructure.OcNIdleState= TIM_OCN_IDLE_STATE_RESET;	//初始状态或占空比值为0时CH1N-CH3N通道输出低电平   
 		TIM_InitOc1(TIM1,&TIM1_OCInitStructure);
 		TIM_InitOc2(TIM1,&TIM1_OCInitStructure);
 		TIM_InitOc3(TIM1,&TIM1_OCInitStructure);
@@ -174,17 +174,15 @@ static void bsp_pwm_config(void)
 		TIM1_OCInitStructure.Pulse = 2699;							//初始输出占空比都为0，Pulse值对应CCDATx寄存器
 		TIM_InitOc4(TIM1, &TIM1_OCInitStructure);
 		
-		//TIM1 counter enable
-		TIM_Enable(TIM1, ENABLE);
-		TIM_EnableCtrlPwmOutputs(TIM1,ENABLE);
+		
 #endif
 
 
 #if 1
 	//刹车功能的配置
 	//这个OSSI和OSSR，是否有效，取决于三相MOS管的下桥是否配置为PWM控制，若配置了，那么这OSSI和OSSR就会有效。现在的情况是无效的
-	TIM_BDTRInitStructure.OssrState = TIM_OSSI_STATE_ENABLE;		//默认设置为enable
 	TIM_BDTRInitStructure.OssrState = TIM_OSSR_STATE_ENABLE;		//默认设置为enable
+	TIM_BDTRInitStructure.OssiState = TIM_OSSI_STATE_ENABLE;		//默认设置为enable
 	
 	TIM_BDTRInitStructure.Break = TIM_BREAK_IN_ENABLE;		//打开刹车信号
 	TIM_BDTRInitStructure.DeadTime = 0;		//死区时间，因为这不是互补PWM，所以死区时间不用设置。
@@ -223,7 +221,10 @@ static void bsp_pwm_config(void)
 	NVIC_Init(&NVIC_InitStructure);
 	
 #endif	
-
+	
+	//TIM1 counter enable
+	TIM_Enable(TIM1, ENABLE);
+	TIM_EnableCtrlPwmOutputs(TIM1,ENABLE);
 }
 
 
@@ -308,9 +309,13 @@ void bsp_all_pwm_open(void)
 	uint16_t tmp;
 	tmp = TIM1->CCEN;
 	
-	tmp |= (uint16_t)(~((uint16_t)TIM_CCEN_CC1EN));
-	tmp |= (uint16_t)(~((uint16_t)TIM_CCEN_CC2EN));
-	tmp |= (uint16_t)(~((uint16_t)TIM_CCEN_CC3EN));
+	tmp |= (uint16_t)(((uint16_t)TIM_CCEN_CC1EN));
+	tmp |= (uint16_t)(((uint16_t)TIM_CCEN_CC2EN)); 
+	tmp |= (uint16_t)(((uint16_t)TIM_CCEN_CC3EN)); 
+	tmp |= (uint16_t)(((uint16_t)TIM_CCEN_CC4EN)); 
+	tmp |= (uint16_t)(((uint16_t)TIM_CCEN_CC1NEN));
+	tmp |= (uint16_t)(((uint16_t)TIM_CCEN_CC2NEN)); 
+	tmp |= (uint16_t)(((uint16_t)TIM_CCEN_CC3NEN));
 	
 	TIM1->CCEN = tmp;
 }

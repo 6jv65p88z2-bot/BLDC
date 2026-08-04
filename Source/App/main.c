@@ -20,6 +20,7 @@
 
 #include "misc.h"
 
+uint32_t time_ctrl_t;
 
 /**
   ******************************************************************************
@@ -49,11 +50,13 @@ int main(void)
 	bsp_opa1_init();		//运放OPA1初始化
 	
 	bsp_pwm_init(bsp_pwm_irq_bk_cb,bsp_pwm_irq_cb);	//初始化PWM
+	//bsp_pwm_init(bsp_pwm_irq_cb);
 	
 		
 	bsp_led_ctrl(LED1, LED_ON);
 	bsp_led_ctrl(LED2, LED_ON);
 	bsp_led_ctrl(LED3, LED_ON);
+	bsp_pwm_set_duty(1349);
 	while(1)
 	{
 		// bsp_uart_send_data(HOST_COMPUTER_COM,test_data,3);  //
@@ -66,6 +69,19 @@ int main(void)
 		//bsp_delay_ms(1000);
 		//bsp_led_ctrl(LED1,LED_TOGGLE);		//LED2翻转
 		bsp_key_scan();
+//		if(time_ctrl_t == 1)
+//		{
+//			bsp_all_pwm_close();
+//		}else if(time_ctrl_t == 2)
+//		{
+//			bsp_all_pwm_open();
+//		}else if(time_ctrl_t == 3)
+//		{
+//			bsp_pwm_set_duty(1349);		//25%
+//		}else if(time_ctrl_t == 4)
+//		{
+//			bsp_pwm_set_duty(4049);		//75%
+//		}
 	}
 
 }
