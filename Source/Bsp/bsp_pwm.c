@@ -153,22 +153,19 @@ static void bsp_pwm_config(void)
 			如果couter计数器计数值大于Pulse值，CH1-CH4通道输出低电平
 		*/
 		TIM1_OCInitStructure.OcPolarity = TIM_OC_POLARITY_HIGH;			//正常通道 输出高电平
-		
-		
+
 		/*	如果couter计数器计数值小于等于Pulse值，CH1N-CH3N通道输出低电平
 			如果couter计数器计数值大于Pulse值，CH1N-CH3N通道输出高电平
 		*/
-		TIM1_OCInitStructure.OcNPolarity = TIM_OCN_POLARITY_HIGH;		//镜像通道 输出低电平
+		TIM1_OCInitStructure.OcNPolarity = TIM_OCN_POLARITY_HIGH;		//镜像通道 
 		
-		
-		TIM1_OCInitStructure.OcIdleState = TIM_OC_IDLE_STATE_RESET;	//初始状态或占空比值为0时CH1-CH4通道输出低电平
+		TIM1_OCInitStructure.OcIdleState = TIM_OC_IDLE_STATE_RESET;		//初始状态或占空比值为0时CH1-CH4通道输出低电平
 		TIM1_OCInitStructure.OcNIdleState= TIM_OCN_IDLE_STATE_RESET;	//初始状态或占空比值为0时CH1N-CH3N通道输出低电平   
 		TIM_InitOc1(TIM1,&TIM1_OCInitStructure);
 		TIM_InitOc2(TIM1,&TIM1_OCInitStructure);
 		TIM_InitOc3(TIM1,&TIM1_OCInitStructure);
 		
-		//Channel 4 Configuration in OC 
-		
+		//Channel 4 Configuration in OC 	
 		TIM1_OCInitStructure.OcMode = TIM_OCMODE_PWM1;//Pos logic(when '<' is active(激活活动),when '>' is inactive(不活跃的，未激活的))
 		TIM1_OCInitStructure.OutputState = TIM_OUTPUT_STATE_ENABLE;	//CH4输出通道开启
 		TIM1_OCInitStructure.Pulse = 2699;							//初始输出占空比都为0，Pulse值对应CCDATx寄存器
@@ -259,7 +256,7 @@ void bsp_pwm_init(void (*irq_bk_cb)(void),void (*irq_cb)(void))
 void bsp_pwm_set_duty(uint16_t duty)
 {
 	//1.限幅比较
-	if(duty > PWM_PERIOD_MAX) duty = PWM_PERIOD_MAX;
+	//if(duty > PWM_PERIOD_MAX) duty = PWM_PERIOD_MAX;
 	
 	TIM1->CCDAT1 = duty;	// U相占空比
 	TIM1->CCDAT2 = duty;	// V相占空比
@@ -294,6 +291,10 @@ void bsp_all_pwm_close(void)
 	tmp &= (uint16_t)(~((uint16_t)TIM_CCEN_CC1EN));
 	tmp &= (uint16_t)(~((uint16_t)TIM_CCEN_CC2EN));
 	tmp &= (uint16_t)(~((uint16_t)TIM_CCEN_CC3EN));
+	tmp &= (uint16_t)(~((uint16_t)TIM_CCEN_CC1NEN));
+	tmp &= (uint16_t)(~((uint16_t)TIM_CCEN_CC2NEN)); 
+	tmp &= (uint16_t)(~((uint16_t)TIM_CCEN_CC3NEN));
+	
 	
 	TIM1->CCEN = tmp;
 

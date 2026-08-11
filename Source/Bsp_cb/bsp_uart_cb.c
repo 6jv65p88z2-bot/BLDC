@@ -11,10 +11,37 @@
 
 #include "bsp_uart_cb.h"
 #include "bsp_uart.h"
-
+#include <string.h>		//为了使用函数strncmp导入
 
 static uint8_t rs485_recv_buf[1024];
 static uint32_t findex = 0;
+
+factory_func_check_t factory_func_check;
+
+/**
+  ******************************************************************************
+  * @brief  出厂参数命令检测
+  * @param  data:接收串口数据
+  * @retval None.
+  ******************************************************************************/
+static void bsp_factory_cmd_analyse(uint8_t data)
+{
+	static uint8_t len = 0;
+	static uint8_t recv_buf[32] = {0};	//接收数据的缓冲区
+	
+	recv_buf[len++] = data;
+	
+	if(recv_buf[len - 1] == '\n')
+	{
+		/*OVERFLOW过流功能测试*/
+		if(strncmp((char *)recv_buf,"OVERFLOW",8) == 0)
+		{
+			//说明在缓冲区recv_buf中找到了OVERFLOW
+			factory_func_check.overflow_sign = 0xFF;
+		}
+	}
+}
+  
 /**
   ******************************************************************************
   * @brief  debug com中断回调
@@ -29,6 +56,7 @@ void bsp_debug_com_irq_cb(void)
 	{
 		//如果UART的中断状态为“接收寄存器满”，则把收到的数据发送出去
 		data = USART_ReceiveData(DEBUG_UART);
+		bsp_factory_cmd_analyse(data);		//出厂数据分析
 		bsp_uart_send_data(DEBUG_COM,&data,1);
 	}
 	
@@ -107,6 +135,5 @@ void bsp_debug_com_irq_cb(void)
 		(void)RS485_UART->STS;
 		(void)RS485_UART->DAT;
 	}
- }
- 
- 
+}
+

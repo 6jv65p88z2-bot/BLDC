@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Libraries\Lib\inc;..\Libraries\Lib\src;..\Libraries\Startup;..\Libraries\SysConfig;..\Libraries\SysCore;..\Source\App;..\Source\Bsp;..\Source\Motor;..\Source\AD56xx</IncludePath>
+              <IncludePath>..\Libraries\Lib\inc;..\Libraries\Lib\src;..\Libraries\Startup;..\Libraries\SysConfig;..\Libraries\SysCore;..\Source\App;..\Source\Bsp;..\Source\Motor;..\Source\AD56xx;..\Source\Bsp_cb</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -494,11 +494,6 @@
               <FilePath>..\Source\Bsp\n32g43x_it.c</FilePath>
             </File>
             <File>
-              <FileName>bsp_uart_cb.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Source\Bsp\bsp_uart_cb.c</FilePath>
-            </File>
-            <File>
               <FileName>bsp_led.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Source\Bsp\bsp_led.c</FilePath>
@@ -529,11 +524,6 @@
               <FilePath>..\Source\Bsp\bsp_pwm.c</FilePath>
             </File>
             <File>
-              <FileName>bsp_pwm_cb.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Source\Bsp\bsp_pwm_cb.c</FilePath>
-            </File>
-            <File>
               <FileName>bsp_io.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Source\Bsp\bsp_io.c</FilePath>
@@ -544,9 +534,29 @@
               <FilePath>..\Source\Bsp\bsp_adc.c</FilePath>
             </File>
             <File>
+              <FileName>bsp_hall.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Source\Bsp\bsp_hall.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Bsp_cb</GroupName>
+          <Files>
+            <File>
               <FileName>bsp_adc_cb.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Source\Bsp\bsp_adc_cb.c</FilePath>
+              <FilePath>..\Source\Bsp_cb\bsp_adc_cb.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_pwm_cb.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Source\Bsp_cb\bsp_pwm_cb.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_uart_cb.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Source\Bsp_cb\bsp_uart_cb.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -557,6 +567,11 @@
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Source\App\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>function_check.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Source\App\function_check.c</FilePath>
             </File>
           </Files>
         </Group>

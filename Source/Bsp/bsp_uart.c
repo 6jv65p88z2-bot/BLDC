@@ -298,3 +298,5 @@ static void bsp_uart_gpio_config(uart_com_e com)
 	return ch;
  }
  
+
+ 

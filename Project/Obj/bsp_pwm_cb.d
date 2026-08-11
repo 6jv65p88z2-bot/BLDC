@@ -1,5 +1,5 @@
-.\obj\bsp_pwm_cb.o: ..\Source\Bsp\bsp_pwm_cb.c
-.\obj\bsp_pwm_cb.o: ..\Source\Bsp\bsp_pwm_cb.h
+.\obj\bsp_pwm_cb.o: ..\Source\Bsp_cb\bsp_pwm_cb.c
+.\obj\bsp_pwm_cb.o: ..\Source\Bsp_cb\bsp_pwm_cb.h
 .\obj\bsp_pwm_cb.o: ..\Libraries\SysConfig\n32g43x.h
 .\obj\bsp_pwm_cb.o: ..\Libraries\SysCore\core_cm4.h
 .\obj\bsp_pwm_cb.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h

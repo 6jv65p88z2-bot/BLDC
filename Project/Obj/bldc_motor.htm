@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Obj\bldc_motor.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Obj\bldc_motor.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Wed Aug 05 00:35:36 2026
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Tue Aug 11 22:46:41 2026
 <BR><P>
 <H3>Maximum Stack Usage =        116 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -110,27 +110,27 @@ Global Symbols
 <P><STRONG><a name="[4d]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_n32g43x.o(.text)
 </UL>
-<P><STRONG><a name="[bd]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[bf]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
 <P><STRONG><a name="[54]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[ba]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
+<P><STRONG><a name="[bc]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Called By]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[be]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[c0]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[bf]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[c1]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[c0]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[c2]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[c1]"></a>__rt_lib_shutdown_fini</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry12b.o(.ARM.Collect$$$$0000000E))
+<P><STRONG><a name="[c3]"></a>__rt_lib_shutdown_fini</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry12b.o(.ARM.Collect$$$$0000000E))
 
-<P><STRONG><a name="[c2]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[c4]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000F))
 
-<P><STRONG><a name="[c3]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$00000011))
+<P><STRONG><a name="[c5]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$00000011))
 
 <P><STRONG><a name="[0]"></a>Reset_Handler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, startup_n32g43x.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_n32g43x.o(RESET)
@@ -315,58 +315,58 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_n32g43x.o(.text)
 </UL>
-<P><STRONG><a name="[c4]"></a>SystemCoreClockUpdate</STRONG> (Thumb, 236 bytes, Stack size 16 bytes, system_n32g43x.o(.text), UNUSED)
+<P><STRONG><a name="[c6]"></a>SystemCoreClockUpdate</STRONG> (Thumb, 236 bytes, Stack size 16 bytes, system_n32g43x.o(.text), UNUSED)
 
-<P><STRONG><a name="[b7]"></a>NVIC_PriorityGroupConfig</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, misc.o(.text))
+<P><STRONG><a name="[b9]"></a>NVIC_PriorityGroupConfig</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, misc.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[81]"></a>NVIC_Init</STRONG> (Thumb, 100 bytes, Stack size 16 bytes, misc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = NVIC_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_config
+<BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_config
 <LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_uart_init
 </UL>
 
-<P><STRONG><a name="[c5]"></a>NVIC_SetVectorTable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, misc.o(.text), UNUSED)
+<P><STRONG><a name="[c7]"></a>NVIC_SetVectorTable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, misc.o(.text), UNUSED)
 
-<P><STRONG><a name="[c6]"></a>NVIC_SystemLPConfig</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, misc.o(.text), UNUSED)
+<P><STRONG><a name="[c8]"></a>NVIC_SystemLPConfig</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, misc.o(.text), UNUSED)
 
-<P><STRONG><a name="[c7]"></a>SysTick_CLKSourceConfig</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, misc.o(.text), UNUSED)
+<P><STRONG><a name="[c9]"></a>SysTick_CLKSourceConfig</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, misc.o(.text), UNUSED)
 
 <P><STRONG><a name="[57]"></a>DAC_DeInit</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, n32g43x_dac.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_EnableAPB1PeriphReset
 </UL>
 
-<P><STRONG><a name="[a0]"></a>DAC_Init</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, n32g43x_dac.o(.text))
+<P><STRONG><a name="[9e]"></a>DAC_Init</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, n32g43x_dac.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = DAC_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_dac_config
+<BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_dac_config
 </UL>
 
-<P><STRONG><a name="[c8]"></a>DAC_ClearStruct</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, n32g43x_dac.o(.text), UNUSED)
+<P><STRONG><a name="[ca]"></a>DAC_ClearStruct</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, n32g43x_dac.o(.text), UNUSED)
 
-<P><STRONG><a name="[a1]"></a>DAC_Enable</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, n32g43x_dac.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_dac_config
+<P><STRONG><a name="[9f]"></a>DAC_Enable</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, n32g43x_dac.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_dac_config
 </UL>
 
-<P><STRONG><a name="[c9]"></a>DAC_DmaEnable</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, n32g43x_dac.o(.text), UNUSED)
+<P><STRONG><a name="[cb]"></a>DAC_DmaEnable</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, n32g43x_dac.o(.text), UNUSED)
 
-<P><STRONG><a name="[a3]"></a>DAC_SoftTrgEnable</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, n32g43x_dac.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_dac_config
+<P><STRONG><a name="[a1]"></a>DAC_SoftTrgEnable</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, n32g43x_dac.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_dac_config
 </UL>
 
-<P><STRONG><a name="[ca]"></a>DAC_SoftwareTrgEnable</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, n32g43x_dac.o(.text), UNUSED)
+<P><STRONG><a name="[cc]"></a>DAC_SoftwareTrgEnable</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, n32g43x_dac.o(.text), UNUSED)
 
-<P><STRONG><a name="[cb]"></a>DAC_WaveGenerationEnable</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, n32g43x_dac.o(.text), UNUSED)
+<P><STRONG><a name="[cd]"></a>DAC_WaveGenerationEnable</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, n32g43x_dac.o(.text), UNUSED)
 
-<P><STRONG><a name="[a2]"></a>DAC_SetChData</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, n32g43x_dac.o(.text))
+<P><STRONG><a name="[a0]"></a>DAC_SetChData</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, n32g43x_dac.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = DAC_SetChData
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_dac_config
+<BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_dac_config
 </UL>
 
-<P><STRONG><a name="[cc]"></a>DAC_GetOutputDataVal</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, n32g43x_dac.o(.text), UNUSED)
+<P><STRONG><a name="[ce]"></a>DAC_GetOutputDataVal</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, n32g43x_dac.o(.text), UNUSED)
 
 <P><STRONG><a name="[59]"></a>GPIO_DeInit</STRONG> (Thumb, 342 bytes, Stack size 24 bytes, n32g43x_gpio.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_EnableAPB2PeriphReset
@@ -379,113 +379,113 @@ Global Symbols
 <P><STRONG><a name="[7d]"></a>GPIO_InitPeripheral</STRONG> (Thumb, 484 bytes, Stack size 20 bytes, n32g43x_gpio.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = GPIO_InitPeripheral
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_io_init
-<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_io_config
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_dac_gpio_config
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_opa1_gpio_config
-<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_key_init
-<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_led_init
+<BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_io_init
+<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_io_config
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_dac_gpio_config
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_opa1_gpio_config
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_key_init
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_led_init
 <LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_uart_gpio_config
 </UL>
 
 <P><STRONG><a name="[7c]"></a>GPIO_InitStruct</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, n32g43x_gpio.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_io_init
-<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_io_config
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_dac_gpio_config
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_opa1_gpio_config
+<BR><BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_io_init
+<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_io_config
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_dac_gpio_config
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_opa1_gpio_config
 <LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_uart_gpio_config
 </UL>
 
-<P><STRONG><a name="[91]"></a>GPIO_ReadInputDataBit</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_gpio.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_key_scan
+<P><STRONG><a name="[8f]"></a>GPIO_ReadInputDataBit</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_gpio.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_key_scan
 </UL>
 
-<P><STRONG><a name="[cd]"></a>GPIO_ReadInputData</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g43x_gpio.o(.text), UNUSED)
+<P><STRONG><a name="[cf]"></a>GPIO_ReadInputData</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g43x_gpio.o(.text), UNUSED)
 
-<P><STRONG><a name="[ce]"></a>GPIO_ReadOutputDataBit</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_gpio.o(.text), UNUSED)
+<P><STRONG><a name="[d0]"></a>GPIO_ReadOutputDataBit</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_gpio.o(.text), UNUSED)
 
-<P><STRONG><a name="[cf]"></a>GPIO_ReadOutputData</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g43x_gpio.o(.text), UNUSED)
+<P><STRONG><a name="[d1]"></a>GPIO_ReadOutputData</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g43x_gpio.o(.text), UNUSED)
 
 <P><STRONG><a name="[7e]"></a>GPIO_SetBits</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g43x_gpio.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_irq_cb
-<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_led_ctrl
-<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_led_toggle
+<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_led_ctrl
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_led_toggle
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_uart_send_data
 <LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_uart_gpio_config
 </UL>
 
-<P><STRONG><a name="[d0]"></a>GPIO_SetBitsHigh16</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g43x_gpio.o(.text), UNUSED)
+<P><STRONG><a name="[d2]"></a>GPIO_SetBitsHigh16</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g43x_gpio.o(.text), UNUSED)
 
 <P><STRONG><a name="[85]"></a>GPIO_ResetBits</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g43x_gpio.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_irq_cb
-<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_led_ctrl
-<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_led_toggle
+<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_led_ctrl
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_led_toggle
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_uart_send_data
 </UL>
 
-<P><STRONG><a name="[d1]"></a>GPIO_WriteBit</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g43x_gpio.o(.text), UNUSED)
+<P><STRONG><a name="[d3]"></a>GPIO_WriteBit</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g43x_gpio.o(.text), UNUSED)
 
-<P><STRONG><a name="[d2]"></a>GPIO_Write</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g43x_gpio.o(.text), UNUSED)
+<P><STRONG><a name="[d4]"></a>GPIO_Write</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g43x_gpio.o(.text), UNUSED)
 
-<P><STRONG><a name="[d3]"></a>GPIO_ConfigPinLock</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_gpio.o(.text), UNUSED)
+<P><STRONG><a name="[d5]"></a>GPIO_ConfigPinLock</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_gpio.o(.text), UNUSED)
 
-<P><STRONG><a name="[d4]"></a>GPIO_ConfigPinRemap</STRONG> (Thumb, 120 bytes, Stack size 20 bytes, n32g43x_gpio.o(.text), UNUSED)
+<P><STRONG><a name="[d6]"></a>GPIO_ConfigPinRemap</STRONG> (Thumb, 120 bytes, Stack size 20 bytes, n32g43x_gpio.o(.text), UNUSED)
 
-<P><STRONG><a name="[d5]"></a>GPIO_ConfigEventOutput</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, n32g43x_gpio.o(.text), UNUSED)
+<P><STRONG><a name="[d7]"></a>GPIO_ConfigEventOutput</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, n32g43x_gpio.o(.text), UNUSED)
 
-<P><STRONG><a name="[d6]"></a>GPIO_CtrlEventOutput</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_gpio.o(.text), UNUSED)
+<P><STRONG><a name="[d8]"></a>GPIO_CtrlEventOutput</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_gpio.o(.text), UNUSED)
 
-<P><STRONG><a name="[d7]"></a>GPIO_ConfigEXTILine</STRONG> (Thumb, 58 bytes, Stack size 12 bytes, n32g43x_gpio.o(.text), UNUSED)
+<P><STRONG><a name="[d9]"></a>GPIO_ConfigEXTILine</STRONG> (Thumb, 58 bytes, Stack size 12 bytes, n32g43x_gpio.o(.text), UNUSED)
 
-<P><STRONG><a name="[d8]"></a>AFIO_ConfigSPINSSMode</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, n32g43x_gpio.o(.text), UNUSED)
+<P><STRONG><a name="[da]"></a>AFIO_ConfigSPINSSMode</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, n32g43x_gpio.o(.text), UNUSED)
 
-<P><STRONG><a name="[d9]"></a>AFIO_ConfigADCExternalTrigRemap</STRONG> (Thumb, 82 bytes, Stack size 0 bytes, n32g43x_gpio.o(.text), UNUSED)
+<P><STRONG><a name="[db]"></a>AFIO_ConfigADCExternalTrigRemap</STRONG> (Thumb, 82 bytes, Stack size 0 bytes, n32g43x_gpio.o(.text), UNUSED)
 
 <P><STRONG><a name="[5c]"></a>OPAMP_DeInit</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, n32g43x_opamp.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_EnableAPB1PeriphReset
 </UL>
 
-<P><STRONG><a name="[99]"></a>OPAMP_StructInit</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, n32g43x_opamp.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_opa1_conifg
+<P><STRONG><a name="[97]"></a>OPAMP_StructInit</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, n32g43x_opamp.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_opa1_conifg
 </UL>
 
-<P><STRONG><a name="[9a]"></a>OPAMP_Init</STRONG> (Thumb, 106 bytes, Stack size 12 bytes, n32g43x_opamp.o(.text))
+<P><STRONG><a name="[98]"></a>OPAMP_Init</STRONG> (Thumb, 106 bytes, Stack size 12 bytes, n32g43x_opamp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = OPAMP_Init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_opa1_conifg
+<BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_opa1_conifg
 </UL>
 
-<P><STRONG><a name="[9b]"></a>OPAMP_Enable</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, n32g43x_opamp.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_opa1_conifg
+<P><STRONG><a name="[99]"></a>OPAMP_Enable</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, n32g43x_opamp.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_opa1_conifg
 </UL>
 
-<P><STRONG><a name="[da]"></a>OPAMP_SetPgaGain</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, n32g43x_opamp.o(.text), UNUSED)
+<P><STRONG><a name="[dc]"></a>OPAMP_SetPgaGain</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, n32g43x_opamp.o(.text), UNUSED)
 
-<P><STRONG><a name="[db]"></a>OPAMP_SetVpSecondSel</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, n32g43x_opamp.o(.text), UNUSED)
+<P><STRONG><a name="[dd]"></a>OPAMP_SetVpSecondSel</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, n32g43x_opamp.o(.text), UNUSED)
 
-<P><STRONG><a name="[dc]"></a>OPAMP_SetVmSecondSel</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, n32g43x_opamp.o(.text), UNUSED)
+<P><STRONG><a name="[de]"></a>OPAMP_SetVmSecondSel</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, n32g43x_opamp.o(.text), UNUSED)
 
-<P><STRONG><a name="[97]"></a>OPAMP_SetVpSel</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, n32g43x_opamp.o(.text))
+<P><STRONG><a name="[95]"></a>OPAMP_SetVpSel</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, n32g43x_opamp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OPAMP_SetVpSel
 </UL>
-<BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_opa1_gpio_config
+<BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_opa1_gpio_config
 </UL>
 
-<P><STRONG><a name="[96]"></a>OPAMP_SetVmSel</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, n32g43x_opamp.o(.text))
+<P><STRONG><a name="[94]"></a>OPAMP_SetVmSel</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, n32g43x_opamp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OPAMP_SetVmSel
 </UL>
-<BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_opa1_gpio_config
+<BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_opa1_gpio_config
 </UL>
 
-<P><STRONG><a name="[dd]"></a>OPAMP_IsCalOutHigh</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g43x_opamp.o(.text), UNUSED)
+<P><STRONG><a name="[df]"></a>OPAMP_IsCalOutHigh</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g43x_opamp.o(.text), UNUSED)
 
-<P><STRONG><a name="[de]"></a>OPAMP_CalibrationEnable</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, n32g43x_opamp.o(.text), UNUSED)
+<P><STRONG><a name="[e0]"></a>OPAMP_CalibrationEnable</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, n32g43x_opamp.o(.text), UNUSED)
 
-<P><STRONG><a name="[df]"></a>OPAMP_SetLock</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_opamp.o(.text), UNUSED)
+<P><STRONG><a name="[e1]"></a>OPAMP_SetLock</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_opamp.o(.text), UNUSED)
 
-<P><STRONG><a name="[e0]"></a>RCC_DeInit</STRONG> (Thumb, 80 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[e2]"></a>RCC_DeInit</STRONG> (Thumb, 80 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[e1]"></a>RCC_ConfigHse</STRONG> (Thumb, 70 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[e3]"></a>RCC_ConfigHse</STRONG> (Thumb, 70 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
 <P><STRONG><a name="[5e]"></a>RCC_GetFlagStatus</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, n32g43x_rcc.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_WaitMsiStable
@@ -497,71 +497,71 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetFlagStatus
 </UL>
 
-<P><STRONG><a name="[e2]"></a>RCC_ConfigHsi</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[e4]"></a>RCC_ConfigHsi</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
 <P><STRONG><a name="[5f]"></a>RCC_WaitHsiStable</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, n32g43x_rcc.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetFlagStatus
 </UL>
 
-<P><STRONG><a name="[e3]"></a>RCC_SetHsiCalibValue</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[e5]"></a>RCC_SetHsiCalibValue</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[e4]"></a>RCC_EnableHsi</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[e6]"></a>RCC_EnableHsi</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[e5]"></a>RCC_ConfigMsi</STRONG> (Thumb, 58 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[e7]"></a>RCC_ConfigMsi</STRONG> (Thumb, 58 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
 <P><STRONG><a name="[60]"></a>RCC_WaitMsiStable</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, n32g43x_rcc.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetFlagStatus
 </UL>
 
-<P><STRONG><a name="[e6]"></a>RCC_SetMsiCalibValue</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[e8]"></a>RCC_SetMsiCalibValue</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[e7]"></a>RCC_EnableMsi</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[e9]"></a>RCC_EnableMsi</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[e8]"></a>RCC_ConfigPll</STRONG> (Thumb, 56 bytes, Stack size 12 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[ea]"></a>RCC_ConfigPll</STRONG> (Thumb, 56 bytes, Stack size 12 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[e9]"></a>RCC_EnablePll</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[eb]"></a>RCC_EnablePll</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[ea]"></a>RCC_ConfigSysclk</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[ec]"></a>RCC_ConfigSysclk</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[eb]"></a>RCC_GetSysclkSrc</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[ed]"></a>RCC_GetSysclkSrc</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[ec]"></a>RCC_ConfigHclk</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[ee]"></a>RCC_ConfigHclk</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[ed]"></a>RCC_ConfigPclk1</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[ef]"></a>RCC_ConfigPclk1</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[ee]"></a>RCC_ConfigPclk2</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[f0]"></a>RCC_ConfigPclk2</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[ef]"></a>RCC_ConfigInt</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[f1]"></a>RCC_ConfigInt</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[f0]"></a>RCC_ConfigUsbClk</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[f2]"></a>RCC_ConfigUsbClk</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[f1]"></a>RCC_ConfigTim18Clk</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[f3]"></a>RCC_ConfigTim18Clk</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[f2]"></a>RCC_ConfigRngcClk</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[f4]"></a>RCC_ConfigRngcClk</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[f3]"></a>RCC_ConfigAdc1mClk</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[f5]"></a>RCC_ConfigAdc1mClk</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[f4]"></a>RCC_ConfigAdcPllClk</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[f6]"></a>RCC_ConfigAdcPllClk</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[f5]"></a>RCC_ConfigAdcHclk</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[f7]"></a>RCC_ConfigAdcHclk</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[f6]"></a>RCC_ConfigTrng1mClk</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[f8]"></a>RCC_ConfigTrng1mClk</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[f7]"></a>RCC_EnableTrng1mClk</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[f9]"></a>RCC_EnableTrng1mClk</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[f8]"></a>RCC_ConfigUCDRClk</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[fa]"></a>RCC_ConfigUCDRClk</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[f9]"></a>RCC_ConfigUSBXTALESSMode</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[fb]"></a>RCC_ConfigUSBXTALESSMode</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[fa]"></a>RCC_EnableRETPeriphClk</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[fc]"></a>RCC_EnableRETPeriphClk</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[fb]"></a>RCC_EnableRETPeriphReset</STRONG> (Thumb, 62 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[fd]"></a>RCC_EnableRETPeriphReset</STRONG> (Thumb, 62 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
 <P><STRONG><a name="[62]"></a>RCC_EnableAPB1PeriphClk</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_ConfigLse
 <LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_ConfigLPTIMClk
-<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_dac_rcc_config
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_opa1_rcc_config
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_dac_rcc_config
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_opa1_rcc_config
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_uart_rcc_config
 </UL>
 
@@ -569,17 +569,17 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_EnableAPB1PeriphClk
 </UL>
 
-<P><STRONG><a name="[fc]"></a>RCC_GetLPTIMClkSrc</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[fe]"></a>RCC_GetLPTIMClkSrc</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[fd]"></a>RCC_ConfigLPUARTClk</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[ff]"></a>RCC_ConfigLPUARTClk</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[fe]"></a>RCC_GetLPUARTClkSrc</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[100]"></a>RCC_GetLPUARTClkSrc</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[ff]"></a>RCC_ConfigSRAMParityErrorInt</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[101]"></a>RCC_ConfigSRAMParityErrorInt</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[100]"></a>RCC_ConfigSRAMParityErrorRESET</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[102]"></a>RCC_ConfigSRAMParityErrorRESET</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[101]"></a>RCC_ClrSRAMParityErrorFlag</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[103]"></a>RCC_ClrSRAMParityErrorFlag</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
 <P><STRONG><a name="[64]"></a>LSE_XtalConfig</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_ConfigLse
@@ -590,17 +590,17 @@ Global Symbols
 <LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_EnableAPB1PeriphClk
 </UL>
 
-<P><STRONG><a name="[102]"></a>RCC_EnableLsi</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[104]"></a>RCC_EnableLsi</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[103]"></a>RCC_ConfigRtcClk</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[105]"></a>RCC_ConfigRtcClk</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[104]"></a>RCC_GetRTCClkSrc</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[106]"></a>RCC_GetRTCClkSrc</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[105]"></a>RCC_EnableRtcClk</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[107]"></a>RCC_EnableRtcClk</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[106]"></a>RCC_ConfigLSXClk</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[108]"></a>RCC_ConfigLSXClk</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[107]"></a>RCC_GetLSXClkSrc</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[109]"></a>RCC_GetLSXClkSrc</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
 <P><STRONG><a name="[78]"></a>RCC_GetClocksFreqValue</STRONG> (Thumb, 302 bytes, Stack size 20 bytes, n32g43x_rcc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = RCC_GetClocksFreqValue
@@ -608,18 +608,18 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Init
 </UL>
 
-<P><STRONG><a name="[108]"></a>RCC_EnableAHBPeriphClk</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[10a]"></a>RCC_EnableAHBPeriphClk</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
 <P><STRONG><a name="[7a]"></a>RCC_EnableAPB2PeriphClk</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_io_init
-<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_rcc_config
-<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_dac_rcc_config
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_opa1_rcc_config
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_key_rcc_config
+<BR><BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_io_init
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_rcc_config
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_dac_rcc_config
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_opa1_rcc_config
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_key_rcc_config
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_uart_rcc_config
 </UL>
 
-<P><STRONG><a name="[109]"></a>RCC_EnableAHBPeriphReset</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[10b]"></a>RCC_EnableAHBPeriphReset</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
 <P><STRONG><a name="[5a]"></a>RCC_EnableAPB2PeriphReset</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_DeInit
@@ -635,23 +635,23 @@ Global Symbols
 <LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_DeInit
 </UL>
 
-<P><STRONG><a name="[10a]"></a>RCC_EnableLowPowerReset</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[10c]"></a>RCC_EnableLowPowerReset</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[10b]"></a>RCC_EnableClockSecuritySystem</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[10d]"></a>RCC_EnableClockSecuritySystem</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[10c]"></a>RCC_EnableLSEClockSecuritySystem</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[10e]"></a>RCC_EnableLSEClockSecuritySystem</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[10d]"></a>RCC_GetLSEClockSecuritySystemStatus</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[10f]"></a>RCC_GetLSEClockSecuritySystemStatus</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[10e]"></a>RCC_ConfigMcoClkPre</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[110]"></a>RCC_ConfigMcoClkPre</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[10f]"></a>RCC_ConfigMco</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[111]"></a>RCC_ConfigMco</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[110]"></a>RCC_ClrFlag</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[112]"></a>RCC_ClrFlag</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[111]"></a>RCC_GetIntStatus</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[113]"></a>RCC_GetIntStatus</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[112]"></a>RCC_ClrIntPendingBit</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[114]"></a>RCC_ClrIntPendingBit</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, n32g43x_rcc.o(.text), UNUSED)
 
 <P><STRONG><a name="[65]"></a>TIM_DeInit</STRONG> (Thumb, 220 bytes, Stack size 8 bytes, n32g43x_tim.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = TIM_DeInit
@@ -659,40 +659,40 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_EnableAPB2PeriphReset
 <LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_EnableAPB1PeriphReset
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_config
+<BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_config
 </UL>
 
-<P><STRONG><a name="[a9]"></a>TIM_InitTimeBase</STRONG> (Thumb, 296 bytes, Stack size 0 bytes, n32g43x_tim.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_config
+<P><STRONG><a name="[a7]"></a>TIM_InitTimeBase</STRONG> (Thumb, 296 bytes, Stack size 0 bytes, n32g43x_tim.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_config
 </UL>
 
-<P><STRONG><a name="[ab]"></a>TIM_InitOc1</STRONG> (Thumb, 106 bytes, Stack size 12 bytes, n32g43x_tim.o(.text))
+<P><STRONG><a name="[a9]"></a>TIM_InitOc1</STRONG> (Thumb, 106 bytes, Stack size 12 bytes, n32g43x_tim.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = TIM_InitOc1
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_config
+<BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_config
 </UL>
 
-<P><STRONG><a name="[ac]"></a>TIM_InitOc2</STRONG> (Thumb, 126 bytes, Stack size 16 bytes, n32g43x_tim.o(.text))
+<P><STRONG><a name="[aa]"></a>TIM_InitOc2</STRONG> (Thumb, 126 bytes, Stack size 16 bytes, n32g43x_tim.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = TIM_InitOc2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_config
+<BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_config
 </UL>
 
-<P><STRONG><a name="[ad]"></a>TIM_InitOc3</STRONG> (Thumb, 118 bytes, Stack size 12 bytes, n32g43x_tim.o(.text))
+<P><STRONG><a name="[ab]"></a>TIM_InitOc3</STRONG> (Thumb, 118 bytes, Stack size 12 bytes, n32g43x_tim.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = TIM_InitOc3
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_config
+<BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_config
 </UL>
 
-<P><STRONG><a name="[ae]"></a>TIM_InitOc4</STRONG> (Thumb, 98 bytes, Stack size 16 bytes, n32g43x_tim.o(.text))
+<P><STRONG><a name="[ac]"></a>TIM_InitOc4</STRONG> (Thumb, 98 bytes, Stack size 16 bytes, n32g43x_tim.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = TIM_InitOc4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_config
+<BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_config
 </UL>
 
-<P><STRONG><a name="[113]"></a>TIM_InitOc5</STRONG> (Thumb, 122 bytes, Stack size 12 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[115]"></a>TIM_InitOc5</STRONG> (Thumb, 122 bytes, Stack size 12 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[114]"></a>TIM_InitOc6</STRONG> (Thumb, 96 bytes, Stack size 16 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[116]"></a>TIM_InitOc6</STRONG> (Thumb, 96 bytes, Stack size 16 bytes, n32g43x_tim.o(.text), UNUSED)
 
 <P><STRONG><a name="[6e]"></a>TIM_SetInCap4Prescaler</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ICInit
@@ -730,43 +730,43 @@ Global Symbols
 <LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConfigTI2
 </UL>
 
-<P><STRONG><a name="[af]"></a>TIM_ConfigBkdt</STRONG> (Thumb, 82 bytes, Stack size 8 bytes, n32g43x_tim.o(.text))
+<P><STRONG><a name="[ad]"></a>TIM_ConfigBkdt</STRONG> (Thumb, 82 bytes, Stack size 8 bytes, n32g43x_tim.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = TIM_ConfigBkdt
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_config
+<BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_config
 </UL>
 
-<P><STRONG><a name="[a8]"></a>TIM_InitTimBaseStruct</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, n32g43x_tim.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_config
+<P><STRONG><a name="[a6]"></a>TIM_InitTimBaseStruct</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, n32g43x_tim.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_config
 </UL>
 
-<P><STRONG><a name="[aa]"></a>TIM_InitOcStruct</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, n32g43x_tim.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_config
+<P><STRONG><a name="[a8]"></a>TIM_InitOcStruct</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, n32g43x_tim.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_config
 </UL>
 
-<P><STRONG><a name="[115]"></a>TIM_InitIcStruct</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[117]"></a>TIM_InitIcStruct</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[116]"></a>TIM_InitBkdtStruct</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[118]"></a>TIM_InitBkdtStruct</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[b2]"></a>TIM_Enable</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g43x_tim.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_config
+<P><STRONG><a name="[b0]"></a>TIM_Enable</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g43x_tim.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_config
 </UL>
 
-<P><STRONG><a name="[b3]"></a>TIM_EnableCtrlPwmOutputs</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, n32g43x_tim.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_config
+<P><STRONG><a name="[b1]"></a>TIM_EnableCtrlPwmOutputs</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, n32g43x_tim.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_config
 </UL>
 
-<P><STRONG><a name="[b1]"></a>TIM_ConfigInt</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_config
+<P><STRONG><a name="[af]"></a>TIM_ConfigInt</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_config
 </UL>
 
-<P><STRONG><a name="[117]"></a>TIM_GenerateEvent</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[119]"></a>TIM_GenerateEvent</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[118]"></a>TIM_ConfigDma</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[11a]"></a>TIM_ConfigDma</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[119]"></a>TIM_EnableDma</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[11b]"></a>TIM_EnableDma</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[11a]"></a>TIM_ConfigInternalClk</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[11c]"></a>TIM_ConfigInternalClk</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
 <P><STRONG><a name="[71]"></a>TIM_SelectInputTrig</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ConfigExtTrigAsClk
@@ -796,159 +796,159 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ConfigExtTrig
 </UL>
 
-<P><STRONG><a name="[11b]"></a>TIM_ConfigPrescaler</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[11d]"></a>TIM_ConfigPrescaler</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[11c]"></a>TIM_ConfigCntMode</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[11e]"></a>TIM_ConfigCntMode</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[11d]"></a>TIM_ConfigEncoderInterface</STRONG> (Thumb, 64 bytes, Stack size 20 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[11f]"></a>TIM_ConfigEncoderInterface</STRONG> (Thumb, 64 bytes, Stack size 20 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[11e]"></a>TIM_ConfigForcedOc1</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[120]"></a>TIM_ConfigForcedOc1</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[11f]"></a>TIM_ConfigForcedOc2</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[121]"></a>TIM_ConfigForcedOc2</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[120]"></a>TIM_ConfigForcedOc3</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[122]"></a>TIM_ConfigForcedOc3</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[121]"></a>TIM_ConfigForcedOc4</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[123]"></a>TIM_ConfigForcedOc4</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[122]"></a>TIM_ConfigForcedOc5</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[124]"></a>TIM_ConfigForcedOc5</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[123]"></a>TIM_ConfigForcedOc6</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[125]"></a>TIM_ConfigForcedOc6</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[124]"></a>TIM_ConfigArPreload</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[126]"></a>TIM_ConfigArPreload</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[125]"></a>TIM_SelectComEvt</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[127]"></a>TIM_SelectComEvt</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[126]"></a>TIM_SelectCapCmpDmaSrc</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[128]"></a>TIM_SelectCapCmpDmaSrc</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[127]"></a>TIM_EnableCapCmpPreloadControl</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[129]"></a>TIM_EnableCapCmpPreloadControl</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[128]"></a>TIM_ConfigOc1Preload</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[12a]"></a>TIM_ConfigOc1Preload</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[129]"></a>TIM_ConfigOc2Preload</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[12b]"></a>TIM_ConfigOc2Preload</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[12a]"></a>TIM_ConfigOc3Preload</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[12c]"></a>TIM_ConfigOc3Preload</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[12b]"></a>TIM_ConfigOc4Preload</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[12d]"></a>TIM_ConfigOc4Preload</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[12c]"></a>TIM_ConfigOc5Preload</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[12e]"></a>TIM_ConfigOc5Preload</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[12d]"></a>TIM_ConfigOc6Preload</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[12f]"></a>TIM_ConfigOc6Preload</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[12e]"></a>TIM_ConfigOc1Fast</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[130]"></a>TIM_ConfigOc1Fast</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[12f]"></a>TIM_ConfigOc2Fast</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[131]"></a>TIM_ConfigOc2Fast</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[130]"></a>TIM_ConfigOc3Fast</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[132]"></a>TIM_ConfigOc3Fast</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[131]"></a>TIM_ConfigOc4Fast</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[133]"></a>TIM_ConfigOc4Fast</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[132]"></a>TIM_ConfigOc5Fast</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[134]"></a>TIM_ConfigOc5Fast</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[133]"></a>TIM_ConfigOc6Fast</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[135]"></a>TIM_ConfigOc6Fast</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[134]"></a>TIM_ClrOc1Ref</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[136]"></a>TIM_ClrOc1Ref</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[135]"></a>TIM_ClrOc2Ref</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[137]"></a>TIM_ClrOc2Ref</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[136]"></a>TIM_ClrOc3Ref</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[138]"></a>TIM_ClrOc3Ref</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[137]"></a>TIM_ClrOc4Ref</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[139]"></a>TIM_ClrOc4Ref</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[138]"></a>TIM_ClrOc5Ref</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[13a]"></a>TIM_ClrOc5Ref</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[139]"></a>TIM_ClrOc6Ref</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[13b]"></a>TIM_ClrOc6Ref</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[13a]"></a>TIM_ConfigOc1Polarity</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[13c]"></a>TIM_ConfigOc1Polarity</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[13b]"></a>TIM_ConfigOc1NPolarity</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[13d]"></a>TIM_ConfigOc1NPolarity</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[13c]"></a>TIM_ConfigOc2Polarity</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[13e]"></a>TIM_ConfigOc2Polarity</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[13d]"></a>TIM_ConfigOc2NPolarity</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[13f]"></a>TIM_ConfigOc2NPolarity</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[13e]"></a>TIM_ConfigOc3Polarity</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[140]"></a>TIM_ConfigOc3Polarity</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[13f]"></a>TIM_ConfigOc3NPolarity</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[141]"></a>TIM_ConfigOc3NPolarity</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[140]"></a>TIM_ConfigOc4Polarity</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[142]"></a>TIM_ConfigOc4Polarity</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[141]"></a>TIM_ConfigOc5Polarity</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[143]"></a>TIM_ConfigOc5Polarity</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[142]"></a>TIM_ConfigOc6Polarity</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[144]"></a>TIM_ConfigOc6Polarity</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[143]"></a>TIM_EnableCapCmpCh</STRONG> (Thumb, 28 bytes, Stack size 12 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[145]"></a>TIM_EnableCapCmpCh</STRONG> (Thumb, 28 bytes, Stack size 12 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[144]"></a>TIM_EnableCapCmpChN</STRONG> (Thumb, 28 bytes, Stack size 12 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[146]"></a>TIM_EnableCapCmpChN</STRONG> (Thumb, 28 bytes, Stack size 12 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[145]"></a>TIM_SelectOcMode</STRONG> (Thumb, 86 bytes, Stack size 16 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[147]"></a>TIM_SelectOcMode</STRONG> (Thumb, 86 bytes, Stack size 16 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[146]"></a>TIM_EnableUpdateEvt</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[148]"></a>TIM_EnableUpdateEvt</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[147]"></a>TIM_ConfigUpdateRequestIntSrc</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[149]"></a>TIM_ConfigUpdateRequestIntSrc</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[148]"></a>TIM_SelectHallSensor</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[14a]"></a>TIM_SelectHallSensor</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[149]"></a>TIM_SelectOnePulseMode</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[14b]"></a>TIM_SelectOnePulseMode</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[14a]"></a>TIM_SelectOutputTrig</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[14c]"></a>TIM_SelectOutputTrig</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[14b]"></a>TIM_SelectSlaveMode</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[14d]"></a>TIM_SelectSlaveMode</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[14c]"></a>TIM_SelectMasterSlaveMode</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[14e]"></a>TIM_SelectMasterSlaveMode</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[14d]"></a>TIM_SetCnt</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[14f]"></a>TIM_SetCnt</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[14e]"></a>TIM_SetAutoReload</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[150]"></a>TIM_SetAutoReload</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[14f]"></a>TIM_SetCmp1</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[151]"></a>TIM_SetCmp1</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[150]"></a>TIM_SetCmp2</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[152]"></a>TIM_SetCmp2</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[151]"></a>TIM_SetCmp3</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[153]"></a>TIM_SetCmp3</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[152]"></a>TIM_SetCmp4</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[154]"></a>TIM_SetCmp4</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[153]"></a>TIM_SetCmp5</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[155]"></a>TIM_SetCmp5</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[154]"></a>TIM_SetCmp6</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[156]"></a>TIM_SetCmp6</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[155]"></a>TIM_SetClkDiv</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[157]"></a>TIM_SetClkDiv</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[156]"></a>TIM_GetCap1</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[158]"></a>TIM_GetCap1</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[157]"></a>TIM_GetCap2</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[159]"></a>TIM_GetCap2</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[158]"></a>TIM_GetCap3</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[15a]"></a>TIM_GetCap3</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[159]"></a>TIM_GetCap4</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[15b]"></a>TIM_GetCap4</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[15a]"></a>TIM_GetCap5</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[15c]"></a>TIM_GetCap5</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[15b]"></a>TIM_GetCap6</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[15d]"></a>TIM_GetCap6</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[15c]"></a>TIM_GetCnt</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[15e]"></a>TIM_GetCnt</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[15d]"></a>TIM_GetPrescaler</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[15f]"></a>TIM_GetPrescaler</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[15e]"></a>TIM_GetAutoReload</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[160]"></a>TIM_GetAutoReload</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[15f]"></a>TIM_GetCCENStatus</STRONG> (Thumb, 74 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[161]"></a>TIM_GetCCENStatus</STRONG> (Thumb, 74 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[160]"></a>TIM_GetFlagStatus</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[162]"></a>TIM_GetFlagStatus</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[161]"></a>TIM_ClearFlag</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
+<P><STRONG><a name="[163]"></a>TIM_ClearFlag</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[b5]"></a>TIM_GetIntStatus</STRONG> (Thumb, 34 bytes, Stack size 12 bytes, n32g43x_tim.o(.text))
+<P><STRONG><a name="[b4]"></a>TIM_GetIntStatus</STRONG> (Thumb, 34 bytes, Stack size 12 bytes, n32g43x_tim.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = TIM_GetIntStatus
 </UL>
 <BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_irq_bk_cb
 <LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_irq_cb
 </UL>
 
-<P><STRONG><a name="[b0]"></a>TIM_ClrIntPendingBit</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_tim.o(.text))
+<P><STRONG><a name="[ae]"></a>TIM_ClrIntPendingBit</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, n32g43x_tim.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_irq_bk_cb
 <LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_irq_cb
-<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_config
+<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_config
 </UL>
 
 <P><STRONG><a name="[76]"></a>USART_DeInit</STRONG> (Thumb, 134 bytes, Stack size 8 bytes, n32g43x_usart.o(.text), UNUSED)
@@ -968,9 +968,9 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_uart_init
 </UL>
 
-<P><STRONG><a name="[162]"></a>USART_ClockInit</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, n32g43x_usart.o(.text), UNUSED)
+<P><STRONG><a name="[164]"></a>USART_ClockInit</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, n32g43x_usart.o(.text), UNUSED)
 
-<P><STRONG><a name="[163]"></a>USART_ClockStructInit</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, n32g43x_usart.o(.text), UNUSED)
+<P><STRONG><a name="[165]"></a>USART_ClockStructInit</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, n32g43x_usart.o(.text), UNUSED)
 
 <P><STRONG><a name="[83]"></a>USART_Enable</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, n32g43x_usart.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_uart_init
@@ -982,53 +982,53 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_uart_init
 </UL>
 
-<P><STRONG><a name="[164]"></a>USART_EnableDMA</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_usart.o(.text), UNUSED)
+<P><STRONG><a name="[166]"></a>USART_EnableDMA</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_usart.o(.text), UNUSED)
 
-<P><STRONG><a name="[165]"></a>USART_SetAddr</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_usart.o(.text), UNUSED)
+<P><STRONG><a name="[167]"></a>USART_SetAddr</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_usart.o(.text), UNUSED)
 
-<P><STRONG><a name="[166]"></a>USART_ConfigWakeUpMode</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_usart.o(.text), UNUSED)
+<P><STRONG><a name="[168]"></a>USART_ConfigWakeUpMode</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_usart.o(.text), UNUSED)
 
-<P><STRONG><a name="[167]"></a>USART_EnableRcvWakeUp</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, n32g43x_usart.o(.text), UNUSED)
+<P><STRONG><a name="[169]"></a>USART_EnableRcvWakeUp</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, n32g43x_usart.o(.text), UNUSED)
 
-<P><STRONG><a name="[168]"></a>USART_ConfigLINBreakDetectLength</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_usart.o(.text), UNUSED)
+<P><STRONG><a name="[16a]"></a>USART_ConfigLINBreakDetectLength</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_usart.o(.text), UNUSED)
 
-<P><STRONG><a name="[169]"></a>USART_EnableLIN</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, n32g43x_usart.o(.text), UNUSED)
+<P><STRONG><a name="[16b]"></a>USART_EnableLIN</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, n32g43x_usart.o(.text), UNUSED)
 
 <P><STRONG><a name="[87]"></a>USART_SendData</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, n32g43x_usart.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fputc
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_uart_send_data
 </UL>
 
-<P><STRONG><a name="[8a]"></a>USART_ReceiveData</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g43x_usart.o(.text))
+<P><STRONG><a name="[b8]"></a>USART_ReceiveData</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g43x_usart.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_rs485_com_irq_cb
 <LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_host_computer_com_irq_cb
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_debug_com_irq_cb
 </UL>
 
-<P><STRONG><a name="[16a]"></a>USART_SendBreak</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g43x_usart.o(.text), UNUSED)
+<P><STRONG><a name="[16c]"></a>USART_SendBreak</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, n32g43x_usart.o(.text), UNUSED)
 
-<P><STRONG><a name="[16b]"></a>USART_SetGuardTime</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g43x_usart.o(.text), UNUSED)
+<P><STRONG><a name="[16d]"></a>USART_SetGuardTime</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g43x_usart.o(.text), UNUSED)
 
-<P><STRONG><a name="[16c]"></a>USART_SetPrescaler</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g43x_usart.o(.text), UNUSED)
+<P><STRONG><a name="[16e]"></a>USART_SetPrescaler</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, n32g43x_usart.o(.text), UNUSED)
 
-<P><STRONG><a name="[16d]"></a>USART_EnableSmartCard</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, n32g43x_usart.o(.text), UNUSED)
+<P><STRONG><a name="[16f]"></a>USART_EnableSmartCard</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, n32g43x_usart.o(.text), UNUSED)
 
-<P><STRONG><a name="[16e]"></a>USART_SetSmartCardNACK</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, n32g43x_usart.o(.text), UNUSED)
+<P><STRONG><a name="[170]"></a>USART_SetSmartCardNACK</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, n32g43x_usart.o(.text), UNUSED)
 
-<P><STRONG><a name="[16f]"></a>USART_EnableHalfDuplex</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, n32g43x_usart.o(.text), UNUSED)
+<P><STRONG><a name="[171]"></a>USART_EnableHalfDuplex</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, n32g43x_usart.o(.text), UNUSED)
 
-<P><STRONG><a name="[170]"></a>USART_ConfigIrDAMode</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_usart.o(.text), UNUSED)
+<P><STRONG><a name="[172]"></a>USART_ConfigIrDAMode</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_usart.o(.text), UNUSED)
 
-<P><STRONG><a name="[171]"></a>USART_EnableIrDA</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, n32g43x_usart.o(.text), UNUSED)
+<P><STRONG><a name="[173]"></a>USART_EnableIrDA</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, n32g43x_usart.o(.text), UNUSED)
 
 <P><STRONG><a name="[88]"></a>USART_GetFlagStatus</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, n32g43x_usart.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fputc
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_uart_send_data
 </UL>
 
-<P><STRONG><a name="[172]"></a>USART_ClrFlag</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_usart.o(.text), UNUSED)
+<P><STRONG><a name="[174]"></a>USART_ClrFlag</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, n32g43x_usart.o(.text), UNUSED)
 
-<P><STRONG><a name="[89]"></a>USART_GetIntStatus</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, n32g43x_usart.o(.text))
+<P><STRONG><a name="[b7]"></a>USART_GetIntStatus</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, n32g43x_usart.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = USART_GetIntStatus
 </UL>
 <BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_rs485_com_irq_cb
@@ -1036,7 +1036,7 @@ Global Symbols
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_debug_com_irq_cb
 </UL>
 
-<P><STRONG><a name="[173]"></a>USART_ClrIntPendingBit</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, n32g43x_usart.o(.text), UNUSED)
+<P><STRONG><a name="[175]"></a>USART_ClrIntPendingBit</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, n32g43x_usart.o(.text), UNUSED)
 
 <P><STRONG><a name="[7f]"></a>bsp_uart_init</STRONG> (Thumb, 334 bytes, Stack size 40 bytes, bsp_uart.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 116<LI>Call Chain = bsp_uart_init &rArr; USART_Init &rArr; RCC_GetClocksFreqValue
@@ -1074,21 +1074,21 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> printfb.o(i.__0printf$bare)
 </UL>
-<P><STRONG><a name="[b8]"></a>bsp_systick_init</STRONG> (Thumb, 90 bytes, Stack size 12 bytes, bsp_systick.o(.text))
+<P><STRONG><a name="[ba]"></a>bsp_systick_init</STRONG> (Thumb, 90 bytes, Stack size 12 bytes, bsp_systick.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = bsp_systick_init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[174]"></a>bsp_systick_disable</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, bsp_systick.o(.text), UNUSED)
+<P><STRONG><a name="[176]"></a>bsp_systick_disable</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, bsp_systick.o(.text), UNUSED)
 
-<P><STRONG><a name="[92]"></a>bsp_systick_time_get</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, bsp_systick.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_key_scan
+<P><STRONG><a name="[90]"></a>bsp_systick_time_get</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, bsp_systick.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_key_scan
 </UL>
 
 <P><STRONG><a name="[86]"></a>bsp_delay_ms</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, bsp_systick.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_dac_config
-<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_led_toggle
+<BR><BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_dac_config
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_led_toggle
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_uart_send_data
 </UL>
 
@@ -1157,34 +1157,7 @@ Global Symbols
 <P><STRONG><a name="[13]"></a>EXTI3_IRQHandler</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, n32g43x_it.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_n32g43x.o(RESET)
 </UL>
-<P><STRONG><a name="[4e]"></a>bsp_debug_com_irq_cb</STRONG> (Thumb, 70 bytes, Stack size 8 bytes, bsp_uart_cb.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = bsp_debug_com_irq_cb &rArr; bsp_uart_send_data
-</UL>
-<BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_uart_send_data
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_GetIntStatus
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_ReceiveData
-</UL>
-<BR>[Address Reference Count : 1]<UL><LI> main.o(.text)
-</UL>
-<P><STRONG><a name="[4f]"></a>bsp_host_computer_com_irq_cb</STRONG> (Thumb, 72 bytes, Stack size 8 bytes, bsp_uart_cb.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = bsp_host_computer_com_irq_cb &rArr; bsp_uart_send_data
-</UL>
-<BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_uart_send_data
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_GetIntStatus
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_ReceiveData
-</UL>
-<BR>[Address Reference Count : 1]<UL><LI> main.o(.text)
-</UL>
-<P><STRONG><a name="[50]"></a>bsp_rs485_com_irq_cb</STRONG> (Thumb, 108 bytes, Stack size 8 bytes, bsp_uart_cb.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = bsp_rs485_com_irq_cb &rArr; bsp_uart_send_data
-</UL>
-<BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_uart_send_data
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_GetIntStatus
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_ReceiveData
-</UL>
-<BR>[Address Reference Count : 1]<UL><LI> main.o(.text)
-</UL>
-<P><STRONG><a name="[8b]"></a>bsp_led_init</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, bsp_led.o(.text))
+<P><STRONG><a name="[89]"></a>bsp_led_init</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, bsp_led.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = bsp_led_init &rArr; GPIO_InitPeripheral
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_InitPeripheral
@@ -1192,92 +1165,73 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[8d]"></a>bsp_led_ctrl</STRONG> (Thumb, 112 bytes, Stack size 16 bytes, bsp_led.o(.text))
+<P><STRONG><a name="[8b]"></a>bsp_led_ctrl</STRONG> (Thumb, 112 bytes, Stack size 16 bytes, bsp_led.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = bsp_led_ctrl
 </UL>
 <BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
-<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_led_toggle
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_led_toggle
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[8f]"></a>bsp_key_init</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, bsp_key.o(.text))
+<P><STRONG><a name="[8d]"></a>bsp_key_init</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, bsp_key.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = bsp_key_init &rArr; GPIO_InitPeripheral
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_InitPeripheral
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_key_rcc_config
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_key_rcc_config
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[90]"></a>bsp_key_scan</STRONG> (Thumb, 246 bytes, Stack size 8 bytes, bsp_key.o(.text))
+<P><STRONG><a name="[8e]"></a>bsp_key_scan</STRONG> (Thumb, 246 bytes, Stack size 8 bytes, bsp_key.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = bsp_key_scan
 </UL>
-<BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_systick_time_get
+<BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_systick_time_get
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[9c]"></a>bsp_opa1_init</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, bsp_opa.o(.text))
+<P><STRONG><a name="[9a]"></a>bsp_opa1_init</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, bsp_opa.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = bsp_opa1_init &rArr; bsp_opa1_gpio_config &rArr; GPIO_InitPeripheral
 </UL>
-<BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_opa1_conifg
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_opa1_gpio_config
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_opa1_rcc_config
+<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_opa1_conifg
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_opa1_gpio_config
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_opa1_rcc_config
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[a4]"></a>bsp_dac_init</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, bsp_dac.o(.text))
+<P><STRONG><a name="[a2]"></a>bsp_dac_init</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, bsp_dac.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = bsp_dac_init &rArr; bsp_dac_gpio_config &rArr; GPIO_InitPeripheral
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_dac_config
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_dac_gpio_config
-<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_dac_rcc_config
+<BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_dac_config
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_dac_gpio_config
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_dac_rcc_config
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;factory_function_check
+<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[b4]"></a>bsp_pwm_init</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, bsp_pwm.o(.text))
+<P><STRONG><a name="[b2]"></a>bsp_pwm_init</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, bsp_pwm.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = bsp_pwm_init &rArr; bsp_pwm_config &rArr; TIM_InitOc4
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_config
-<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_io_config
-<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_rcc_config
+<BR>[Calls]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_config
+<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_io_config
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_rcc_config
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[b9]"></a>bsp_pwm_set_duty</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, bsp_pwm.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
+<P><STRONG><a name="[177]"></a>bsp_pwm_set_duty</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, bsp_pwm.o(.text), UNUSED)
 
-<P><STRONG><a name="[175]"></a>bsp_all_pwm_close</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, bsp_pwm.o(.text), UNUSED)
+<P><STRONG><a name="[178]"></a>bsp_all_pwm_close</STRONG> (Thumb, 52 bytes, Stack size 0 bytes, bsp_pwm.o(.text), UNUSED)
 
-<P><STRONG><a name="[176]"></a>bsp_all_pwm_open</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, bsp_pwm.o(.text), UNUSED)
+<P><STRONG><a name="[179]"></a>bsp_all_pwm_open</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, bsp_pwm.o(.text), UNUSED)
 
-<P><STRONG><a name="[51]"></a>bsp_pwm_irq_cb</STRONG> (Thumb, 64 bytes, Stack size 8 bytes, bsp_pwm_cb.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = bsp_pwm_irq_cb &rArr; TIM_GetIntStatus
-</UL>
-<BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
-<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ClrIntPendingBit
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_GetIntStatus
-</UL>
-<BR>[Address Reference Count : 1]<UL><LI> main.o(.text)
-</UL>
-<P><STRONG><a name="[52]"></a>bsp_pwm_irq_bk_cb</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, bsp_pwm_cb.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = bsp_pwm_irq_bk_cb &rArr; TIM_GetIntStatus
-</UL>
-<BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ClrIntPendingBit
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_GetIntStatus
-</UL>
-<BR>[Address Reference Count : 1]<UL><LI> main.o(.text)
-</UL>
-<P><STRONG><a name="[b6]"></a>bsp_io_init</STRONG> (Thumb, 42 bytes, Stack size 24 bytes, bsp_io.o(.text))
+<P><STRONG><a name="[b3]"></a>bsp_io_init</STRONG> (Thumb, 42 bytes, Stack size 24 bytes, bsp_io.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = bsp_io_init &rArr; GPIO_InitPeripheral
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_EnableAPB2PeriphClk
@@ -1287,47 +1241,109 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[4b]"></a>main</STRONG> (Thumb, 120 bytes, Stack size 0 bytes, main.o(.text))
+<P><STRONG><a name="[51]"></a>bsp_pwm_irq_cb</STRONG> (Thumb, 64 bytes, Stack size 8 bytes, bsp_pwm_cb.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = bsp_pwm_irq_cb &rArr; TIM_GetIntStatus
+</UL>
+<BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
+<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ClrIntPendingBit
+<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_GetIntStatus
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> main.o(.text)
+</UL>
+<P><STRONG><a name="[52]"></a>bsp_pwm_irq_bk_cb</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, bsp_pwm_cb.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = bsp_pwm_irq_bk_cb &rArr; TIM_GetIntStatus
+</UL>
+<BR>[Calls]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ClrIntPendingBit
+<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_GetIntStatus
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> main.o(.text)
+</UL>
+<P><STRONG><a name="[4e]"></a>bsp_debug_com_irq_cb</STRONG> (Thumb, 78 bytes, Stack size 8 bytes, bsp_uart_cb.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = bsp_debug_com_irq_cb &rArr; bsp_uart_send_data
+</UL>
+<BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_factory_cmd_analyse
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_uart_send_data
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_GetIntStatus
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_ReceiveData
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> main.o(.text)
+</UL>
+<P><STRONG><a name="[4f]"></a>bsp_host_computer_com_irq_cb</STRONG> (Thumb, 72 bytes, Stack size 8 bytes, bsp_uart_cb.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = bsp_host_computer_com_irq_cb &rArr; bsp_uart_send_data
+</UL>
+<BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_uart_send_data
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_GetIntStatus
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_ReceiveData
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> main.o(.text)
+</UL>
+<P><STRONG><a name="[50]"></a>bsp_rs485_com_irq_cb</STRONG> (Thumb, 108 bytes, Stack size 8 bytes, bsp_uart_cb.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = bsp_rs485_com_irq_cb &rArr; bsp_uart_send_data
+</UL>
+<BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_uart_send_data
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_GetIntStatus
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_ReceiveData
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> main.o(.text)
+</UL>
+<P><STRONG><a name="[4b]"></a>main</STRONG> (Thumb, 116 bytes, Stack size 0 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 116<LI>Call Chain = main &rArr; bsp_uart_init &rArr; USART_Init &rArr; RCC_GetClocksFreqValue
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_PriorityGroupConfig
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_io_init
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_set_duty
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_init
-<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_dac_init
-<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_opa1_init
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_key_scan
-<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_key_init
-<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_led_ctrl
-<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_led_init
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_systick_init
+<BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_PriorityGroupConfig
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;factory_function_check
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_io_init
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_init
+<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_dac_init
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_opa1_init
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_key_scan
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_key_init
+<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_led_ctrl
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_led_init
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_systick_init
 <LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_uart_init
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
+<P><STRONG><a name="[bb]"></a>factory_function_check</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, function_check.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = factory_function_check &rArr; bsp_dac_init &rArr; bsp_dac_gpio_config &rArr; GPIO_InitPeripheral
+</UL>
+<BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
+<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_dac_init
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[b6]"></a>strncmp</STRONG> (Thumb, 30 bytes, Stack size 12 bytes, strncmp.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = strncmp
+</UL>
+<BR>[Called By]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_factory_cmd_analyse
+</UL>
+
 <P><STRONG><a name="[55]"></a>__scatterload</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, init.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
+<BR><BR>[Calls]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
 </UL>
 <BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[177]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[17a]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
-<P><STRONG><a name="[bb]"></a>__0printf$bare</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, printfb.o(i.__0printf$bare), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<P><STRONG><a name="[bd]"></a>__0printf$bare</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, printfb.o(i.__0printf$bare), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[178]"></a>__1printf$bare</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, printfb.o(i.__0printf$bare), UNUSED)
+<P><STRONG><a name="[17b]"></a>__1printf$bare</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, printfb.o(i.__0printf$bare), UNUSED)
 
-<P><STRONG><a name="[93]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, printfb.o(i.__0printf$bare))
-<BR><BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_key_scan
+<P><STRONG><a name="[91]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, printfb.o(i.__0printf$bare))
+<BR><BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;factory_function_check
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_key_scan
 </UL>
 
-<P><STRONG><a name="[179]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[17c]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[17a]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+<P><STRONG><a name="[17d]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[17b]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[17e]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 <P>
 <H3>
 Local Symbols
@@ -1377,122 +1393,130 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_uart_init
 </UL>
 
-<P><STRONG><a name="[8c]"></a>bsp_led_toggle</STRONG> (Thumb, 74 bytes, Stack size 0 bytes, bsp_led.o(.text))
+<P><STRONG><a name="[8a]"></a>bsp_led_toggle</STRONG> (Thumb, 74 bytes, Stack size 0 bytes, bsp_led.o(.text))
 <BR><BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
 <LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_delay_ms
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_led_ctrl
+<BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_led_ctrl
 </UL>
 
-<P><STRONG><a name="[8e]"></a>bsp_key_rcc_config</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, bsp_key.o(.text))
+<P><STRONG><a name="[8c]"></a>bsp_key_rcc_config</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, bsp_key.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = bsp_key_rcc_config
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_EnableAPB2PeriphClk
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_key_init
+<BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_key_init
 </UL>
 
-<P><STRONG><a name="[94]"></a>bsp_opa1_rcc_config</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, bsp_opa.o(.text))
+<P><STRONG><a name="[92]"></a>bsp_opa1_rcc_config</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, bsp_opa.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = bsp_opa1_rcc_config
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_EnableAPB2PeriphClk
 <LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_EnableAPB1PeriphClk
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_opa1_init
+<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_opa1_init
 </UL>
 
-<P><STRONG><a name="[95]"></a>bsp_opa1_gpio_config</STRONG> (Thumb, 78 bytes, Stack size 24 bytes, bsp_opa.o(.text))
+<P><STRONG><a name="[93]"></a>bsp_opa1_gpio_config</STRONG> (Thumb, 78 bytes, Stack size 24 bytes, bsp_opa.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = bsp_opa1_gpio_config &rArr; GPIO_InitPeripheral
 </UL>
-<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OPAMP_SetVmSel
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OPAMP_SetVpSel
+<BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OPAMP_SetVmSel
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OPAMP_SetVpSel
 <LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_InitStruct
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_InitPeripheral
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_opa1_init
+<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_opa1_init
 </UL>
 
-<P><STRONG><a name="[98]"></a>bsp_opa1_conifg</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, bsp_opa.o(.text))
+<P><STRONG><a name="[96]"></a>bsp_opa1_conifg</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, bsp_opa.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = bsp_opa1_conifg &rArr; OPAMP_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OPAMP_Enable
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OPAMP_Init
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OPAMP_StructInit
+<BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OPAMP_Enable
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OPAMP_Init
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OPAMP_StructInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_opa1_init
+<BR>[Called By]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_opa1_init
 </UL>
 
-<P><STRONG><a name="[9d]"></a>bsp_dac_rcc_config</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, bsp_dac.o(.text))
+<P><STRONG><a name="[9b]"></a>bsp_dac_rcc_config</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, bsp_dac.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = bsp_dac_rcc_config
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_EnableAPB2PeriphClk
 <LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_EnableAPB1PeriphClk
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_dac_init
+<BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_dac_init
 </UL>
 
-<P><STRONG><a name="[9e]"></a>bsp_dac_gpio_config</STRONG> (Thumb, 34 bytes, Stack size 24 bytes, bsp_dac.o(.text))
+<P><STRONG><a name="[9c]"></a>bsp_dac_gpio_config</STRONG> (Thumb, 34 bytes, Stack size 24 bytes, bsp_dac.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = bsp_dac_gpio_config &rArr; GPIO_InitPeripheral
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_InitStruct
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_InitPeripheral
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_dac_init
+<BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_dac_init
 </UL>
 
-<P><STRONG><a name="[9f]"></a>bsp_dac_config</STRONG> (Thumb, 52 bytes, Stack size 24 bytes, bsp_dac.o(.text))
+<P><STRONG><a name="[9d]"></a>bsp_dac_config</STRONG> (Thumb, 52 bytes, Stack size 24 bytes, bsp_dac.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = bsp_dac_config &rArr; DAC_SetChData
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DAC_SetChData
-<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DAC_SoftTrgEnable
-<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DAC_Enable
-<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DAC_Init
+<BR>[Calls]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DAC_SetChData
+<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DAC_SoftTrgEnable
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DAC_Enable
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DAC_Init
 <LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_delay_ms
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_dac_init
+<BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_dac_init
 </UL>
 
-<P><STRONG><a name="[a5]"></a>bsp_pwm_rcc_config</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, bsp_pwm.o(.text))
+<P><STRONG><a name="[a3]"></a>bsp_pwm_rcc_config</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, bsp_pwm.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = bsp_pwm_rcc_config
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_EnableAPB2PeriphClk
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_init
+<BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_init
 </UL>
 
-<P><STRONG><a name="[a6]"></a>bsp_pwm_io_config</STRONG> (Thumb, 104 bytes, Stack size 24 bytes, bsp_pwm.o(.text))
+<P><STRONG><a name="[a4]"></a>bsp_pwm_io_config</STRONG> (Thumb, 104 bytes, Stack size 24 bytes, bsp_pwm.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = bsp_pwm_io_config &rArr; GPIO_InitPeripheral
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_InitStruct
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_InitPeripheral
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_init
+<BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_init
 </UL>
 
-<P><STRONG><a name="[a7]"></a>bsp_pwm_config</STRONG> (Thumb, 294 bytes, Stack size 64 bytes, bsp_pwm.o(.text))
+<P><STRONG><a name="[a5]"></a>bsp_pwm_config</STRONG> (Thumb, 294 bytes, Stack size 64 bytes, bsp_pwm.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = bsp_pwm_config &rArr; TIM_InitOc4
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ConfigInt
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_EnableCtrlPwmOutputs
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Enable
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_InitOcStruct
-<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_InitTimBaseStruct
-<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ConfigBkdt
-<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_InitOc4
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_InitOc3
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_InitOc2
-<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_InitOc1
-<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_InitTimeBase
+<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ConfigInt
+<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_EnableCtrlPwmOutputs
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Enable
+<LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_InitOcStruct
+<LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_InitTimBaseStruct
+<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ConfigBkdt
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_InitOc4
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_InitOc3
+<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_InitOc2
+<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_InitOc1
+<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_InitTimeBase
 <LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_DeInit
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Init
-<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ClrIntPendingBit
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ClrIntPendingBit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_init
+<BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_pwm_init
 </UL>
 
-<P><STRONG><a name="[bc]"></a>_printf_core</STRONG> (Thumb, 34 bytes, Stack size 24 bytes, printfb.o(i._printf_core), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0printf$bare
+<P><STRONG><a name="[b5]"></a>bsp_factory_cmd_analyse</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, bsp_uart_cb.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = bsp_factory_cmd_analyse &rArr; strncmp
+</UL>
+<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncmp
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bsp_debug_com_irq_cb
+</UL>
+
+<P><STRONG><a name="[be]"></a>_printf_core</STRONG> (Thumb, 34 bytes, Stack size 24 bytes, printfb.o(i._printf_core), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0printf$bare
 </UL>
 <P>
 <H3>

@@ -1,5 +1,5 @@
-.\obj\bsp_uart_cb.o: ..\Source\Bsp\bsp_uart_cb.c
-.\obj\bsp_uart_cb.o: ..\Source\Bsp\bsp_uart_cb.h
+.\obj\bsp_uart_cb.o: ..\Source\Bsp_cb\bsp_uart_cb.c
+.\obj\bsp_uart_cb.o: ..\Source\Bsp_cb\bsp_uart_cb.h
 .\obj\bsp_uart_cb.o: ..\Libraries\SysConfig\n32g43x.h
 .\obj\bsp_uart_cb.o: ..\Libraries\SysCore\core_cm4.h
 .\obj\bsp_uart_cb.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
@@ -34,3 +34,4 @@
 .\obj\bsp_uart_cb.o: ..\Libraries\Lib\inc\n32g43x_wwdg.h
 .\obj\bsp_uart_cb.o: ..\Libraries\Lib\inc\misc.h
 .\obj\bsp_uart_cb.o: ..\Source\Bsp\bsp_uart.h
+.\obj\bsp_uart_cb.o: D:\keil5\ARM\ARMCC\Bin\..\include\string.h

@@ -16,9 +16,16 @@
 #include "n32g43x.h"
 #include "bsp_uart.h"
 
+//出厂函数检测结构体
+typedef struct
+{
+	uint8_t overflow_sign;
+}factory_func_check_t;
+
+extern factory_func_check_t factory_func_check;
 //函数声明
 void bsp_debug_com_irq_cb(void);
- void bsp_host_computer_com_irq_cb(void);
- void bsp_rs485_com_irq_cb(void);
+void bsp_host_computer_com_irq_cb(void);
+void bsp_rs485_com_irq_cb(void);
 #endif
 
