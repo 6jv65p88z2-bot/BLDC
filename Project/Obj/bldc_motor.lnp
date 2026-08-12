@@ -30,6 +30,7 @@
 ".\obj\bsp_adc_cb.o"
 ".\obj\bsp_pwm_cb.o"
 ".\obj\bsp_uart_cb.o"
+".\obj\bsp_hall_cb.o"
 ".\obj\main.o"
 ".\obj\function_check.o"
 --library_type=microlib --strict --scatter ".\Obj\bldc_motor.sct"

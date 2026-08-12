@@ -44,3 +44,5 @@
 .\obj\main.o: ..\Source\Bsp\bsp_opa.h
 .\obj\main.o: ..\Source\Bsp\bsp_dac.h
 .\obj\main.o: ..\Source\App\function_check.h
+.\obj\main.o: ..\Source\Bsp\bsp_hall.h
+.\obj\main.o: ..\Source\Bsp_cb\bsp_hall_cb.h

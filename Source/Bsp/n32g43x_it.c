@@ -35,6 +35,7 @@
 #include "n32g43x_it.h"
 #include "bsp_uart_cb.h"
 #include "bsp_pwm_cb.h"
+#include "bsp_hall.h"
 
 /** @addtogroup N32G43X_StdPeriph_Template
  * @{
@@ -204,7 +205,7 @@ void TIM8_UP_IRQHandler(void)
  */
 void EXTI1_IRQHandler(void)
 {
-    
+    hall_irq_cb.hall_u_cb(hall_irq_cb.formal_param);
 }
 
 /**
@@ -212,7 +213,7 @@ void EXTI1_IRQHandler(void)
  */
 void EXTI2_IRQHandler(void)
 {
-    
+    hall_irq_cb.hall_v_cb(hall_irq_cb.formal_param);
 }
 
 /**
@@ -220,7 +221,7 @@ void EXTI2_IRQHandler(void)
  */
 void EXTI3_IRQHandler(void)
 {
-    
+    hall_irq_cb.hall_w_cb(hall_irq_cb.formal_param);
 }
 
 /**

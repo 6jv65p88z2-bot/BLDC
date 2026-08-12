@@ -19,6 +19,8 @@
 #include "bsp_pwm.h"
 #include "function_check.h"
 #include "misc.h"
+#include "bsp_hall.h"
+#include "bsp_hall_cb.h"
 
 uint32_t time_ctrl_t;
 
@@ -50,6 +52,8 @@ int main(void)
 	bsp_opa1_init();		//运放OPA1初始化
 	
 	bsp_pwm_init(bsp_pwm_irq_bk_cb,bsp_pwm_irq_cb);	//初始化PWM
+	//bsp_hall_init(hall_uvw_irq_cb, motor_sensor_mode_phase);
+	bsp_hall_init(hall_uvw_irq_cb);
 	//bsp_pwm_init(bsp_pwm_irq_cb);
 	
 		

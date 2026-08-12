@@ -15,6 +15,8 @@ static void bsp_hall_rcc_config(void);
 static void bsp_hall_gpio_config(void);
 
 hall_irq_cb_t hall_irq_cb= {NULL};
+
+
 /**
   ******************************************************************************
   * @brief  hall的时钟配置
@@ -36,6 +38,85 @@ static void bsp_hall_gpio_config(void)
 	GPIO_InitStructure.Pin = GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3;
 	GPIO_InitPeripheral(GPIOC,&GPIO_InitStructure);
 }
+
+/**
+  ******************************************************************************
+  * @brief  hall中断开启
+  * @param  None.
+  * @retval None.
+  ******************************************************************************/
+void bsp_hall_irq_enable(void)
+{
+	EXTI_InitType EXTI_InitStrucutre = {0};
+	NVIC_InitType NVIC_InitStructure = {0};
+	
+	//配置外部中断
+	EXTI_InitStrucutre.EXTI_Line = EXTI_LINE1;					//PC1 HALL_U
+	EXTI_InitStrucutre.EXTI_Mode = EXTI_Mode_Interrupt;		//中断触发
+	EXTI_InitStrucutre.EXTI_Trigger = EXTI_Trigger_Rising_Falling;  //io产生上升沿/下降沿触发
+	EXTI_InitStrucutre.EXTI_LineCmd = DISABLE;
+	EXTI_InitPeripheral(&EXTI_InitStrucutre);
+	
+	EXTI_InitStrucutre.EXTI_Line = EXTI_LINE2;					//PC2 HALL_V
+	EXTI_InitPeripheral(&EXTI_InitStrucutre);
+	
+	EXTI_InitStrucutre.EXTI_Line = EXTI_LINE3;					//PC3 HALL_W
+	EXTI_InitPeripheral(&EXTI_InitStrucutre);
+	
+	//配置NVIC中断管理
+	NVIC_InitStructure.NVIC_IRQChannel = EXTI1_IRQn;
+	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
+	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
+	NVIC_Init(&NVIC_InitStructure);
+	
+	NVIC_InitStructure.NVIC_IRQChannel                   = EXTI2_IRQn;
+    NVIC_Init(&NVIC_InitStructure);
+	
+	NVIC_InitStructure.NVIC_IRQChannel                   = EXTI3_IRQn;
+    NVIC_Init(&NVIC_InitStructure);
+	
+}
+
+/**
+  ******************************************************************************
+  * @brief  hall中断关闭
+  * @param  None.
+  * @retval None.
+  ******************************************************************************/
+void bsp_hall_irq_disable(void)
+{
+	EXTI_InitType EXTI_InitStrucutre = {0};
+	NVIC_InitType NVIC_InitStructure = {0};
+	
+	//配置外部中断
+	EXTI_InitStrucutre.EXTI_Line = EXTI_LINE1;
+	EXTI_InitStrucutre.EXTI_Mode = EXTI_Mode_Interrupt;		//中断触发
+	EXTI_InitStrucutre.EXTI_Trigger = EXTI_Trigger_Rising_Falling;  //io产生上升沿/下降沿触发
+	EXTI_InitStrucutre.EXTI_LineCmd = DISABLE;
+	EXTI_InitPeripheral(&EXTI_InitStrucutre);
+	
+	EXTI_InitStrucutre.EXTI_Line = EXTI_LINE2;
+	EXTI_InitPeripheral(&EXTI_InitStrucutre);
+	
+	EXTI_InitStrucutre.EXTI_Line = EXTI_LINE3;
+	EXTI_InitPeripheral(&EXTI_InitStrucutre);
+	
+	//配置NVIC中断管理
+	NVIC_InitStructure.NVIC_IRQChannel = EXTI1_IRQn;
+	NVIC_InitStructure.NVIC_IRQChannelCmd = DISABLE;
+	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 3;
+	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 3;
+	NVIC_Init(&NVIC_InitStructure);
+	
+	NVIC_InitStructure.NVIC_IRQChannel                   = EXTI2_IRQn;
+    NVIC_Init(&NVIC_InitStructure);
+	
+	NVIC_InitStructure.NVIC_IRQChannel                   = EXTI3_IRQn;
+    NVIC_Init(&NVIC_InitStructure);
+	
+}
+
 /**
   ******************************************************************************
   * @brief  hall初始化
@@ -43,10 +124,11 @@ static void bsp_hall_gpio_config(void)
   * @param  formal_param:中断回调指针数组中形参
   * @retval None.
   ******************************************************************************/
-void bsp_hall_init(void( *irq_cb[3])(void (*formal_param)(void)),void (*formal_param)(void))
-
+//void bsp_hall_init(void( *irq_cb[3])(void (*formal_param)(void)),void (*formal_param)(void))
+void bsp_hall_init(void( *irq_cb[3])(void (*formal_param)(void)))
 {
-	if((irq_cb[0] == NULL) || (irq_cb[1] == NULL) || (irq_cb[2] == NULL) || (formal_param == NULL))
+	if((irq_cb[0] == NULL) || (irq_cb[1] == NULL) || (irq_cb[2] == NULL) )
+	//if((irq_cb[0] == NULL) || (irq_cb[1] == NULL) || (irq_cb[2] == NULL) || (formal_param == NULL))
 	{
 		while(1);	//卡死在此处
 	}
@@ -54,13 +136,19 @@ void bsp_hall_init(void( *irq_cb[3])(void (*formal_param)(void)),void (*formal_p
 	hall_irq_cb.hall_u_cb = irq_cb[0];
 	hall_irq_cb.hall_v_cb = irq_cb[1];
 	hall_irq_cb.hall_w_cb = irq_cb[2];
-	hall_irq_cb.formal_param = formal_param;
+	//hall_irq_cb.formal_param = formal_param;
 	
 	
 	//1.开启时钟
 	bsp_hall_rcc_config();
 	//2.GPIO配置
 	bsp_hall_gpio_config();
-	//3.
+	//3.配置管脚输入的外部中断线
+	GPIO_ConfigEXTILine(GPIOC_PORT_SOURCE, GPIO_PIN_SOURCE1);
+	GPIO_ConfigEXTILine(GPIOC_PORT_SOURCE, GPIO_PIN_SOURCE2);
+	GPIO_ConfigEXTILine(GPIOC_PORT_SOURCE, GPIO_PIN_SOURCE3);
+	
+	//4.初始化关闭中断
+	bsp_hall_irq_disable();
 }
 

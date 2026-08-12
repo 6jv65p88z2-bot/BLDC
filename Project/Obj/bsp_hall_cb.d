@@ -1,14 +1,14 @@
-.\obj\bsp_hall_cb.o: ..\Source\Bsp\bsp_hall_cb.c
-.\obj\bsp_hall_cb.o: ..\Source\Bsp\bsp_hall_cb.h
+.\obj\bsp_hall_cb.o: ..\Source\Bsp_cb\bsp_hall_cb.c
+.\obj\bsp_hall_cb.o: ..\Source\Bsp_cb\bsp_hall_cb.h
 .\obj\bsp_hall_cb.o: ..\Libraries\SysConfig\n32g43x.h
 .\obj\bsp_hall_cb.o: ..\Libraries\SysCore\core_cm4.h
-.\obj\bsp_hall_cb.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\bsp_hall_cb.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
 .\obj\bsp_hall_cb.o: ..\Libraries\SysCore\cmsis_version.h
 .\obj\bsp_hall_cb.o: ..\Libraries\SysCore\cmsis_compiler.h
 .\obj\bsp_hall_cb.o: ..\Libraries\SysCore\cmsis_armcc.h
 .\obj\bsp_hall_cb.o: ..\Libraries\SysCore\mpu_armv7.h
 .\obj\bsp_hall_cb.o: ..\Libraries\SysConfig\system_n32g43x.h
-.\obj\bsp_hall_cb.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\obj\bsp_hall_cb.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\obj\bsp_hall_cb.o: ..\Libraries\SysConfig\n32g43x_conf.h
 .\obj\bsp_hall_cb.o: ..\Libraries\Lib\inc\n32g43x_adc.h
 .\obj\bsp_hall_cb.o: ..\Libraries\SysConfig\n32g43x.h
@@ -33,4 +33,3 @@
 .\obj\bsp_hall_cb.o: ..\Libraries\Lib\inc\n32g43x_lpuart.h
 .\obj\bsp_hall_cb.o: ..\Libraries\Lib\inc\n32g43x_wwdg.h
 .\obj\bsp_hall_cb.o: ..\Libraries\Lib\inc\misc.h
-.\obj\bsp_hall_cb.o: ..\Source\Bsp\bsp_io.h

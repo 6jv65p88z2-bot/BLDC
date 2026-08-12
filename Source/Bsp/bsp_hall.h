@@ -21,10 +21,12 @@ typedef struct
 	void (*formal_param)(void);
 }hall_irq_cb_t;
 
-
+extern hall_irq_cb_t hall_irq_cb;		//外部声明，目的是使得hall_irq_cb可以被文件n32g43x_it.c文件调用
 
 
 //函数声明
-void bsp_hall_init(void( *irq_cb[3])(void (*formal_param)(void)),void (*formal_param)(void));
-
+//void bsp_hall_init(void( *irq_cb[3])(void (*formal_param)(void)),void (*formal_param)(void));
+void bsp_hall_init(void( *irq_cb[3])(void (*formal_param)(void)));
+void bsp_hall_irq_enable(void);
+void bsp_hall_irq_disable(void);
 #endif

@@ -104,3 +104,14 @@ if (bsp_systick_time_get() - adc_test_tick >= 1000)  // 每1000ms
 (1)更新了bldc_motor工程的分层架构，把所有的回调函数，全部单独放在一个文件夹Bsp_cb。语法检查通过。
 (2)github->1.4.9
 (3)bsp_hall.c文件已经写了一点代码。
+
+2026.8.12日软件更新日志
+(1)github->1.5.1    之前1.4.9无法同步到github上面，所以这里改为1.5.1，现在可以同步上去了
+(2)完成bsp_hall_init(hall_uvw_irq_cb)，但是未完成：bsp_hall_init(hall_uvw_irq_cb, motor_sensor_mode_phase);我觉得后面的形参2应该是要学习了霍尔传感器的知识后才去撰写的代码。
+(3)githhub->1.5.2 已经更新。
+
+2026.8.13日软件更新日志
+一、计划
+(1)完成母线电压值和温度值计算的代码撰写
+(2)完成hall接口驱动层采集传感数据的代码撰写
+
