@@ -21,6 +21,11 @@
 #include "misc.h"
 #include "bsp_hall.h"
 #include "bsp_hall_cb.h"
+#include "bsp_adc.h"
+#include "bsp_adc_value.h"
+#include "analog_calcate.h"
+
+
 
 uint32_t time_ctrl_t;
 
@@ -51,6 +56,8 @@ int main(void)
 	bsp_dac_init(300);		//DAC初始化
 	bsp_opa1_init();		//运放OPA1初始化
 	
+	bsp_adc_init();			//ADC初始化(母线电压/温度/速度/反电动势)
+	
 	bsp_pwm_init(bsp_pwm_irq_bk_cb,bsp_pwm_irq_cb);	//初始化PWM
 	//bsp_hall_init(hall_uvw_irq_cb, motor_sensor_mode_phase);
 	bsp_hall_init(hall_uvw_irq_cb);
@@ -74,6 +81,7 @@ int main(void)
 		//bsp_led_ctrl(LED1,LED_TOGGLE);		//LED2翻转
 		bsp_key_scan();
 		factory_function_check();
+		adc_value_calculate();		//ADC实时计算
 		/*
 		//7路PWM测试样例
 		if(time_ctrl_t == 1)

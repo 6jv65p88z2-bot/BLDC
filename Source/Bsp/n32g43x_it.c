@@ -36,6 +36,9 @@
 #include "bsp_uart_cb.h"
 #include "bsp_pwm_cb.h"
 #include "bsp_hall.h"
+#include "bsp_adc_cb.h"
+#include "bsp_adc.h"
+
 
 /** @addtogroup N32G43X_StdPeriph_Template
  * @{
@@ -173,7 +176,8 @@ void UART5_IRQHandler(void)
  */
 void ADC_IRQHandler(void)
 {
-	
+	//adc_irq_cb.adc_cb(adc_irq_cb.formal_param);
+	bsp_adc_irq_cb();		//ADC 暂时使用的中断回调函数
 }
 uint32_t BRK_CNT = 0;
 /**

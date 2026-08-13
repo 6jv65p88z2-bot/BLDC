@@ -17,7 +17,7 @@
 typedef struct
 {
 	uint16_t v_bus;					//母线电压
-	uint16_t temperature;		//温度
+	uint16_t temperature;			//温度
 	uint16_t speed;					//电机的速度
 	
 	uint16_t current;				//电流环的电流
@@ -29,6 +29,8 @@ typedef struct
 
 
 extern adc_digital_val_e adc_digital_val;
+
+void bsp_adc_irq_cb(void);
 
 
 

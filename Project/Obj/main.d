@@ -46,3 +46,6 @@
 .\obj\main.o: ..\Source\App\function_check.h
 .\obj\main.o: ..\Source\Bsp\bsp_hall.h
 .\obj\main.o: ..\Source\Bsp_cb\bsp_hall_cb.h
+.\obj\main.o: ..\Source\Bsp\bsp_adc.h
+.\obj\main.o: ..\Source\Bsp_cb\bsp_adc_value.h
+.\obj\main.o: ..\Source\App\analog_calcate.h

@@ -39,3 +39,6 @@
 .\obj\n32g43x_it.o: ..\Source\Bsp\bsp_pwm.h
 .\obj\n32g43x_it.o: ..\Source\Bsp\bsp_io.h
 .\obj\n32g43x_it.o: ..\Source\Bsp\bsp_hall.h
+.\obj\n32g43x_it.o: ..\Source\Bsp_cb\bsp_adc_cb.h
+.\obj\n32g43x_it.o: ..\Source\Bsp\bsp_adc.h
+.\obj\n32g43x_it.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdio.h

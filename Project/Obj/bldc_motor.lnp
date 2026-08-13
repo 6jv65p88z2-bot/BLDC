@@ -33,6 +33,7 @@
 ".\obj\bsp_hall_cb.o"
 ".\obj\main.o"
 ".\obj\function_check.o"
+".\obj\analog_calcate.o"
 --library_type=microlib --strict --scatter ".\Obj\bldc_motor.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

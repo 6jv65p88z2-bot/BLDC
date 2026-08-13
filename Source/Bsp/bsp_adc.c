@@ -17,6 +17,9 @@ static void bsp_adc_rcc_config(void);
 static void bsp_adc_gpio_config(void);
 static void bsp_adc_config(void);
 
+adc_irq_cb_t adc_irq_cb = {NULL, NULL};
+
+
 volatile uint16_t ADC_RegularConvertedValueTab[3];		//规则组缓冲区
 volatile uint16_t ADC_InjectConvertedValueTab[4];		//注入组缓冲区
 
@@ -146,7 +149,8 @@ static void bsp_adc_config(void)
 	//开启ADC的注入通道外部触发模式
 	ADC_EnableExternalTrigInjectedConv(ADC,ENABLE);
 	
-	
+	//首次软件触发一次规则通道转换，之后由中断回调自续触发
+	ADC_EnableSoftwareStartConv(ADC, ENABLE);
 }
   
 
