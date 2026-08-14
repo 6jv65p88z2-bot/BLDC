@@ -12,6 +12,8 @@
 #include "analog_calcate.h"
 #include "bsp_systick.h"
 #include "bsp_adc_cb.h"
+#include <math.h>
+#include <stdio.h>
 
 #define R23 33.0f		//分压网络中的上电阻
 #define R30 3.0f		//分压网络中的下电阻
@@ -23,10 +25,12 @@ adc_voltage_val_e	adc_voltage_val;
 
 /**
   ******************************************************************************
-  * @brief  adc值计算
+  * @brief  adc值计算  有添加滑动平均计算电压值
   * @param  None.
   * @retval None.
   ******************************************************************************/
+
+/*
 void adc_value_calculate(void)
 {
 	uint16_t adc_value = 0;
@@ -68,3 +72,41 @@ void adc_value_calculate(void)
 		printf("ADC:0x%04X  V_BUS:%.2fV\r\n", (unsigned)adc_value, adc_voltage_val.v_bus);
 	}
 }
+*/
+
+
+/**
+  ******************************************************************************
+  * @brief  adc值计算  和视频的计算一致
+  * @param  None.
+  * @retval None.
+  ******************************************************************************/
+void adc_value_calculate(void)
+{
+	uint16_t adc_value = 0;
+	float v_pin;		//经过分压网络后的引脚电压
+	static uint32_t timeout = 0;
+	
+	if(bsp_systick_time_get() - timeout > 50)
+	{
+		timeout = bsp_systick_time_get();
+		adc_value = adc_digital_val.v_bus;		//得到v_bus的模拟量
+		v_pin = adc_value / 4095.0f * 3.3f;		
+		adc_voltage_val.v_bus = v_pin / DIV_RATIO;		//得到真正的v_bus电压
+		
+		adc_value = adc_digital_val.temperature;	//得到temperature的模拟量
+		float Rt = 0;		//NTC电阻(代计算)
+		float R = 10000;	//10K固定阻值电阻
+		float T0 = 273.15+ 25;	//转换为开尔文温度
+		float B = 3450;
+		float Ka = 273.15;		//K值
+		float VR = 0;  //热敏两端的电压值(待计算)
+		
+		VR = 3.3 - (float)adc_value * 4095.f * 3.3f;		//转换为电压值
+		Rt = (3.3 - VR) * 10000.0f / VR;		//得到Rt
+		adc_voltage_val.temperature = 1 / ( 1 / T0 + log(Rt / R) / B) - Ka + 0.5;	//得到热敏电阻对应的真正温度
+		printf("ADC:0x%04X  V_BUS:%.2fV\r\n,temperature:%.3fT", (unsigned)adc_value, adc_voltage_val.v_bus,adc_voltage_val.temperature);
+	}
+	
+}
+
